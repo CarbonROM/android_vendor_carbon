@@ -1,0 +1,4 @@
+#!/system/bin/sh
+# liquid smooth
+echo 0,1,2,7,14,16 > /sys/module/lowmemorykiller/parameters/adj
+echo 8192,10134,20254,20536,20648,25750 > /sys/module/lowmemorykiller/parameters/minfree
