@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/liquid/prebuilt/common/app/Gallery2.apk:system/app/Gallery2.apk \
     vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
     vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
@@ -69,9 +68,9 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
+    vendor/liquid/prebuilt/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
-    vendor/liquid/prebuilt/common/app/Vending.apk:system/app/Vending.apk \
     vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
 
 # library
