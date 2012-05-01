@@ -91,3 +91,6 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw
 
+# Camera shutter sound property
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.camera-sound=1
