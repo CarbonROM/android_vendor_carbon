@@ -56,6 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
     vendor/liquid/prebuilt/common/app/Gallery2.apk:system/app/Gallery2.apk \
     vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
+    vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
     vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
     vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
@@ -91,6 +92,3 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw
 
-# Camera shutter sound property
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.camera-sound=1
