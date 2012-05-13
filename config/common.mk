@@ -13,7 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.media.enc.jpeg.quality=100 \
-    ro.kernel.android.checkjni=0
+    ro.kernel.android.checkjni=0 \
+    persist.sys.camera-sound=1
 
 # packages
 PRODUCT_PACKAGES += \
@@ -25,6 +26,12 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     NoiseField \
     LiquidControl
+
+# tmobile
+PRODUCT_PACKAGES += \
+    ThemeManager \
+    ThemeChooser \
+    com.tmobile.themes
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
@@ -44,7 +51,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
     vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml
+    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # framework
 PRODUCT_COPY_FILES += \
@@ -92,6 +100,3 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw
 
-# Camera shutter sound property
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.sys.camera-sound=1
