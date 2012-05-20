@@ -14,6 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.media.enc.jpeg.quality=100 \
     ro.kernel.android.checkjni=0 \
+    persist.sys.composition.type=gpu
     persist.sys.camera-sound=1
 
 # packages
