@@ -24,8 +24,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Galaxy4 \
     PhaseBeam \
-    NoiseField \
-    LiquidControl
+    NoiseField
 
 # tmobile
 PRODUCT_PACKAGES += \
