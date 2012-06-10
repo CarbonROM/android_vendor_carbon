@@ -1,6 +1,10 @@
 # brand
 PRODUCT_BRAND ?= liquid
 
+# build
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_DISPLAY_ID="Liquid ICS v1.5 Beta 2"
+
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
