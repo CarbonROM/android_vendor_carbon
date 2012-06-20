@@ -3,7 +3,7 @@ PRODUCT_BRAND ?= liquid
 
 # build
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Liquid Linaro v1.5 RC1"
+    BUILD_DISPLAY_ID="Liquid Linaro v1.5 RC2"
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
