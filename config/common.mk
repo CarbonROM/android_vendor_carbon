@@ -3,7 +3,7 @@ PRODUCT_BRAND ?= liquid
 
 # build
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Liquid ICS v1.6 Beta1"
+    BUILD_DISPLAY_ID="Liquid ICS v1.5 MR1"
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
