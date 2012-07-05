@@ -42,7 +42,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 # binary
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/sdcard:system/bin/sdcard \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # etc
