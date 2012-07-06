@@ -28,8 +28,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Galaxy4 \
     PhaseBeam \
-    NoiseField \
-    Stats
+    NoiseField
 
 # tmobile
 PRODUCT_PACKAGES += \
