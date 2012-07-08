@@ -16,3 +16,8 @@ PRODUCT_PACKAGES += \
   Mms \
   Music \
   MusicFX
+
+# google
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk
+
