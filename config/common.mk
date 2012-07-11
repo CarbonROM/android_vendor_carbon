@@ -3,7 +3,7 @@ PRODUCT_BRAND ?= liquid
 
 # build
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Liquid ICS v1.5 MR1"
+    BUILD_DISPLAY_ID="Liquid JB v2.0"
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -31,10 +31,10 @@ PRODUCT_PACKAGES += \
     NoiseField
 
 # tmobile
-PRODUCT_PACKAGES += \
-    ThemeManager \
-    ThemeChooser \
-    com.tmobile.themes
+#PRODUCT_PACKAGES += \
+#    ThemeManager \
+#    ThemeChooser \
+#    com.tmobile.themes
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
@@ -51,45 +51,44 @@ PRODUCT_COPY_FILES += \
 
 # permissions
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+#    vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
+#    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+#    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+#    vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
 # framework
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    vendor/liquid/prebuilt/common/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar
+#    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+#    vendor/liquid/prebuilt/common/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar
 
 # google
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/Gallery2.apk:system/app/Gallery2.apk \
-    vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
-    vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
-    vendor/liquid/prebuilt/common/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
-    vendor/liquid/prebuilt/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
-    vendor/liquid/prebuilt/common/app/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
-    vendor/liquid/prebuilt/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-    vendor/liquid/prebuilt/common/app/MarketUpdater.apk:system/app/MarketUpdater.apk \
-    vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
-    vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
-    vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
-    vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
-    vendor/liquid/prebuilt/common/app/Vending.apk:system/app/Vending.apk \
-    vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
+#    vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
+#    vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
+#    vendor/liquid/prebuilt/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
+#    vendor/liquid/prebuilt/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+#    vendor/liquid/prebuilt/common/app/MarketUpdater.apk:system/app/MarketUpdater.apk \
+#    vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
+#    vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+#    vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
+#    vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
+#    vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
+#    vendor/liquid/prebuilt/common/app/Vending.apk:system/app/Vending.apk \
+#    vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
 
 # library
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
-    vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-    vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
-    vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
-    vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so
+#    vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
+#    vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+#    vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+#    vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
+#    vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so
 
 # media
 PRODUCT_COPY_FILES += \
