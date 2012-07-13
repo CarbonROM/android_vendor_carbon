@@ -1,9 +1,6 @@
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
 
-# audio
-include frameworks/base/data/sounds/NewAudio.mk
-
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Hydra.ogg \
