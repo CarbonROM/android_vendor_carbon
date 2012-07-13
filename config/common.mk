@@ -55,7 +55,8 @@ PRODUCT_COPY_FILES += \
 
 # xbin
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su 
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
+    vendor/liquid/prebuilt/common/system/app/SuperSU.apk:system/app/SuperSU.apk
 
 # scripts
 PRODUCT_COPY_FILES += \
