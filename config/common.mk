@@ -3,7 +3,7 @@ PRODUCT_BRAND ?= liquid
 
 # build
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Liquid JB v2.0 Alpha 1.5"
+    BUILD_DISPLAY_ID="Liquid JB v2.0 Alpha 2"
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
