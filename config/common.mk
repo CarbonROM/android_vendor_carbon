@@ -3,12 +3,13 @@ PRODUCT_BRAND ?= liquid
 
 # build
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_DISPLAY_ID="Liquid JB v2.0 Alpha 2"
+    BUILD_DISPLAY_ID="JRO03C"
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.rommanager.developerid=liquid \
+    ro.modversion=Liquid JB v2.0 Alpha 2 \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
