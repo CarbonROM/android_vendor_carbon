@@ -8,3 +8,4 @@ add_lunch_combo liquid_targa-userdebug
 add_lunch_combo liquid_tf101-userdebug
 add_lunch_combo liquid_toro-userdebug
 add_lunch_combo liquid_ville-userdebug
+add_lunch_combo liquid_d2vzw-userdebug
