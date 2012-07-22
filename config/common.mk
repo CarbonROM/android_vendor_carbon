@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
 
 # xbin
 PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/system/app/SuperSU.apk:system/app/SuperSU.apk
 
 # scripts
@@ -62,7 +63,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "Alpha2"
+PRODUCT_VERSION_MAINTENANCE = "Alpha3"
 
 LiquidVersion := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
