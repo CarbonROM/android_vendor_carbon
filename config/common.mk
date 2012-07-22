@@ -25,12 +25,6 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     NoiseField
 
-# tmobile
-#PRODUCT_PACKAGES += \
-#    ThemeManager \
-#    ThemeChooser \
-#    com.tmobile.themes
-
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
@@ -40,19 +34,59 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
-    vendor/liquid/prebuilt/common/etc/init.d/90tweaks:system/etc/init.d/90tweaks
+    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
+    vendor/liquid/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
+# permissions
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
+    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml
+
+# framework
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    vendor/liquid/prebuilt/common/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar
+
+# google
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/app/Calendar.apk:system/app/Calendar.apk \
+    vendor/liquid/prebuilt/common/app/CalendarProvider.apk:system/app/CalendarProvider.apk \
+    vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
+    vendor/liquid/prebuilt/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
+    vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
+    vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk \
+    vendor/liquid/prebuilt/common/app/GmsCore.apk:system/app/GmsCore.apk \
+    vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+    vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
+    vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
+    vendor/liquid/prebuilt/common/app/GoogleEars.apk:system/app/GoogleEars.apk \
+    vendor/liquid/prebuilt/common/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
+    vendor/liquid/prebuilt/common/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
+    vendor/liquid/prebuilt/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+    vendor/liquid/prebuilt/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+    vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
+    vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
+    vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
+    vendor/liquid/prebuilt/common/app/PhoneSky.apk:system/app/PhoneSky.apk \
+    vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
+    vendor/liquid/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
+    vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
+    vendor/liquid/prebuilt/common/app/Velvet.apk:system/app/Velvet.apk \
+    vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
+
+# library
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
+    vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+    vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+    vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
+    vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so
 
 # media
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
-# xbin
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/liquid/prebuilt/common/system/app/SuperSU.apk:system/app/SuperSU.apk
 
 # scripts
 PRODUCT_COPY_FILES += \
@@ -63,7 +97,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "Alpha3"
+PRODUCT_VERSION_MAINTENANCE = "Alpha4"
 
 LiquidVersion := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 

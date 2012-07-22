@@ -13,4 +13,3 @@ PRODUCT_PACKAGES += \
   Mms \
   Music \
   MusicFX
-
