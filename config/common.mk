@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
-    vendor/liquid/prebuilt/common/app/PhoneSky.apk:system/app/PhoneSky.apk \
+    vendor/liquid/prebuilt/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
     vendor/liquid/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
