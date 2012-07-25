@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     NoiseField
 
+# audio
+include frameworks/base/data/sounds/NewAudio.mk
+
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
@@ -94,12 +97,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw 
 
-# Liquid Version
-
+# version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "Alpha4"
-
+PRODUCT_VERSION_MAINTENANCE = "Alpha"
 LiquidVersion := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
