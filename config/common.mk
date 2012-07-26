@@ -74,7 +74,6 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/liquid/prebuilt/common/app/Phonesky.apk:system/app/Phonesky.apk \
     vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/liquid/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
     vendor/liquid/prebuilt/common/app/Velvet.apk:system/app/Velvet.apk \
     vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
@@ -97,10 +96,10 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-#xbin
+#root
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/liquid/prebuilt/common/system/app/SuperSU.apk:system/app/SuperSU.apk
+    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
 
 # scripts
 PRODUCT_COPY_FILES += \
