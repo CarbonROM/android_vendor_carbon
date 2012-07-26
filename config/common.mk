@@ -92,6 +92,11 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+#xbin
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
+    vendor/liquid/prebuilt/common/system/app/SuperSU.apk:system/app/SuperSU.apk
+
 # scripts
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
@@ -100,7 +105,7 @@ PRODUCT_COPY_FILES += \
 # version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "Alpha"
+PRODUCT_VERSION_MAINTENANCE = "Alpha6"
 LiquidVersion := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
