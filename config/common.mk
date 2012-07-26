@@ -86,6 +86,11 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so
+    vendor/liquid/prebuilt/common/lib/libflint_engine_jni_api.so:system/lib/libflint_engine_jni_api.so
+    vendor/liquid/prebuilt/common/lib/libfrsdk.so:system/lib/libfrsdk.so
+    vendor/liquid/prebuilt/common/lib/libgcomm_jni.so:system/lib/libgcomm_jni.so
+    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so
+    vendor/liquid/prebuilt/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so
 
 # media
 PRODUCT_COPY_FILES += \
