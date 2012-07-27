@@ -98,7 +98,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-#root
+# root
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw 
 
-# T-Mobile theme engine
+# theme chooser
 PRODUCT_PACKAGES += \
        ThemeManager \
        ThemeChooser \
@@ -117,8 +117,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
        vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
-
-# version
+# liquid version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = "Beta1"
