@@ -54,10 +54,7 @@ PRODUCT_COPY_FILES += \
 
 # google
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/Calendar.apk:system/app/Calendar.apk \
-    vendor/liquid/prebuilt/common/app/CalendarProvider.apk:system/app/CalendarProvider.apk \
     vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GalleryGoogle.apk:system/app/GalleryGoogle.apk \
     vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
     vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk \
     vendor/liquid/prebuilt/common/app/GmsCore.apk:system/app/GmsCore.apk \
@@ -69,29 +66,27 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
     vendor/liquid/prebuilt/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
     vendor/liquid/prebuilt/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
+    vendor/liquid/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
     vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
     vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
     vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
     vendor/liquid/prebuilt/common/app/Phonesky.apk:system/app/Phonesky.apk \
+    vendor/liquid/prebuilt/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
     vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
+    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
     vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
-    vendor/liquid/prebuilt/common/app/Velvet.apk:system/app/Velvet.apk \
-    vendor/liquid/prebuilt/common/app/VoiceSearch.apk:system/app/VoiceSearch.apk
+    vendor/liquid/prebuilt/common/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk
 
 # library
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
     vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
     vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
+    vendor/liquid/prebuilt/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
-    vendor/liquid/prebuilt/common/lib/libflint_engine_jni_api.so:system/lib/libflint_engine_jni_api.so \
-    vendor/liquid/prebuilt/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
-    vendor/liquid/prebuilt/common/lib/libgcomm_jni.so:system/lib/libgcomm_jni.so \
-    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
     vendor/liquid/prebuilt/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
-    vendor/liquid/prebuilt/common/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
-    vendor/liquid/prebuilt/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so
+    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so
 
 # media
 PRODUCT_COPY_FILES += \
@@ -100,8 +95,7 @@ PRODUCT_COPY_FILES += \
 
 # root
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su
 
 # scripts
 PRODUCT_COPY_FILES += \
