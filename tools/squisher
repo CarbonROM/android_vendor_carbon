@@ -78,7 +78,7 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTFILE=$OUT/LiquidSmoothRoms-$MODVERSION.zip
+OUTFILE=$OUT/$MODVERSION__$TARGET.zip
 echo MODVERSION: $MODVERSION
 
 # Pack it up and sign
