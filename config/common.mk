@@ -45,12 +45,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
     vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml
+    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+    vendor/liquid/prebuilt/common/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml
 
 # framework
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    vendor/liquid/prebuilt/common/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar
+    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+    vendor/liquid/prebuilt/common/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
 
 # google
 PRODUCT_COPY_FILES += \
@@ -79,14 +81,18 @@ PRODUCT_COPY_FILES += \
 
 # library
 PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/lib/libwvm.so:system/lib/libwvm.so \
+    vendor/liquid/prebuilt/common/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
     vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
     vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
+    vendor/liquid/prebuilt/common/lib/libdrmwvmplugin.so:system/lib/libdrmwvmplugin.so \
     vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/liquid/prebuilt/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
     vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
     vendor/liquid/prebuilt/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
-    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so
+    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
+    vendor/liquid/prebuilt/common/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so
 
 # media
 PRODUCT_COPY_FILES += \
