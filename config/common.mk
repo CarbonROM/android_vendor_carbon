@@ -18,13 +18,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    AppWidgetPicker \
     LiveWallpapers \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
     Galaxy4 \
     PhaseBeam \
-    NoiseField
+    NoiseField \
+    Torch
 
 # audio
 include frameworks/base/data/sounds/NewAudio.mk
