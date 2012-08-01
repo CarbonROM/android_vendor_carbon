@@ -14,7 +14,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=true \
     ro.media.enc.jpeg.quality=100 \
     ro.kernel.android.checkjni=0 \
-    persist.sys.camera-sound=1
+    persist.sys.camera-sound=1 \
+    drm.service.enabled=true
 
 # packages
 PRODUCT_PACKAGES += \
@@ -41,57 +42,12 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
     vendor/liquid/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
-# permissions
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
-    vendor/liquid/prebuilt/common/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml
-
-# framework
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    vendor/liquid/prebuilt/common/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-    vendor/liquid/prebuilt/common/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
-
-# google
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GenieWidget.apk:system/app/GenieWidget.apk \
-    vendor/liquid/prebuilt/common/app/Gmail.apk:system/app/Gmail.apk \
-    vendor/liquid/prebuilt/common/app/GmsCore.apk:system/app/GmsCore.apk \
-    vendor/liquid/prebuilt/common/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
-    vendor/liquid/prebuilt/common/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
-    vendor/liquid/prebuilt/common/app/GoogleEars.apk:system/app/GoogleEars.apk \
-    vendor/liquid/prebuilt/common/app/GoogleFeedback.apk:system/app/GoogleFeedback.apk \
-    vendor/liquid/prebuilt/common/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
-    vendor/liquid/prebuilt/common/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
-    vendor/liquid/prebuilt/common/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-    vendor/liquid/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    vendor/liquid/prebuilt/common/app/MediaUploader.apk:system/app/MediaUploader.apk \
-    vendor/liquid/prebuilt/common/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
-    vendor/liquid/prebuilt/common/app/OneTimeInitializer.apk:system/app/OneTimeInitializer.apk \
-    vendor/liquid/prebuilt/common/app/Phonesky.apk:system/app/Phonesky.apk \
-    vendor/liquid/prebuilt/common/app/QuickSearchBox.apk:system/app/QuickSearchBox.apk \
-    vendor/liquid/prebuilt/common/app/SetupWizard.apk:system/app/SetupWizard.apk \
-    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
-    vendor/liquid/prebuilt/common/app/Talk.apk:system/app/Talk.apk \
-    vendor/liquid/prebuilt/common/app/VoiceSearchStub.apk:system/app/VoiceSearchStub.apk
-
-# library
+# drm
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/lib/libwvm.so:system/lib/libwvm.so \
     vendor/liquid/prebuilt/common/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
-    vendor/liquid/prebuilt/common/lib/libpicowrapper.so:system/lib/libpicowrapper.so \
-    vendor/liquid/prebuilt/common/lib/libvoicesearch.so:system/lib/libvoicesearch.so \
-    vendor/liquid/prebuilt/common/lib/libdrmwvmplugin.so:system/lib/libdrmwvmplugin.so \
-    vendor/liquid/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
-    vendor/liquid/prebuilt/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so \
-    vendor/liquid/prebuilt/common/lib/libvideochat_jni.so:system/lib/libvideochat_jni.so \
-    vendor/liquid/prebuilt/common/lib/libvideochat_stabilize.so:system/lib/libvideochat_stabilize.so \
-    vendor/liquid/prebuilt/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
-    vendor/liquid/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
+    vendor/liquid/prebuilt/common/lib/libWVphoneAPI.so:system/lib/libWVphoneAPI.so \
+    vendor/liquid/prebuilt/common/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
     vendor/liquid/prebuilt/common/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so
 
 # media
@@ -101,7 +57,8 @@ PRODUCT_COPY_FILES += \
 
 # root
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su
+    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
+    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
 
 # scripts
 PRODUCT_COPY_FILES += \
