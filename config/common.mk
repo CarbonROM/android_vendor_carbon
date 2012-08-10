@@ -39,8 +39,7 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
-    vendor/liquid/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
+    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
 # drm
 PRODUCT_COPY_FILES += \
