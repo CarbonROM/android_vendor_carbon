@@ -2,12 +2,12 @@
 Getting Started
 ---------------
 
-To get started with LiquidSmoothROMs, you'll need to get familiar
+To get started with LiquidSmooth, you'll need to get familiar
 with [Git and Repo](http://source.android.com/download/using-repo)
 
-Initialize your local repository using LiquidSmoothROMs, use this command:
+Initialize your local repository using LiquidSmooth, use this command:
 
-    repo init -u git://github.com/LiquidSmoothROMs/android.git -b jb
+    repo init -u git://github.com/LiquidSmooth/android.git -b jb
 
 Then sync up:
 

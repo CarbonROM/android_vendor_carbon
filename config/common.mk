@@ -13,9 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.media.enc.jpeg.quality=100 \
-    ro.kernel.android.checkjni=0 \
-    persist.sys.camera-sound=1 \
-    drm.service.enabled=true
+    ro.kernel.android.checkjni=0
 
 # packages
 PRODUCT_PACKAGES += \
@@ -27,6 +25,12 @@ PRODUCT_PACKAGES += \
     NoiseField \
     Torch
 
+# tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs
+
 # audio
 include frameworks/base/data/sounds/NewAudio.mk
 
@@ -37,7 +41,11 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# etc
+# export
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+
+# gps
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
@@ -51,19 +59,17 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
 
+# sip
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
 # scripts
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw 
+    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw
 
 # theme chooser
-PRODUCT_PACKAGES += \
-       ThemeManager \
-       ThemeChooser \
-       com.tmobile.themes
-
-PRODUCT_COPY_FILES += \
-       vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+include vendor/liquid/config/theme_chooser.mk
 
 # liquid version
 PRODUCT_VERSION_MAJOR = v2
