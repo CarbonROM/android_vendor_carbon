@@ -17,7 +17,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Camera \
     LiveWallpapers \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
@@ -41,10 +40,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 # binary
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
-
-# export
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
 # gps
 PRODUCT_COPY_FILES += \
