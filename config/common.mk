@@ -41,14 +41,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
-# drm
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libwvm.so:system/lib/libwvm.so \
-    vendor/liquid/prebuilt/common/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
-    vendor/liquid/prebuilt/common/lib/libWVphoneAPI.so:system/lib/libWVphoneAPI.so \
-    vendor/liquid/prebuilt/common/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
-    vendor/liquid/prebuilt/common/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so
-
 # media
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
