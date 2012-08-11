@@ -11,8 +11,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
+# media
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+
 # packages
 PRODUCT_PACKAGES += \
-  Camera \
-  Mms
+  Mms \
+  Stk
 
