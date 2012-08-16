@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2012, Cyanogenmod
+** Copyright 2012, The LiquidSmooth Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 ** limitations under the License.
 */
 -->
-
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
 <apns version="7">
@@ -29,8 +28,7 @@
   <apn carrier="Boost MMS" mcc="505" mnc="02" apn="mms" user="" password="" server="" proxy="61.88.190.10" port="8070" mmsc="http://mmsc.optus.com.au:8002/" mmsproxy="61.88.190.10" mmsport="8070" type="mms" authtype="3"/>
   <apn carrier="Boost Mobile" mcc="505" mnc="02" apn="yesinternet" user="" password="" server="" proxy="" port="" mmsc="" mmsproxy="" mmsport="" type="default,supl" authtype="3"/>
 
-
-<!-- Sprint -->
+  <!-- Sprint -->
   <!-- Modify Apn database for Sprint CDMA MMS support -->
   <apn carrier="Sprint" mcc="310" mnc="120" apn="Sprint" user="Sprint" server="*" password="*" mmsc="http://mms.sprintpcs.com" authtype="3"/>
 
@@ -41,7 +39,7 @@
   <apn carrier="LTE - SPRINT test ISP" mcc="001" mnc="010" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - SPRINT test OTA" mcc="001" mnc="010" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="LTE - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
-<!-- END modify Apn database for Sprint LTE support -->
+  <!-- END modify Apn database for Sprint LTE support -->
 
   <!-- Modify Apn database for Sprint EHRPD support -->
   <apn carrier="EHRPD - SPRINT test ISP" mcc="001" mnc="01" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
@@ -52,18 +50,13 @@
   <apn carrier="EHRPD - SPRINT test PAM" mcc="001" mnc="010" apn="pamsn" type="dun" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <!-- END modify Apn database for Sprint EHRPD support -->
 
-  <!-- Sprint LTE/eHRPD: These apns are added then programmatically removed in S3 LG8 build. -->
-  <!--<apn carrier="LTE - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />-->
-  <!--<apn carrier="EHRPD - SPRINT OTA" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />-->
-
   <!-- Sprint LTE/eHRPD: Programmatically added in S3 LG8 build. -->
   <apn carrier="APN0 LTE ota" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="APN0 EHRPD ota" mcc="310" mnc="120" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="APN2 LTE internet" mcc="310" mnc="120" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <apn carrier="APN2 EHRPD internet" mcc="310" mnc="120" apn="n.ispsn" type="default,mms" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
-<!-- END Sprint -->
 
-<!-- Verizon Wireless -->
+  <!-- Verizon Wireless -->
   <!-- Modify Apn database for VZW CDMA MMS, internet, cbs, fota, and ims support -->
   <apn carrier="Verizon" mcc="310" mnc="004" apn="internet" type="default,mms,dun" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" />
   <apn carrier="Verizon Internet" mcc="310" mnc="004" apn="VZWINTERNET" type="default,dun" protocol="IPV4V6" roaming_protocol="IPV4V6" />
@@ -126,5 +119,4 @@
   <apn carrier="EHRPD - VZW Test IMS" mcc="246" mnc="081" apn="VZWIMS" type="ims" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <apn carrier="EHRPD - VZW Test CBS" mcc="246" mnc="081" apn="VZWAPP" type="cbs,mms" mmsc="http://mms.vtext.com/servlets/mms" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
   <!-- END modify Apn database for VZW EHRPD support -->
-<!-- END Verizon Wireless -->
 </apns>
