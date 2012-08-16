@@ -4,7 +4,7 @@ PRODUCT_PACKAGES += \
        ThemeChooser \
        com.tmobile.themes
 
-# permission
+# theme chooser
 PRODUCT_COPY_FILES += \
-       vendor/liquid/prebuilt/common/etc/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
+       vendor/liquid/config/permissions/com.tmobile.software.themes.xml:system/etc/permissions/com.tmobile.software.themes.xml
 
