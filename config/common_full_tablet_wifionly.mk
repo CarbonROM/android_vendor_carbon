@@ -9,6 +9,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
-# Commenting out because we use the frameworks/base boot animation
-#	vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+
+	vendor/carbon/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
 endif
