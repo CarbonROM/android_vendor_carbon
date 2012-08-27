@@ -33,13 +33,13 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
-# theme chooser
+# themes
 include vendor/liquid/config/theme_chooser.mk
 
-# common overlay
+# overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
-# language packs
+# languages
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
 # binary
@@ -73,10 +73,9 @@ PRODUCT_COPY_FILES += \
 # version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "Beta3"
-PRODUCT_VERSION := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
+PRODUCT_VERSION_MAINTENANCE = "RC1"
+LIQUID_VERSION := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=$(PRODUCT_VERSION)
-
+    ro.modversion=$(LIQUID_VERSION)
 
