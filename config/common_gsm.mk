@@ -11,5 +11,5 @@ PRODUCT_COPY_FILES += \
 
 # gsm apns
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/apns-conf-gsm.xml:system/etc/apns-conf.xml
+    vendor/liquid/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 

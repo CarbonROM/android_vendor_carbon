@@ -1,6 +1,8 @@
 # brand
 PRODUCT_BRAND ?= liquid
 
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -31,10 +33,13 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
-# overlay
+# theme chooser
+include vendor/liquid/config/theme_chooser.mk
+
+# common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
-# language
+# language packs
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
 # binary
@@ -65,21 +70,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml
 
-# theme chooser
-include vendor/liquid/config/theme_chooser.mk
-
-# sound files
-include frameworks/base/data/sounds/NewAudio.mk
-
 # version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = "Beta3"
-LiquidVersion = "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
+PRODUCT_VERSION := "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=$(LiquidVersion) \
-    ro.config.ringtone=Hydra.ogg \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg
+    ro.modversion=$(PRODUCT_VERSION)
+
 
