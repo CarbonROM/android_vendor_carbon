@@ -95,7 +95,8 @@ rm -rf $REPACK/ota/recovery
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT.zip
+TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
+OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 echo MODVERSION: $MODVERSION
 
 # Pack it up and sign
