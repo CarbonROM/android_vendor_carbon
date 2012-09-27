@@ -1,6 +1,9 @@
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
 
+# drm
+$(call inherit-product, vendor/liquid/config/common_drm_phone.mk)
+
 # audio
 include frameworks/base/data/sounds/NewAudio.mk
 

@@ -16,6 +16,7 @@
 ** limitations under the License.
 */
 -->
+
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
 <apns version="7">
@@ -26,6 +27,7 @@
   <apn carrier="Virgin Mobile US" mcc="311" mnc="490" apn="0" mmsproxy="205.239.233.136" mmsport="81" mmsc="http://mmsc.vmobl.com:8088/mms?" port="" type="mms" />
   <apn carrier="Boost MMS" mcc="505" mnc="02" apn="mms" user="" password="" server="" proxy="61.88.190.10" port="8070" mmsc="http://mmsc.optus.com.au:8002/" mmsproxy="61.88.190.10" mmsport="8070" type="mms" authtype="3"/>
   <apn carrier="Boost Mobile" mcc="505" mnc="02" apn="yesinternet" user="" password="" server="" proxy="" port="" mmsc="" mmsproxy="" mmsport="" type="default,supl" authtype="3"/>
+
 
 <!-- Sprint -->
   <!-- Modify Apn database for Sprint CDMA MMS support -->
@@ -134,4 +136,5 @@
   <apn carrier="LTE - USCC INTERNET 2" mcc="311" mnc="225" apn="usccinternet" type="default,dun,mms,fota" mmsc="http://mmsc1.uscc.net/mmsc/MMS" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
   <!-- END modify Apn database for USCC LTE support -->
 <!-- END US Cellular -->
+
 </apns>

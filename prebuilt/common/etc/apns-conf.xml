@@ -16,6 +16,7 @@
 ** limitations under the License.
 */
 -->
+
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
 <apns version="7">
@@ -332,7 +333,7 @@
   <apn carrier="Bite LV Internet" mcc="247" mnc="05" apn="internet" type="default,supl" />
   <apn carrier="Bite MMS" mcc="247" mnc="05" apn="mms" mmsc="http://mmsc" mmsproxy="192.168.150.2" mmsport="8080" type="mms" />
   <apn carrier="EMT" mcc="248" mnc="01" apn="internet.emt.ee" type="default,supl" />
-  <apn carrier="EMT MMS" mcc="248" mnc="01" apn="mms.emt.ee" mmsc="http://mms.emt.ee/servlets/mms" type="mms" />
+  <apn carrier="EMT MMS" mcc="248" mnc="01" apn="mms.emt.ee" mmsc="http://mms.emt.ee/servlets/mms" mmsproxy="217.71.32.82" mmsport="8080" type="mms" />
   <apn carrier="Elisa EE" mcc="248" mnc="02" apn="internet" type="default,supl" />
   <apn carrier="Elisa EE MMS" mcc="248" mnc="02" apn="mms" mmsc="http://194.204.2.10" mmsproxy="194.204.2.6" mmsport="8080" type="mms" />
   <apn carrier="Tele2 EE" mcc="248" mnc="03" apn="internet.tele2.ee" user="wap" password="wap" type="default,supl" />
@@ -535,6 +536,7 @@
   <apn carrier="Rogers" mcc="302" mnc="720" apn="rogers-core-appl1.apn" mmsc="http://mms.gprs.rogers.com" mmsproxy="10.128.1.69" mmsport="80" type="default,supl,mms" />
   <apn carrier="Rogers Tethering" mcc="302" mnc="720" apn="isp.apn" type="default,supl" />
   <apn carrier="Rogers WAP" mcc="302" mnc="720" apn="internet.com" password="wap" type="default,supl,mms" />
+  <apn carrier="Rogers LTE" mcc="302" mnc="720" apn="ltemobile.apn" port="80" mmsc="http://mms.gprs.rogers.com" mmsproxy="10.128.1.69" type="default,supl,mms"/>
   <apn carrier="Sasktel 3G" mcc="302" mnc="780" apn="inet.stm.sk.ca" type="default,supl" />
   <apn carrier="Sasktel MMS" mcc="302" mnc="780" apn="proxy.stm.sk.ca" port="80" mmsc="http://mms.sasktel.com" mmsproxy="mig.sasktel.com" mmsport="80" type="mms" />
   <apn carrier="Verizon" mcc="310" mnc="004" apn="internet" user="*" password="*" server="*" mmsc="http://mms.vtext.com/servlets/mms" type="default,supl,mms" />
@@ -1067,6 +1069,8 @@
   <apn carrier="SMC-Voda Internet" mcc="454" mnc="06" apn="SmarTone-Vodafone" mmsc="http://mms.smartone-vodafone.com/server" mmsproxy="10.9.9.9" mmsport="8080" type="default,supl,mms" />
   <apn carrier="CSL Data" mcc="454" mnc="10" apn="hkcsl" proxy="192.168.59.51" port="8080" mmsc="http://192.168.58.171:8002/" mmsproxy="192.168.59.51" mmsport="8080" type="default,supl,mms" />
   <apn carrier="one2free 2G" mcc="454" mnc="10" apn="hkcsl" mmsc="http://192.168.58.171:8002" mmsproxy="192.168.59.51" mmsport="8080" type="default,supl,mms" />
+  <apn carrier="one2free (mobile)" mcc="454" mnc="00" apn="mobile" mmsc="http://192.168.58.171:8002" mmsproxy="192.168.59.51" mmsport="8080" type="default,mms,hipri"/>
+  <apn carrier="one2free tethering" mcc="454" mnc="00" apn="lte.internet" type="dun" />
   <apn carrier="PEOPLES MMS" mcc="454" mnc="12" apn="170170" mmsc="http://mms.peoples.com.hk/mms" mmsproxy="172.31.31.36" mmsport="8080" type="mms" />
   <apn carrier="China Mobile HK MMS" mcc="454" mnc="12" apn="peoples.mms" mmsc="http://mms.peoples.com.hk/mms" mmsproxy="172.31.31.36" mmsport="8080" type="mms" />
   <apn carrier="PEOPLES" mcc="454" mnc="12" apn="peoples.net" type="default,supl" />
@@ -1389,4 +1393,5 @@
   <apn carrier="MD MOLDCELL" mcc="259" mnc="02" apn="mms" mmsproxy="010.000.010.010" mmsport="9401" mmsc="http://mms.moldcell.md/cmmsc/post" type="mms" />
   <apn carrier="ORANGE INTERNET" mcc="259" mnc="01" apn="wap.orange.md" type="default,supl" />
   <apn carrier="ORANGE MMS" mcc="259" mnc="01" apn="mms.orange.md" mmsproxy="192.168.127.125" mmsport="3128" mmsc="http://mms/mmsc" type="mms" />
+  <apn carrier="Virgin Mobile CL" mcc="730" mnc="07" apn="imovil.virginmobile.cl" type="default" />
 </apns>

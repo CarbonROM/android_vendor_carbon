@@ -7,5 +7,6 @@
     <!-- Location services -->
     <string name="config_networkLocationProviderPackageName">com.google.android.location</string>
     <string name="config_geocodeProviderPackageName">com.google.android.location</string>
+    <string name="default_wallpaper_component" translatable="false">@null</string>
 </resources>
 

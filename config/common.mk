@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # packages
 PRODUCT_PACKAGES += \
     Camera \
+    MusicFX \
     LiveWallpapers \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
@@ -40,33 +41,52 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 # languages
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
 
-# binary
+# bin
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# script
+# etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw
+    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
+    vendor/liquid/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
-# gps
+# chron
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf
+    vendor/liquid/prebuilt/common/etc/cron/cron.conf:system/etc/cron/cron.conf \
+    vendor/liquid/prebuilt/common/etc/cron/cron.hourly/00drop_caches:system/etc/cron/cron.hourly/00drop_caches \
+    vendor/liquid/prebuilt/common/etc/cron/cron.daily/00drop_caches:system/etc/cron/cron.daily/00drop_caches \
+    vendor/liquid/prebuilt/common/etc/cron/cron.weekly/00drop_caches:system/etc/cron/cron.weekly/00drop_caches \
+    vendor/liquid/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
+    vendor/liquid/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
+    vendor/liquid/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache
 
-# root
+# initd
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/liberty.bsh:system/etc/liberty.bsh \
+    vendor/liquid/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/liquid/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/liquid/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/liquid/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/liquid/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/liquid/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/liquid/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/liquid/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/liquid/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/liquid/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/liquid/prebuilt/common/etc/init_trigger.disabled:system/etc/init_trigger.disabled
+
+# prebuilt
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk
-
-# media
-PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# permissions
+# sip/voip
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # version
 PRODUCT_VERSION_MAJOR = v2
