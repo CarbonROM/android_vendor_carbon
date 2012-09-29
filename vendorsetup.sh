@@ -4,6 +4,7 @@ add_lunch_combo liquid_d2tmo-userdebug
 add_lunch_combo liquid_d2usc-userdebug
 add_lunch_combo liquid_d2vzw-userdebug
 add_lunch_combo liquid_grouper-userdebug
+add_lunch_combo liquid_i9100-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_mecha-userdebug
