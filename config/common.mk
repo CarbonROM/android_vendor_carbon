@@ -19,6 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Apollo \
     Camera \
+    DSPManager \
     MusicFX \
     Torch \
     LiveWallpapers \
