@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     Camera \
     MusicFX \
+    Torch \
     LiveWallpapers \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
