@@ -17,7 +17,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Apollo \
     Camera \
     MusicFX \
     Torch \
