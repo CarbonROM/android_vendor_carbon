@@ -82,7 +82,6 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
-    vendor/liquid/prebuilt/common/app/FileExplorer.apk:system/app/FileExplorer.apk \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
