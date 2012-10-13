@@ -89,6 +89,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# nfc enhanced
+PRODUCT_COPY_FILES += \
+    vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
+
 # version
 PRODUCT_VERSION_MAJOR = v2
 PRODUCT_VERSION_MINOR = 0

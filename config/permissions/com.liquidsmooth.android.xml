@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<!-- This feature shows that this is LiquidSmooth -->
+<!-- This feature shows that this is LiquidSmooth based -->
 <permissions>
     <feature name="com.liquidsmooth.android" />
 </permissions>
