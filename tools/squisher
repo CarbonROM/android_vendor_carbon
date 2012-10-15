@@ -4,7 +4,7 @@
 # cyanogen
 #
 
-. $ANDROID_BUILD_TOP/vendor/cm/tools/functions
+. $ANDROID_BUILD_TOP/vendor/liquid/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
