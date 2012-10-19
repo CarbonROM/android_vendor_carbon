@@ -36,9 +36,6 @@ PRODUCT_PACKAGES += \
 # themes
 include vendor/liquid/config/theme_chooser.mk
 
-# paranoid
-include vendor/liquid/config/common_paranoid.mk
-
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
