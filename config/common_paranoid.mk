@@ -7,10 +7,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/$(TARGET_PRODUCT)
 
-# prebuilt
-PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/app/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-
 # target
 ifneq ($(OVERLAY_TARGET),)
     PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/$(OVERLAY_TARGET)
