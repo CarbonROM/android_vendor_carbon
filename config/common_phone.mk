@@ -15,7 +15,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-  Mms
+  Mms \
+  Torch
 
 # bluetooth
 PRODUCT_COPY_FILES += \

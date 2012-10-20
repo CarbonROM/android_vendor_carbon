@@ -19,7 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Camera \
     MusicFX \
-    Torch \
     LiveWallpapers \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
