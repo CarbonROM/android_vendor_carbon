@@ -1,8 +1,8 @@
-# packages
-PRODUCT_PACKAGES += \
-    Stk
+# gps
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/common/etc/gps-cdma.conf:system/etc/gps.conf
 
-# cdma apns
+# apns
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml
 

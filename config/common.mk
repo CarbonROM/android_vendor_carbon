@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf \
     vendor/liquid/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # chron
