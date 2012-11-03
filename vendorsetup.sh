@@ -14,3 +14,5 @@ add_lunch_combo liquid_skyrocket-userdebug
 add_lunch_combo liquid_tf101-userdebug
 add_lunch_combo liquid_tf700t-userdebug
 add_lunch_combo liquid_toro-userdebug
+add_lunch_combo liquid_tenderloin-userdebug
+
