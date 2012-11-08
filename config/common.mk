@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # packages
 PRODUCT_PACKAGES += \
     Camera \
+    CMFileManager \
     MusicFX \
     LiveWallpapers \
     HoloSpiralWallpaper \
