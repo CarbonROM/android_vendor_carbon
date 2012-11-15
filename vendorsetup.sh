@@ -10,6 +10,7 @@ add_lunch_combo liquid_i9100-userdebug
 add_lunch_combo liquid_i9300-userdebug
 add_lunch_combo liquid_maguro-userdebug
 add_lunch_combo liquid_n7000-userdebug
+add_lunch_combo liquid_n7100-userdebug
 add_lunch_combo liquid_quincyatt-userdebug
 add_lunch_combo liquid_skyrocket-userdebug
 add_lunch_combo liquid_tenderloin-userdebug
