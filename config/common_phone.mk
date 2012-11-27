@@ -18,8 +18,7 @@ PRODUCT_COPY_FILES += \
 # packages
 PRODUCT_PACKAGES += \
   Mms \
-  Stk \
-  Torch
+  Stk
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \

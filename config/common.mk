@@ -33,8 +33,12 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
+# liquid
+PRODUCT_PACKAGES += \
+    SuperSU
+
 # themes
-include vendor/liquid/config/theme_chooser.mk
+#include vendor/liquid/config/theme_chooser.mk
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
@@ -80,7 +84,6 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
     vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/liquid/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
     vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
