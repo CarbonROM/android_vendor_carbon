@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
     SuperSU
 
 # themes
-#include vendor/liquid/config/theme_chooser.mk
+include vendor/liquid/config/theme_chooser.mk
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
