@@ -12,11 +12,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
     drm.service.enabled=true
+    camera.flash_off=0
 
 # packages
 PRODUCT_PACKAGES += \
     Camera \
     Galaxy4 \
+    GoogleCalendarSyncAdapter \
     LockClock \
     HoloSpiralWallpaper \
     LatinImeGoogle \
