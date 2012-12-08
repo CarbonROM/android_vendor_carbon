@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     MusicFX \
     LiveWallpapers \
     LatinImeGoogle \
+    NovaLauncher \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
     Galaxy4 \
