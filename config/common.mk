@@ -17,10 +17,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Camera \
-    FileManager \
+    Camera \\
     MusicFX \
     LiveWallpapers \
+    LatinImeGoogle \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
     Galaxy4 \
@@ -44,7 +44,8 @@ include vendor/liquid/config/theme_chooser.mk
 PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 # languages
-PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/dictionaries
+PRODUCT_COPY_FILES += \
+vendor/aokp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
 
 # bin
 PRODUCT_COPY_FILES += \
@@ -96,9 +97,9 @@ PRODUCT_COPY_FILES += \
     vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
 
 # version
-PRODUCT_VERSION_MAJOR = v2
+PRODUCT_VERSION_MAJOR = v2.1
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = "RC8"
+PRODUCT_VERSION_MAINTENANCE = "Alpha4"
 LiquidVersion = "Liquid-JB"-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
