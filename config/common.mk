@@ -21,7 +21,6 @@ PRODUCT_PACKAGES += \
     MusicFX \
     LiveWallpapers \
     LatinImeGoogle \
-    NovaLauncher \
     HoloSpiralWallpaper \
     LiveWallpapersPicker \
     Galaxy4 \
@@ -36,6 +35,7 @@ PRODUCT_PACKAGES += \
 
 # liquid
 PRODUCT_PACKAGES += \
+    NovaLauncher \
     SuperSU
 
 # themes
