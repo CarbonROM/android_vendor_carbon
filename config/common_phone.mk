@@ -1,5 +1,5 @@
 # audio
-include frameworks/base/data/sounds/AllAudio.mk
+include frameworks/base/data/sounds/NewAudio.mk
 
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
