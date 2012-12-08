@@ -18,14 +18,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # packages
 PRODUCT_PACKAGES += \
     Camera \
-    MusicFX \
-    LiveWallpapers \
-    LatinImeGoogle \
-    HoloSpiralWallpaper \
-    LiveWallpapersPicker \
     Galaxy4 \
-    PhaseBeam \
-    NoiseField
+    HoloSpiralWallpaper \
+    LatinImeGoogle \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    MusicFX \
+    NoiseField \
+    PhaseBeam
 
 # tools
 PRODUCT_PACKAGES += \
