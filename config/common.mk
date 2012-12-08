@@ -45,7 +45,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
 
 # languages
 PRODUCT_COPY_FILES += \
-vendor/aokp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
 
 # bin
 PRODUCT_COPY_FILES += \
