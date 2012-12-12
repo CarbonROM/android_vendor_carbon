@@ -1,5 +1,8 @@
 # audio
-include frameworks/base/data/sounds/AllAudio.mk
+include frameworks/base/data/sounds/NewAudio.mk
+
+# Extra Ringtones
+include frameworks/base/data/sounds/AudioPackageNewWave.mk
 
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
