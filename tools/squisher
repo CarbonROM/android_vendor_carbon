@@ -25,15 +25,6 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-if [ "$TARGET_BUILD_TYPE" = "debug" ]; then
-    OTAPACKAGE=$OUT/${TARGET_PRODUCT}_debug-ota-$TARGET_BUILD_VARIANT.$USER.zip
-elif [ "$TARGET_BUILD_VARIANT" = "userdebug" ]; then
-    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip
-elif [ "$TARGET_BUILD_VARIANT" = "user" ]; then
-    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-eng.$USER.zip
-else
-    OTAPACKAGE=$OUT/$TARGET_PRODUCT-ota-$TARGET_BUILD_VARIANT.$USER.zip
-fi
 if [ ! -f "$OTAPACKAGE" ]; then
 	echo -e $CL_RED"$OTAPACKAGE doesn't exist!"$CL_RST;
 	exit 1
@@ -96,7 +87,7 @@ rm -rf $REPACK/ota/recovery
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
+MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST

@@ -4,13 +4,11 @@
          do this is a no-op unless the below item is true -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
-    <string name="default_wallpaper_component" translatable="false">@null</string>
-
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
-        <!-- The Google Network Location Services location provider -->
+        <!-- The Google provider -->
         <item>com.google.android.location</item>
-</string-array>
+    </string-array>
 </resources>
 
