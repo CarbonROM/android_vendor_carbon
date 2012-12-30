@@ -11,8 +11,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
-    ro.media.enc.jpeg.quality=100 \
-    ro.kernel.android.checkjni=0 \
     drm.service.enabled=true
 
 # packages
@@ -23,7 +21,6 @@ PRODUCT_PACKAGES += \
     LatinImeGoogle \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MusicFX \
     NoiseField \
     PhaseBeam
 
