@@ -17,6 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Camera \
     Galaxy4 \
+    LockClock \
     HoloSpiralWallpaper \
     LatinImeGoogle \
     LiveWallpapers \
