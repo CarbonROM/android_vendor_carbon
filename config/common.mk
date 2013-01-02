@@ -23,18 +23,15 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     NoiseField \
-    PhaseBeam
+    NovaLauncher \
+    PhaseBeam \
+    SuperSU
 
 # tools
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs
-
-# liquid
-PRODUCT_PACKAGES += \
-    NovaLauncher \
-    SuperSU
 
 # themes
 include vendor/liquid/config/theme_chooser.mk
