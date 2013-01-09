@@ -78,7 +78,18 @@ PRODUCT_COPY_FILES += \
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 1
 LIQUID_VERSION_STATE = "Beta2"
-LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+
+ifeq ($(RELEASE),true)
+    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+else
+    LIQUID_VERSION := "Liquid-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
+endif
+
+# goo.im properties
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.goo.developerid=liquidsmooth \
+  ro.goo.rom=liquidsmoothJB2 \
+  ro.goo.version=$(shell date +%0d%^b%Y-%H%M%S)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.liquid.version=$(LIQUID_VERSION)
