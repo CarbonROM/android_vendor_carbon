@@ -10,24 +10,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false \
-    drm.service.enabled=true
-    camera.flash_off=0
+    ro.com.android.dataroaming=false
 
 # packages
 PRODUCT_PACKAGES += \
     Camera \
     Galaxy4 \
-    GoogleCalendarSyncAdapter \
-    LockClock \
     HoloSpiralWallpaper \
-    LatinImeGoogle \
     LiveWallpapers \
     LiveWallpapersPicker \
     NoiseField \
+    PhaseBeam
+
+# prebuilts
+PRODUCT_PACKAGES += \
+    LatinIME \
+    LockClock \
     NovaLauncher \
-    PhaseBeam \
-    SuperSU
+    Superuser
 
 # tools
 PRODUCT_PACKAGES += \
@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 # version
 LIQUID_VERSION_MAJOR = 2
 LIQUID_VERSION_MINOR = 1
-LIQUID_VERSION_STATE = "Beta2"
+LIQUID_VERSION_STATE = "Beta3"
 
 ifeq ($(RELEASE),true)
     LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)

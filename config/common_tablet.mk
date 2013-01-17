@@ -4,9 +4,6 @@ include frameworks/base/data/sounds/NewAudio.mk
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
 
-# drm
-$(call inherit-product, vendor/liquid/config/common_drm_tablet.mk)
-
 # gps
 PRODUCT_COPY_FILES += \
     vendor/liquid/prebuilt/common/etc/gps.conf:system/etc/gps.conf

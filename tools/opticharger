@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Super-mega opticharger of doom
 # Shrinks apks by running pngcrush or optipng or pngout on png images
@@ -14,7 +14,6 @@ QUIET=1
 BASE=`pwd`
 BRUTECRUSH="-brute"
 TMPDIR=/tmp/opticharge-$$
-
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/functions
 
 if [ -z "$BRUTE_PNGCRUSH" ]
@@ -47,7 +46,7 @@ if [ "$(which pngcrush)" != "" ];
 then
     optimize_png () {
         pngcrush -q ${BRUTECRUSH} $1 ${1}.out 1> /dev/null 2> /dev/null
-        mv ${1}.out ${1} 2> /dev/null
+        mv ${1}.out ${1}
     }
 elif [ "$(which optipng)" != "" ];
 then

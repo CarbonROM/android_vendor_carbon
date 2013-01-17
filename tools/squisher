@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Squish a CM otapackage for distribution
 # cyanogen
 #
-
 . $ANDROID_BUILD_TOP/vendor/liquid/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
@@ -25,10 +24,84 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-if [ ! -f "$OTAPACKAGE" ]; then
-	echo -e $CL_RED"$OTAPACKAGE doesn't exist!"$CL_RST;
-	exit 1
-fi
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/liquid/tools/opticharger
+QUIET=-q
+DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
+DELETE_LIBS="libc_malloc_debug_leak.so libc_malloc_debug_qemu.so"
+DELETE_FONTS="MTLmr3m.ttf NanumGothic.ttf"
+DELETE_MEDIA="*.qmg"
+
+REPACK=$OUT/repack.d
+printf "Sanitizing Environment..."
+rm -rf $REPACK
+mkdir -p $REPACK
+echo
+
+# Unpack the otapackage and opticharge all apks
+mkdir $REPACK/ota
+(
+cd $REPACK/ota
+printf "Unpacking $OTAPACKAGE..."
+unzip $QUIET $OTAPACKAGE
+echo
+
+# Move all apks to the same directory so xargs can
+# use also with framework-res.apk. This allow process
+# framework-res.apk in parallel with other apks
+mkdir -p $REPACK/parallel
+cd $REPACK/parallel
+cp $REPACK/ota/system/framework/framework-res.apk .
+cp $REPACK/ota/system/app/*.apk .
+
+# Do optimization in parallel
+find ./ -name \*.apk | $XARGS $OPTICHARGER
+
+# Move optimized apks to repack directory
+mv -f $REPACK/parallel/framework-res.apk $REPACK/ota/system/framework/framework-res.apk
+mv -f $REPACK/parallel/*.apk $REPACK/ota/system/app/
+
+# Return to directory
+cd $REPACK/ota
+rm -rf $REPACK/parallel
+)
+
+# Fix build.prop
+$SED -i \
+	-e '/ro\.kernel\.android\.checkjni/d' \
+	-e '/ro\.build\.type/s/eng/user/' \
+	$REPACK/ota/system/build.prop
+
+# Delete unnecessary binaries
+( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
+
+# Delete unnecessary libraries
+( cd $REPACK/ota/system/lib; echo $DELETE_LIBS | xargs rm -f; )
+
+# Delete Offline charging mode files
+( cd $REPACK/ota/system/media; echo $DELETE_MEDIA | xargs rm -f; )
+
+# No need for modem.bin
+rm -f $REPACK/ota/modem.bin
+
+# No need for media/video
+rm -rf $REPACK/ota/system/media/video
+
+# Delete Unnecessary Fonts
+( cd $REPACK/ota/system/fonts; echo $DELETE_FONTS | xargs rm -f; )
+
+# No need for tts
+rm -rf $REPACK/ota/system/tts
+
+# No need for srec
+rm -rf $REPACK/ota/system/usr/srec
+
+# No need for recovery
+rm -rf $REPACK/ota/recovery
+rm -rf $REPACK/ota/system/etc/recovery-resource.dat
+
+# Strip modules
+[ -d $REPACK/ota/system/lib/modules ] && \
+	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $OUT/system/build.prop`
@@ -36,7 +109,20 @@ TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
-ln -f $OTAPACKAGE $OUTFILE
+# Pack it up and sign
+printf "Zipping package..."
+( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
+echo
+printf "Signing package..."
+SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
+java -Xmx1024m \
+	-jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
+	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
+	$REPACK/update.zip $OUTFILE
+echo
+printf "Cleaning up..."
+rm -rf $REPACK
+echo
 
 # Create a md5 checksum image of the repacked package
 (

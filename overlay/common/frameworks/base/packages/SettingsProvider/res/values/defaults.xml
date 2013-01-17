@@ -18,5 +18,4 @@
 -->
 <resources>
     <string name="def_backup_transport">com.google.android.backup/.BackupTransportService</string>
-    <bool name="def_install_non_market_apps">true</bool>
 </resources>

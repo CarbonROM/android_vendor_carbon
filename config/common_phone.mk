@@ -1,14 +1,8 @@
 # audio
 include frameworks/base/data/sounds/NewAudio.mk
 
-# Extra Ringtones
-include frameworks/base/data/sounds/AudioPackageNewWave.mk
-
 # common
 $(call inherit-product, vendor/liquid/config/common.mk)
-
-# drm
-$(call inherit-product, vendor/liquid/config/common_drm_phone.mk)
 
 # bluetooth
 PRODUCT_COPY_FILES += \
