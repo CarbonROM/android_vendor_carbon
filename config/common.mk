@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     NoiseField \
-    PhaseBeam
+    PhaseBeam \
+    Torch
 
 # prebuilts
 PRODUCT_PACKAGES += \
@@ -47,7 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
 
 # initd
 PRODUCT_COPY_FILES += \
@@ -88,10 +89,9 @@ endif
 
 # goo.im properties
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.developerid=liquidsmooth \
   ro.goo.rom=liquidsmoothJB2 \
+  ro.goo.developerid=liquidsmooth \
   ro.goo.version=$(shell date +%0d%^b%Y-%H%M%S)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.liquid.version=$(LIQUID_VERSION)
-
