@@ -20,7 +20,7 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-	echo -e $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
+	echo $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
 	exit 1
 fi
 
@@ -106,7 +106,7 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $OUT/system/build.prop`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
-echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
 # Pack it up and sign
@@ -130,8 +130,8 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo -e $CL_GRN"Package complete: $OUTFILE"$CL_RST
-echo -e $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
+echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo
 )
 
