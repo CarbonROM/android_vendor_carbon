@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     NovaLauncher \
+    Performance \
     Superuser
 
 # tools
