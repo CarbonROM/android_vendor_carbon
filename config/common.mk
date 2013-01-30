@@ -1,4 +1,5 @@
-PRODUCT_BRAND ?= omni
+# brand
+PRODUCT_BRAND ?= Carbon
 
 # use specific resolution for bootanimation
 ifneq ($(TARGET_BOOTANIMATION_SIZE),)
@@ -29,12 +30,21 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+//# tools
+//PRODUCT_PACKAGES += \
+//    e2fsck \
+//    mke2fs \
+//    tune2fs
+
+# overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/omni/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/omni/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/omni/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/carbon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/carbon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/carbon/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/carbon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -45,9 +55,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init script file with omni extras
+# Init script file borrowed from omni
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.local.rc:root/init.omni.rc
+    vendor/carbon/prebuilt/etc/init.local.rc:root/init.carbon.rc
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -70,3 +80,17 @@ endif
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+
+# version
+RELEASE = true
+CARBON_VERSION_MAJOR = 5
+CARBON_VERSION_MINOR = 0
+
+ifeq ($(RELEASE),true)
+    CARBON_VERSION := "Carbon-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(shell date +%0d%^b%Y-%H%M%S)
+else
+    CARBON_VERSION := "Carbon-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.carbon.version=$(CARBON_VERSION)
