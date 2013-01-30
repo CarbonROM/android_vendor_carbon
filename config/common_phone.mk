@@ -2,7 +2,7 @@
 include frameworks/base/data/sounds/NewAudio.mk
 
 # common
-$(call inherit-product, vendor/liquid/config/common.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # bluetooth
 PRODUCT_COPY_FILES += \
@@ -10,7 +10,7 @@ PRODUCT_COPY_FILES += \
 
 # media
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+    vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # packages
 PRODUCT_PACKAGES += \

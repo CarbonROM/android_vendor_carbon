@@ -1,5 +1,5 @@
 # brand
-PRODUCT_BRAND ?= liquid
+PRODUCT_BRAND ?= Carbon
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,34 +39,34 @@ PRODUCT_PACKAGES += \
     tune2fs
 
 # themes
-include vendor/liquid/config/theme_chooser.mk
+include vendor/carbon/config/theme_chooser.mk
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/liquid/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # bin
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # etc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.liquid.rc:root/init.liquid.rc
+    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
 
 # initd
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
+    vendor/carbon/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
 
 # prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/xbin/su:system/xbin/su \
-    vendor/liquid/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/liquid/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/liquid/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/liquid/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/carbon/prebuilt/common/xbin/su:system/xbin/su \
+    vendor/carbon/prebuilt/common/xbin/sysro:system/xbin/sysro \
+    vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
+    vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # keyboard
 PRODUCT_COPY_FILES += \
-    vendor/liquid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/carbon/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # sip/voip
 PRODUCT_COPY_FILES += \
@@ -74,26 +74,25 @@ PRODUCT_COPY_FILES += \
 
 # nfc
 PRODUCT_COPY_FILES += \
-    vendor/liquid/config/permissions/com.liquidsmooth.android.xml:system/etc/permissions/com.liquidsmooth.android.xml \
-    vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
+    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml \
+    vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
 RELEASE = true
-LIQUID_VERSION_MAJOR = 2
-LIQUID_VERSION_MINOR = 1
-LIQUID_VERSION_STATE = "Beta3.2"
+CARBON_VERSION_MAJOR = 1
+CARBON_VERSION_MINOR = 0
 
 ifeq ($(RELEASE),true)
-    LIQUID_VERSION := "Liquid-JB-v"$(LIQUID_VERSION_MAJOR).$(LIQUID_VERSION_MINOR)-$(LIQUID_VERSION_STATE)
+    CARBON_VERSION := "Carbon-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(shell date +%0d%^b%Y-%H%M%S)
 else
-    LIQUID_VERSION := "Liquid-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
+    CARBON_VERSION := "Carbon-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
 endif
 
 # goo.im properties
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.rom=liquidsmoothJB2 \
-  ro.goo.developerid=liquidsmooth \
+  ro.goo.rom=carbon \
+  ro.goo.developerid=carbon \
   ro.goo.version=$(shell date +%0d%^b%Y-%H%M%S)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.liquid.version=$(LIQUID_VERSION)
+  ro.carbon.version=$(CARBON_VERSION)

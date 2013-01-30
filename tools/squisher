@@ -3,7 +3,7 @@
 # Squish a CM otapackage for distribution
 # cyanogen
 #
-. $ANDROID_BUILD_TOP/vendor/liquid/tools/functions
+. $ANDROID_BUILD_TOP/vendor/carbon/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -24,7 +24,7 @@ if [ -z "$OUT" -o ! -d "$OUT" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/liquid/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/carbon/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_LIBS="libc_malloc_debug_leak.so libc_malloc_debug_qemu.so"
@@ -104,7 +104,7 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-MODVERSION=`sed -n -e'/ro\.liquid\.version/s/^.*=//p' $OUT/system/build.prop`
+MODVERSION=`sed -n -e'/ro\.carbon\.version/s/^.*=//p' $OUT/system/build.prop`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
