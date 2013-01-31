@@ -1,4 +1,4 @@
-# LiquidSmooth Extras
+# Carbon Extras
 
 on init
     export ANDROID_CACHE /cache
