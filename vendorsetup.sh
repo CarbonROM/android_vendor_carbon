@@ -7,6 +7,7 @@ add_lunch_combo carbon_d2usc-userdebug
 add_lunch_combo carbon_d2vzw-userdebug
 add_lunch_combo carbon_grouper-userdebug
 add_lunch_combo carbon_i605-userdebug
+add_lunch_combo carbon_infuse4g-userdebug
 add_lunch_combo carbon_i9300-userdebug
 add_lunch_combo carbon_l900-userdebug
 add_lunch_combo carbon_maguro-userdebug
