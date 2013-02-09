@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
+    BlueBalls \
     Torch
 
 # prebuilts
