@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
+    BlueBalls \
     Torch
 
 # prebuilts
@@ -29,7 +30,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     NovaLauncher \
-    Performance \
+    PerformanceControl \
     Superuser
 
 # tools
