@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
 include vendor/carbon/config/theme_chooser.mk
 
 # overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # bin
