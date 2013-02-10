@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
-    NovaLauncher \
     PerformanceControl \
     Superuser
 
@@ -66,9 +65,9 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
-# keyboard
+# Nova
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    vendor/carbon/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
 
 # sip/voip
 PRODUCT_COPY_FILES += \
