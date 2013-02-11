@@ -37,7 +37,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
-    tune2fs
+    tune2fs \
+	bash \
+	nano
+	
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
 
 # themes
 include vendor/carbon/config/theme_chooser.mk
