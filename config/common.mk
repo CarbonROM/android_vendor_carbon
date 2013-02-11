@@ -18,6 +18,7 @@ PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
+    Launcher2 \
     LiveWallpapersPicker \
     NoiseField \
     PhaseBeam \
@@ -64,10 +65,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
-# Nova
-PRODUCT_COPY_FILES += \
-    vendor/carbon/proprietary/NovaLauncher/NovaLauncher.apk:system/app/NovaLauncher.apk
 
 # sip/voip
 PRODUCT_COPY_FILES += \
