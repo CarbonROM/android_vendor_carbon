@@ -37,9 +37,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
-    tune2fs \
-	bash \
-	nano
+    tune2fs 
 	
 # Openssh
 PRODUCT_PACKAGES += \
