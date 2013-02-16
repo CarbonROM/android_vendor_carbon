@@ -31,7 +31,10 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     PerformanceControl \
-    Superuser
+    Superuser \
+    XposedInstaller \
+    XposedNetflixWorkaround.apk \
+    XposedSettings
 
 # tools
 PRODUCT_PACKAGES += \
