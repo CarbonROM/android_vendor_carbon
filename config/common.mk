@@ -33,8 +33,8 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     Superuser \
     XposedInstaller \
-    XposedNetflixWorkaround.apk \
-    XposedSettings
+    XposedNetflixWorkaround \
+    XposedPerAppSettings
 
 # tools
 PRODUCT_PACKAGES += \
