@@ -13,8 +13,8 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
 
 # media
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
