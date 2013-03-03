@@ -56,6 +56,9 @@ PRODUCT_PACKAGES += \
 # themes
 include vendor/carbon/config/theme_chooser.mk
 
+#korean
+$(call inherit-product-if-exists, external/naver-fonts/fonts.mk)
+
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
