@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     BlueBalls \
-    Torch
+    Torch \
+    Wallpapers
 
 # prebuilts
 PRODUCT_PACKAGES += \
