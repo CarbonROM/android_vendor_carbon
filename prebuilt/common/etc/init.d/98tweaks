@@ -17,11 +17,13 @@ busybox rm -f /data/dalvik-cache/*.tmp
 VAC_LOG_FILE=/data/S50-vacuum-databases.log
 
 # do nothing if less than 5 days
-find $VAC_LOG_FILE -type f -mtime +5 -delete
+find $VAC_LOG_FILE -type f -mtime +5 -exec rm '{}' \;
 
 if ! test -f $VAC_LOG_FILE; then
 
-	/bin/mount -o remount,rw /
+	touch $VAC_LOG_FILE
+
+	busybox mount -o rw,remount /
 
 	if [ -e $VAC_LOG_FILE ]; then
 		rm $VAC_LOG_FILE;
@@ -52,8 +54,6 @@ if ! test -f $VAC_LOG_FILE; then
 
 	echo "Sqlite Vacuum finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $VAC_LOG_FILE;
 
-	/bin/mount -o remount,ro /
-
 fi
 
 # zipalign
@@ -65,6 +65,8 @@ ZIPALIGNED_APK=/data/local/zipalignedapk;
 if [ -e $ZIP_LOG_FILE ]; then
 	rm $ZIP_LOG_FILE;
 fi;
+
+touch $ZIP_LOG_FILE
 
 if [ ! -f $ZIPALIGNED_APK ]; then
 	touch $ZIPALIGNED_APK;
@@ -82,7 +84,7 @@ for DIR in /system/app /data/app; do
 				echo "Temporary APK removed: /data/$APK" | tee -a $ZIP_LOG_FILE;
 			fi;
 		else
-			ZIPCHECK=`/system/xbin/zipalign -c -v 4 $APK | grep FAILED | wc -l`;
+			ZIPCHECK=`/system/bin/armzipalign -c -v 4 $APK | grep FAILED | wc -l`;
 			if [ $ZIPCHECK == "1" ]; then
 				echo "Now aligning: $DIR/$APK" | tee -a $ZIP_LOG_FILE;
 				/system/xbin/zipalign -v -f 4 $APK /data/$APK;
@@ -113,5 +115,6 @@ for DIR in /system/app /data/app; do
 done;
 sync
 busybox mount -o ro,remount /system;
+busybox mount -o ro,remount /;
 touch $ZIPALIGNED_APK;
 echo "Automatic ZipAlign finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $ZIP_LOG_FILE;
