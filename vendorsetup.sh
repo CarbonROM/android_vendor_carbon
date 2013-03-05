@@ -5,7 +5,6 @@ add_lunch_combo carbon_d2spr-user
 add_lunch_combo carbon_d2tmo-user
 add_lunch_combo carbon_d2usc-user
 add_lunch_combo carbon_d2vzw-user
-add_lunch_combo carbon_endeavoru-user
 add_lunch_combo carbon_grouper-user
 add_lunch_combo carbon_i605-user
 add_lunch_combo carbon_infuse4g-user
