@@ -99,7 +99,7 @@ CARBON_VERSION_MAJOR = 1
 CARBON_VERSION_MINOR = 5-beta
 
 ifeq ($(RELEASE),true)
-    CARBON_VERSION := "Carbon-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(shell date +%0d%^b%Y-%H%M%S)
+    CARBON_VERSION := "Carbon-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
     CARBON_VERSION := "Carbon-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
 endif
