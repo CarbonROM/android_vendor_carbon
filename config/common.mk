@@ -1,3 +1,5 @@
+SUPERUSER_EMBEDDED := true
+
 # brand
 PRODUCT_BRAND ?= Carbon
 
@@ -24,6 +26,8 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     BlueBalls \
     Torch \
+    Superuser \
+    su \
     Wallpapers
 
 # prebuilts
@@ -32,7 +36,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     PerformanceControl \
-    Superuser \
     XposedInstaller \
     XposedNetflixWorkaround \
     XposedPerAppSettings
@@ -78,7 +81,6 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/xbin/su:system/xbin/su \
     vendor/carbon/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
