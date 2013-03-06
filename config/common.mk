@@ -105,13 +105,16 @@ else
 endif
 
 # goo.im properties
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.goo.developerid=carbon \
-  ro.goo.version=$(shell date +%Y%m%d) \
 ifeq ($(RELEASE),true)
-    ro.goo.rom=carbonjb2
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=carbonjb2 \
+        ro.goo.developerid=carbon \
+        ro.goo.version=$(shell date +%Y%m%d)
 else
-    ro.goo.rom=carbonjb2exp
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=carbonjb2exp \
+        ro.goo.developerid=carbon \
+        ro.goo.version=$(shell date +%Y%m%d)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
