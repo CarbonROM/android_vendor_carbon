@@ -11,6 +11,7 @@ add_lunch_combo carbon_i605-user
 add_lunch_combo carbon_infuse4g-user
 add_lunch_combo carbon_i9100-user
 add_lunch_combo carbon_i9300-user
+add_lunch_combo carbon_i9305-user
 add_lunch_combo carbon_l900-user
 add_lunch_combo carbon_maguro-user
 add_lunch_combo carbon_mako-user
