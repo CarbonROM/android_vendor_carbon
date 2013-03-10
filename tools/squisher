@@ -28,7 +28,7 @@ OPTICHARGER=$ANDROID_BUILD_TOP/vendor/carbon/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_LIBS="libc_malloc_debug_leak.so libc_malloc_debug_qemu.so"
-DELETE_FONTS="MTLmr3m.ttf NanumGothic.ttf"
+DELETE_FONTS="MTLmr3m.ttf"
 DELETE_MEDIA="*.qmg"
 
 REPACK=$OUT/repack.d
