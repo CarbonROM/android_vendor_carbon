@@ -71,6 +71,12 @@ $SED -i \
 	-e '/ro\.build\.type/s/eng/user/' \
 	$REPACK/ota/system/build.prop
 
+# Determine what to name the new signed package
+MODVERSION=`sed -n -e'/ro\.carbon\.version/s/^.*=//p' $OUT/system/build.prop`
+TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
+echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
+
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
 
@@ -80,8 +86,11 @@ $SED -i \
 # Delete Offline charging mode files
 ( cd $REPACK/ota/system/media; echo $DELETE_MEDIA | xargs rm -f; )
 
+if [ "$TARGET_PRODUCT_FINAL" != "infuse4g" ]
+then
 # No need for modem.bin
 rm -f $REPACK/ota/modem.bin
+fi
 
 # No need for media/video
 rm -rf $REPACK/ota/system/media/video
@@ -102,12 +111,6 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Strip modules
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
-
-# Determine what to name the new signed package
-MODVERSION=`sed -n -e'/ro\.carbon\.version/s/^.*=//p' $OUT/system/build.prop`
-TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
-echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
-OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
 # Pack it up and sign
 printf "Zipping package..."
