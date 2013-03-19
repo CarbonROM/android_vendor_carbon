@@ -22,3 +22,5 @@ add_lunch_combo carbon_t0lte-user
 add_lunch_combo carbon_toro-user
 add_lunch_combo carbon_toroplus-user
 add_lunch_combo carbon_ville-user
+add_lunch_combo carbon_d2vzw-userdebug
+add_lunch_combo carbon_infuse4g-userdebug
