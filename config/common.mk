@@ -88,6 +88,14 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
     vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
+#backup tool
+CARBON_BUILD = true
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
+    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
