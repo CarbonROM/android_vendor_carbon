@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
+    ParanoidPreferences \
     PerformanceControl \
     XposedInstaller \
     XposedNetflixWorkaround \
