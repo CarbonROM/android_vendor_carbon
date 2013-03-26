@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 #backup tool
-CARBON_BUILD = true
+CARBON_BUILD = false
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
