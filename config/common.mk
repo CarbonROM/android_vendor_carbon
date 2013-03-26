@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
-RELEASE = false
+RELEASE = true
 CARBON_VERSION_MAJOR = 1
 CARBON_VERSION_MINOR = 6
 
