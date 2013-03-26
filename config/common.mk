@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 #backup tool
-CARBON_BUILD = false
+CARBON_BUILD = true
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
-RELEASE = true
+RELEASE = false
 CARBON_VERSION_MAJOR = 1
 CARBON_VERSION_MINOR = 6
 
