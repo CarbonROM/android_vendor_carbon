@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     BlueBalls \
+    PhotoTable \
     Torch \
     Superuser \
     su \
