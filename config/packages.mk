@@ -12,6 +12,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# CellBroadcastReceiver
+PRODUCT_PACKAGES += \
+CellBroadcastReceiver
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
@@ -63,4 +67,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Permissions
 PRODUCT_PACKAGES += \
     privapp-permissions-carbon.xml
-
