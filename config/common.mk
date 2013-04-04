@@ -37,10 +37,7 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
-    PerformanceControl \
-    XposedInstaller \
-    XposedNetflixWorkaround \
-    XposedPerAppSettings
+    PerformanceControl
 
 # tools
 PRODUCT_PACKAGES += \
