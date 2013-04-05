@@ -39,12 +39,12 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LockClock \
     ParanoidPreferences \
-    PerformanceControl \
-    XposedInstaller \
-    XposedNetflixWorkaround \
-    XposedPerAppSettings
+    PerformanceControl
 
 # tools
+PRODUCT_PACKAGES += \
+    CellBroadcastReceiver
+
 PRODUCT_PACKAGES += \
     armzipalign \
     e2fsck \
