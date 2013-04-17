@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Apollo \
     Camera \
+    CMFileManager \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
