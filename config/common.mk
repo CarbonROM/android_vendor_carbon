@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     Camera \
     CMFileManager \
+    DashClock \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
