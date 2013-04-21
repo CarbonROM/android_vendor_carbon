@@ -17,7 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Apollo \
+    BlueBalls \
     Camera \
     CMFileManager \
     DashClock \
@@ -27,12 +27,12 @@ PRODUCT_PACKAGES += \
     Launcher2 \
     LiveWallpapersPicker \
     NoiseField \
+    PermissionsManager \
     PhaseBeam \
-    BlueBalls \
     PhotoTable \
-    Torch \
     Superuser \
     su \
+    Torch \
     Wallpapers
 
 # prebuilts
