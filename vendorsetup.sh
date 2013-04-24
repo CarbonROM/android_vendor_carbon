@@ -6,6 +6,7 @@ add_lunch_combo carbon_d2spr-userdebug
 add_lunch_combo carbon_d2tmo-userdebug
 add_lunch_combo carbon_d2usc-userdebug
 add_lunch_combo carbon_d2vzw-userdebug
+add_lunch_combo carbon_d710-userdebug
 add_lunch_combo carbon_endeavoru-userdebug
 add_lunch_combo carbon_evita-userdebug
 add_lunch_combo carbon_grouper-userdebug
