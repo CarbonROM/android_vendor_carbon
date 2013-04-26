@@ -133,7 +133,7 @@ CARBON_VERSION_MINOR = 6
 ifeq ($(RELEASE),true)
     CARBON_VERSION := "CARBON-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
-    CARBON_VERSION := "CARBON-JB-EXP"-$(shell date +%Y%m%d-%H%M%S)
+    CARBON_VERSION := "CARBON-JB-EXP"-$(shell date +%Y%^b%d-%H%M%S)
 endif
 
 # goo.im properties
