@@ -133,23 +133,41 @@ RELEASE = false
 CARBON_VERSION_MAJOR = 1
 CARBON_VERSION_MINOR = 6
 
-ifeq ($(RELEASE),true)
-    CARBON_VERSION := "CARBON-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
-else
-    CARBON_VERSION := "CARBON-JB-EXP"-$(shell date +%Y%^b%d-%H%M%S)
-endif
-
-# goo.im properties
-ifeq ($(RELEASE),true)
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=carbonjb2 \
-        ro.goo.developerid=carbon \
-        ro.goo.version=$(shell date +%Y%m%d)
-else
+#Set CARBON_BUILDTYPE and goo.im properties
+ifdef CARBON_NIGHTLY
+    CARBON_BUILDTYPE := NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=carbonjb2exp \
         ro.goo.developerid=carbon \
         ro.goo.version=$(shell date +%Y%m%d)
+endif
+ifdef CARBON_EXPERIMENTAL
+    CARBON_BUILDTYPE := EXPERIMENTAL
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=carbonjb2exp \
+        ro.goo.developerid=carbon \
+        ro.goo.version=$(shell date +%Y%m%d)
+endif
+ifdef CARBON_RELEASE
+    CARBON_BUILDTYPE := RELEASE
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.goo.rom=carbonjb2 \
+        ro.goo.developerid=carbon \
+        ro.goo.version=$(shell date +%Y%m%d)
+endif
+#Set Unofficial if no buildtype set (Buildtype should ONLY be set by Carbon Devs!)
+ifdef CARBON_BUILDTYPE
+else
+    CARBON_BUILDTYPE := UNOFFICIAL
+    CARBON_VERSION_MAJOR :=
+    CARBON_VERSION_MINOR :=
+endif
+
+#Set Carbon version
+ifdef CARBON_RELEASE
+    CARBON_VERSION := "CARBON-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
+else
+    CARBON_VERSION := "CARBON-JB-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
