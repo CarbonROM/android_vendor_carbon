@@ -73,7 +73,6 @@ $SED -i \
 
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.carbon\.version/s/^.*=//p' $OUT/system/build.prop`
-OVERLAYTARGET=`grep 'ro.pa.family=' $REPACK/ota/system/build.prop | sed -e 's/ro.pa.family=//g'`
 TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
 echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
@@ -112,14 +111,6 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Strip modules
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
-
-# Copy PA overlays
-printf "Copying overlay preferences for $OVERLAYTARGET..."
-echo
-mkdir $REPACK/ota/system/etc/paranoid/preferences
-mkdir $REPACK/ota/system/etc/paranoid/preferences/images
-cp -r $ANDROID_BUILD_TOP/vendor/carbon/prebuilt/preferences/images/* $REPACK/ota/system/etc/paranoid/preferences/images/
-cp -r $ANDROID_BUILD_TOP/vendor/carbon/prebuilt/preferences/$OVERLAYTARGET/* $REPACK/ota/system/etc/paranoid/preferences/
 
 # Pack it up and sign
 printf "Zipping package..."

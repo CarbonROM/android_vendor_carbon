@@ -12,8 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false \
-    ro.pa.family=$(OVERLAY_TARGET)
+    ro.com.android.dataroaming=false
 
 # packages
 PRODUCT_PACKAGES += \
@@ -40,7 +39,6 @@ PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
     LockClock \
-    ParanoidPreferences \
     PerformanceControl
 
 # tools
@@ -112,21 +110,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml \
     vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
-
-# ParanoidAndroid Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/prebuilt/preferences/$(TARGET_PRODUCT)
-
-# Allow device family to add overlays and use a same prop.conf
-ifneq ($(OVERLAY_TARGET),)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/$(OVERLAY_TARGET)
-    PA_CONF_SOURCE := $(OVERLAY_TARGET)
-else
-    PA_CONF_SOURCE := $(TARGET_PRODUCT)
-endif
-
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/carbon/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 # version
 RELEASE = false
