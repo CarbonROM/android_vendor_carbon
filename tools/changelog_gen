@@ -1,0 +1,67 @@
+#!/bin/sh
+
+DATE=$(vendor/carbon/tools/getdate)
+ydate=$(date -d '1 day ago' +"%m/%d/%Y")
+sdate=${1}
+rdir=`pwd`
+
+# Check the date start range is set
+if [ -z "$sdate" ]; then
+    sdate=${ydate}
+fi
+
+# Find the directories to log
+find $rdir -name .git | sed 's/\/.git//g' | sed 'N;$!P;$!D;$d' | while read line
+do
+    cd $line
+    # Test to see if the repo needs to have a changelog written.
+    log=$(git log --pretty="%an - %s" --no-merges --since=$sdate --date-order)
+    project=$(git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//')
+    if [ -z "$log" ]; then
+        echo "Nothing updated on $project, skipping"
+    else
+        # Prepend group project ownership to each project.
+        origin=`grep "$project" $rdir/.repo/manifest.xml | awk {'print $4'} | cut -f2 -d '"'`
+        if [ "$origin" = "aosp" ]; then
+            proj_credit=AOSP
+        elif [ "$origin" = "cr" ]; then
+            proj_credit=CarbonDev
+        elif [ "$origin" = "cm" ]; then
+            proj_credit=CyanogenMod
+        elif [ "$origin" = "aokp" ]; then
+            proj_credit=AOKP
+        elif [ "$origin" = "tm" ]; then
+            proj_credit=TheMuppets
+        elif [ "$origin" = "ub" ]; then
+            proj_credit=UnicornButter
+        elif [ "$origin" = "cmdev" ]; then
+            proj_credit=loosethisskin
+        elif [ "$origin" = "kejar31" ]; then
+            proj_credit=kejar31
+        elif [ "$origin" = "koush" ]; then
+            proj_credit=koush
+        elif [ "$origin" = "nc" ]; then
+            proj_credit=Nocoast
+        elif [ "$origin" = "gh" ]; then
+            proj_credit=Github
+        else
+            proj_credit=CarbonDev
+        fi
+        # Write the changelog
+        echo "$proj_credit Project name: $project" >> "$rdir"/changelog.txt
+        echo "$log" | while read line
+        do
+             echo "  *"${line}"" >> "$rdir"/changelog.txt
+        done
+        echo "" >> "$rdir"/changelog.txt
+    fi
+done
+
+echo "move the changelog into .zip for goo integration"
+    find . -name *CARBON-JB-*.zip -exec zip {} changelog.txt \;
+    cd ..
+
+echo "remove changelog after pushing into .zip"
+    find $rdir -name changelog.txt -exec rm {} \;
+
+exit 0
