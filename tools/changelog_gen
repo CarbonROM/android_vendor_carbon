@@ -48,7 +48,7 @@ do
             proj_credit=CarbonDev
         fi
         # Write the changelog
-        echo "$proj_credit Project name: $project" >> "$rdir"/changelog.txt
+        echo "$proj_credit Project name: $project" > "$rdir"/changelog.txt
         echo "$log" | while read line
         do
              echo "  *"${line}"" >> "$rdir"/changelog.txt
@@ -60,8 +60,5 @@ done
 echo "move the changelog into .zip for goo integration"
     find . -name *CARBON-JB-*.zip -exec zip {} changelog.txt \;
     cd ..
-
-echo "remove changelog after pushing into .zip"
-    find $rdir -name changelog.txt -exec rm {} \;
 
 exit 0
