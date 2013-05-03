@@ -102,11 +102,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
-# Installer
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
-    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
-
 # sip/voip
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
