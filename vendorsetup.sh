@@ -25,6 +25,7 @@ add_lunch_combo carbon_maserati-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
 add_lunch_combo carbon_quincytmo-userdebug
+add_lunch_combo carbon_shooteru-userdebug
 add_lunch_combo carbon_skyrocket-userdebug
 add_lunch_combo carbon_solana-userdebug
 add_lunch_combo carbon_spyder-userdebug
