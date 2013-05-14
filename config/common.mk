@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
+    Launcher2 \
     LiveWallpapersPicker \
     NoiseField \
     PermissionsManager \
@@ -31,7 +32,6 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     Torch \
-    Trebuchet \
     Wallpapers
 
 # prebuilts
