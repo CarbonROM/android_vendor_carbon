@@ -38,8 +38,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GooManager \
     LatinIME \
-    LockClock \
-    PerformanceControl
+    LockClock
 
 # tools
 PRODUCT_PACKAGES += \
