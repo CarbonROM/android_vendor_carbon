@@ -1,3 +1,4 @@
+add_lunch_combo carbon_acclaim-userdebug
 add_lunch_combo carbon_crespo-userdebug
 add_lunch_combo carbon_d2att-userdebug
 add_lunch_combo carbon_d2cri-userdebug
