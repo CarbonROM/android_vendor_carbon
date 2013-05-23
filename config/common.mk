@@ -116,21 +116,21 @@ ifdef CARBON_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=carbonjb2exp \
         ro.goo.developerid=carbon \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date +%Y%m%d%H%M)
 endif
 ifdef CARBON_EXPERIMENTAL
     CARBON_BUILDTYPE := EXPERIMENTAL
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=carbonjb2exp \
         ro.goo.developerid=carbon \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date +%Y%m%d%H%M)
 endif
 ifdef CARBON_RELEASE
     CARBON_BUILDTYPE := RELEASE
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.rom=carbonjb2 \
         ro.goo.developerid=carbon \
-        ro.goo.version=$(shell date +%Y%m%d)
+        ro.goo.version=$(shell date +%Y%m%d%H%M)
 endif
 #Set Unofficial if no buildtype set (Buildtype should ONLY be set by Carbon Devs!)
 ifdef CARBON_BUILDTYPE
@@ -144,7 +144,7 @@ endif
 ifdef CARBON_RELEASE
     CARBON_VERSION := "CARBON-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
-    CARBON_VERSION := "CARBON-JB-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M%S)
+    CARBON_VERSION := "CARBON-JB-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
