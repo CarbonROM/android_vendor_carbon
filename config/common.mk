@@ -100,7 +100,9 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
-    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
+    vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # sip/voip
 PRODUCT_COPY_FILES += \
