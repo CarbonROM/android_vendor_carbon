@@ -18,6 +18,7 @@ add_lunch_combo carbon_infuse4g-userdebug
 add_lunch_combo carbon_i9100-userdebug
 add_lunch_combo carbon_i9300-userdebug
 add_lunch_combo carbon_i9305-userdebug
+add_lunch_combo carbon_jfltevzw-userdebug
 add_lunch_combo carbon_l900-userdebug
 add_lunch_combo carbon_m7ul-userdebug
 add_lunch_combo carbon_m7tmo-userdebug
