@@ -49,3 +49,4 @@ add_lunch_combo carbon_umts_spyder-userdebug
 add_lunch_combo carbon_ville-userdebug
 add_lunch_combo carbon_xt897-userdebug
 add_lunch_combo carbon_xt897c-userdebug
+add_lunch_combo carbon_xt925-userdebug
