@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
 
 # prebuilts
 PRODUCT_PACKAGES += \
-    GooManager \
     LatinIME \
     LockClock
 
