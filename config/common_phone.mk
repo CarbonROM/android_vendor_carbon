@@ -19,3 +19,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# World SPN overrides list
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
