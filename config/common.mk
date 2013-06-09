@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     Camera \
     CMFileManager \
+    DashClock \
     Galaxy4 \
     HoloSpiralWallpaper \
     LiveWallpapers \
