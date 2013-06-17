@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Exports
+export After_Date=`date --date="1 days ago" +%d-%m-%Y`
+export Changelog=changelog.txt
+
+if [ -f $Changelog ];
+then
+	rm -f $Changelog
+fi
+
+touch $Changelog
+echo 'Changelog for carbon since' $After_Date > $Changelog
+
+# Cycle through every repo to find new commits
+repo forall -pc 'git log --oneline --after=$After_Date' >> $Changelog
+
+# Let squisher handle the zipping part
+cp $Changelog $OUT/repack.d/ota/
