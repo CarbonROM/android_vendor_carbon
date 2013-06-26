@@ -5,8 +5,8 @@ include frameworks/base/data/sounds/NewAudio.mk
 $(call inherit-product, vendor/carbon/config/common.mk)
 
 # gps
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/gps.conf:system/etc/gps.conf
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
 # bluetooth
 PRODUCT_COPY_FILES += \
