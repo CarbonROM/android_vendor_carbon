@@ -1,6 +1,6 @@
 # gps
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/gps.conf:system/etc/gps.conf
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/etc/gps.conf:system/etc/gps.conf
 
 # spn
 PRODUCT_COPY_FILES += \
