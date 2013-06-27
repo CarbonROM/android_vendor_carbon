@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     PermissionsManager \
     PhaseBeam \
     PhotoTable \
+    SunBeam \
     Superuser \
     su \
     Torch \
