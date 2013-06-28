@@ -49,7 +49,7 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs \
     nano
-	
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
 # etc
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
+
+# initd
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.d/ANice:system/etc/init.d/ANice
 
 # prebuilt
 PRODUCT_COPY_FILES += \
