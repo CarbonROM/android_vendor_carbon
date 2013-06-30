@@ -22,9 +22,11 @@ PRODUCT_PACKAGES += \
     DashClock \
     Galaxy4 \
     HoloSpiralWallpaper \
-    LiveWallpapers \
+    LatinIME \
     Launcher2 \
+    LiveWallpapers \
     LiveWallpapersPicker \
+    LockClock \
     NoiseField \
     PermissionsManager \
     PhaseBeam \
@@ -37,9 +39,7 @@ PRODUCT_PACKAGES += \
 
 # prebuilts
 PRODUCT_PACKAGES += \
-    GooManager \
-    LatinIME \
-    LockClock
+    GooManager
 
 # tools
 PRODUCT_PACKAGES += \
