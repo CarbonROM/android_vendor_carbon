@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     DashClock \
     Galaxy4 \
+    HALO \
     HoloSpiralWallpaper \
     LatinIME \
     Launcher2 \
