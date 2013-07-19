@@ -16,6 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
+    Babel \
     BlueBalls \
     Camera \
     CMFileManager \
