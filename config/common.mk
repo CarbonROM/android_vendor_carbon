@@ -16,7 +16,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
-    Babel \
     BlueBalls \
     Camera \
     CMFileManager \
@@ -37,6 +36,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     Torch \
+    VoicePlus \
     Wallpapers
 
 # prebuilts
