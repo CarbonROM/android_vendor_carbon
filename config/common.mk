@@ -95,6 +95,7 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt
 PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/app/RomStats.apk:system/app/RomStats.apk \
     vendor/carbon/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -167,3 +168,9 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.carbon.version=$(CARBON_VERSION)
+
+# ROM Statistics and ROM Identification
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.romstats.url=http://carbon-stats.mattman.org \
+ro.romstats.name=CarbonRom- \
+ro.romstats.version=$(CARBON_VERSION)
