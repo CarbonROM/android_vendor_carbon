@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
     Launcher3 \
+    CarbonStats \
     Chromium \
     masquerade \
     VanillaMusic
