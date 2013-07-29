@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     BlueBalls \
     Camera \
+    Focal \
     CMFileManager \
     DashClock \
     Galaxy4 \
