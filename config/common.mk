@@ -92,7 +92,6 @@ PRODUCT_COPY_FILES += \
 
 # initd
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/ANice:system/etc/init.d/ANice
 
 # prebuilt
 PRODUCT_COPY_FILES += \
