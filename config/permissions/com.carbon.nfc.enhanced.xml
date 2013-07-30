@@ -16,5 +16,5 @@
 
 <!-- This feature shows that this is device features NFC enhancements -->
 <permissions>
-    <feature name="com.liquidsmooth.nfc.enhanced" />
+    <feature name="com.carbon.nfc.enhanced" />
 </permissions>
