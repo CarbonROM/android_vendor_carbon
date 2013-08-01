@@ -19,6 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # packages
 PRODUCT_PACKAGES += \
+    Apollo \
     BlueBalls \
     Camera \
     CarbonFibers \
@@ -29,7 +30,6 @@ PRODUCT_PACKAGES += \
     HALO \
     HoloSpiralWallpaper \
     LatinIME \
-    Launcher2 \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     Torch \
+    Trebuchet \
     VoicePlus \
     Wallpapers
 
