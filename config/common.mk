@@ -51,6 +51,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1 \
     ro.opa.eligible_device=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # enable ADB authentication if not on eng build
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
