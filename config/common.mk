@@ -25,10 +25,8 @@ PRODUCT_PACKAGES += \
     CarbonFibers \
     Focal \
     CMFileManager \
-    DashClock \
     Galaxy4 \
     HALO \
-    HoloSpiralWallpaper \
     LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
