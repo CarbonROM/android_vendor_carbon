@@ -190,3 +190,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.name=CarbonRom- \
 ro.romstats.version=$(CARBON_VERSION)
+
+-include vendor/carbon/sepolicy/sepolicy.mk
