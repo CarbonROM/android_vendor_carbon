@@ -17,6 +17,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     persist.sys.root_access=3
 
+# selinux dialog
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 # packages
 PRODUCT_PACKAGES += \
     Apollo \
