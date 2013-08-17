@@ -45,7 +45,11 @@ PRODUCT_PACKAGES += \
     Torch \
     Trebuchet \
     VoicePlus \
-    Wallpapers
+    Wallpapers \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf
+
 
 # prebuilts
 PRODUCT_PACKAGES += \
