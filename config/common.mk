@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     Camera \
     CarbonFibers \
+    Development \
     Focal \
     CMFileManager \
     Galaxy4 \
