@@ -7,5 +7,4 @@ BOARD_SEPOLICY_DIRS := \
     vendor/carbon/sepolicy
 
 BOARD_SEPOLICY_UNION := \
-    mac_permissions.xml \
-    file_contexts
+    mac_permissions.xml
