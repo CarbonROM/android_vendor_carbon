@@ -28,11 +28,13 @@ PRODUCT_PACKAGES += \
     Camera \
     CarbonFibers \
     Development \
+    DSPManager \
     Focal \
     CMFileManager \
     Galaxy4 \
     HALO \
     LatinIME \
+    libcyanogen-dsp \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
@@ -47,8 +49,6 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     VoicePlus \
     Wallpapers \
-    DSPManager \
-    libcyanogen-dsp \
     audio_effects.conf
 
 
@@ -107,9 +107,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
 
-# initd
-PRODUCT_COPY_FILES += \
-
 # prebuilt
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/app/RomStats.apk:system/app/RomStats.apk \
@@ -127,6 +124,10 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+
+# block stock OTAs
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/otablock:system/bin/otablock
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
