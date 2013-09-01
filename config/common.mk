@@ -125,10 +125,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
-# block stock OTAs
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/otablock:system/bin/otablock
-
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
