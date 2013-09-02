@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     PermissionsManager \
     PhaseBeam \
     PhotoTable \
+    ROMStats \
     SunBeam \
     Superuser \
     su \
@@ -109,7 +110,6 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/app/RomStats.apk:system/app/RomStats.apk \
     vendor/carbon/prebuilt/common/xbin/sysro:system/xbin/sysro \
     vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -189,8 +189,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ROM Statistics and ROM Identification
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.romstats.url=http://carbon-stats.mattman.org \
+ro.romstats.askfirst=1 \
+ro.romstats.ga=UA-0000000-0 \
 ro.romstats.name=CarbonRom- \
+ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.version=$(CARBON_VERSION)
 
 -include vendor/carbon/sepolicy/sepolicy.mk
