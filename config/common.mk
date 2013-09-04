@@ -186,7 +186,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ROM Statistics and ROM Identification
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.askfirst=1 \
-ro.romstats.ga=UA-0000000-0 \
+ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
 ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.version=$(CARBON_VERSION)
