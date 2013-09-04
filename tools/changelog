@@ -29,4 +29,4 @@ k=$(expr $i - 1)
 done
 
 # Let squisher handle the zipping part
-cp $Changelog $OUT/repack.d/ota/
+# cp $Changelog $OUT/repack.d/ota/

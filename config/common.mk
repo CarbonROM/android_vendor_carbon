@@ -39,7 +39,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     LockClock \
     NoiseField \
-    PermissionsManager \
     PhaseBeam \
     PhotoTable \
     ROMStats \
