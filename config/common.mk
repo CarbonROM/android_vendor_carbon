@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Apollo \
     BlueBalls \
+    BluetoothExt \
     Camera \
     CarbonFibers \
     Development \
