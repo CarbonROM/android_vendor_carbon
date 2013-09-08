@@ -5,7 +5,7 @@
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not specified -->
-    <string name="default_wallpaper_component" translatable="false">com.android.phasebeam/.PhaseBeamWallpaper</string>
+    <string name="default_wallpaper_component" translatable="false">com.android.blueballs/.BlueBallsWallpaper</string>
 
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
