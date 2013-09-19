@@ -33,7 +33,6 @@ PRODUCT_PACKAGES += \
     CarbonFibers \
     Development \
     DSPManager \
-    Focal \
     CMFileManager \
     Galaxy4 \
     HALO \
