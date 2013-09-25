@@ -8,3 +8,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     gsm.current.phone-type=2
+
+#Set correct LTE mode
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.qc_lte_network_modes=true
