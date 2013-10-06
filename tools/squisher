@@ -112,8 +112,14 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
+if [ "$CARBON_CHANGELOG" = true ]
+then
 # Add changelog
 . $ANDROID_BUILD_TOP/vendor/carbon/tools/changelog
+else
+printf "No changelog..."
+echo
+fi
 
 # Pack it up and sign
 printf "Zipping package..."
