@@ -15,6 +15,7 @@ add_lunch_combo carbon_evita-userdebug
 add_lunch_combo carbon_find5-userdebug
 add_lunch_combo carbon_flo-userdebug
 add_lunch_combo carbon_grouper-userdebug
+add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_hercules-userdebug
 add_lunch_combo carbon_i605-userdebug
 add_lunch_combo carbon_i777-userdebug
