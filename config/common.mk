@@ -193,5 +193,3 @@ ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
 ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.version=$(CARBON_VERSION)
-
--include vendor/carbon/sepolicy/sepolicy.mk

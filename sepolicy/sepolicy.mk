@@ -3,8 +3,9 @@
 # inherit from Carbon
 #
 
-BOARD_SEPOLICY_DIRS := \
+BOARD_SEPOLICY_DIRS += \
     vendor/carbon/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
+    seapp_contexts \
     mac_permissions.xml
