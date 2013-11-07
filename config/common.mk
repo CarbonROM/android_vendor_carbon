@@ -31,12 +31,11 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     BluetoothExt \
     Camera \
-#    CarbonFibers \
+    CarbonFibers \
     Development \
     DSPManager \
     CMFileManager \
     Galaxy4 \
-    HALO \
     LatinIME \
     libcyanogen-dsp \
     LiveWallpapers \
@@ -65,9 +64,9 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiver
 
 # CM Hardware Abstraction Framework
-#PRODUCT_PACKAGES += \
-#    org.cyanogenmod.hardware \
-#    org.cyanogenmod.hardware.xml
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 PRODUCT_PACKAGES += \
     e2fsck \
