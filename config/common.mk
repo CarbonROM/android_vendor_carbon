@@ -53,7 +53,8 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     VoicePlus \
     Wallpapers \
-    audio_effects.conf
+    audio_effects.conf \
+    libemoji
 
 
 # prebuilts
