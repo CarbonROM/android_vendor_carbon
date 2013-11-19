@@ -4,7 +4,6 @@ import /init.superuser.rc
 
 on init
     export TERMINFO /system/etc/terminfo
-    export TERM linux
 
 on post-fs-data
     mkdir /data/.ssh 0750 root shell
