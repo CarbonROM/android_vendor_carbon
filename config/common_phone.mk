@@ -8,10 +8,6 @@ $(call inherit-product, vendor/carbon/config/common.mk)
 #PRODUCT_COPY_FILES += \
 #    vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
-# packages
-PRODUCT_PACKAGES += \
-  Mms
-
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Hydra.ogg \
