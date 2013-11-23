@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
     VoicePlus \
     Wallpapers \
     audio_effects.conf \
-    libemoj
+    libemoji
 
 # prebuilts
 PRODUCT_PACKAGES += \
