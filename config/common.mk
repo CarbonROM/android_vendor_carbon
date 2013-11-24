@@ -105,6 +105,7 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware.xml
 
 PRODUCT_PACKAGES += \
+    libsepol \
     e2fsck \
     mke2fs \
     tune2fs \
