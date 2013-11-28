@@ -3,7 +3,6 @@ PRODUCT_BRAND ?= Carbon
 
 #SuperUser
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # overrides
 PRODUCT_PROPERTY_OVERRIDES += \
