@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libemoji
 
+# Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
+
 # prebuilts
 PRODUCT_PACKAGES += \
     GooManager
