@@ -56,6 +56,7 @@ add_lunch_combo carbon_toro-userdebug
 add_lunch_combo carbon_toroplus-userdebug
 add_lunch_combo carbon_umts_spyder-userdebug
 add_lunch_combo carbon_ville-userdebug
+add_lunch_combo carbon_vs980-userdebug
 add_lunch_combo carbon_xt897-userdebug
 add_lunch_combo carbon_xt897c-userdebug
 add_lunch_combo carbon_xt907-userdebug
