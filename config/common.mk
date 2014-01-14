@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     BluetoothExt \
     Camera \
+    CarbonDelta \
     CarbonFibers \
     Development \
     DSPManager \
