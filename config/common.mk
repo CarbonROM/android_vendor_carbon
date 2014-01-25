@@ -55,19 +55,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-# Camera shutter sound property
+# camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.camera-sound=1
 
-# packages
+# main packages
 PRODUCT_PACKAGES += \
-    BlueBalls \
     BluetoothExt \
     Camera \
-    CarbonDelta \
-    CarbonFibers \
     Development \
-    DSPManager \
     CMFileManager \
     Galaxy4 \
     LatinIME \
@@ -77,15 +73,26 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     PhotoTable \
-    ROMStats \
     Superuser \
     su \
     Torch \
     VoicePlus \
-    Wallpapers \
-    audio_effects.conf \
-    libcyanogen-dsp \
     libemoji
+
+# carbon packages
+PRODUCT_PACKAGES += \
+    BlueBalls \
+    CarbonAbout \
+    CarbonDelta \
+    CarbonFibers \
+    ROMStats \
+    Wallpapers
+
+# dsp manager
+PRODUCT_PACKAGES += \
+    DSPManager \
+    audio_effects.conf \
+    libcyanogen-dsp
 
 # Screen recorder
 PRODUCT_PACKAGES += \
