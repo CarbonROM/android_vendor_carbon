@@ -32,10 +32,9 @@ add_lunch_combo carbon_jfltevzw-userdebug
 add_lunch_combo carbon_jfltexx-userdebug
 add_lunch_combo carbon_l900-userdebug
 add_lunch_combo carbon_mb886-userdebug
-add_lunch_combo carbon_m7ul-userdebug
-add_lunch_combo carbon_m7att-userdebug
+add_lunch_combo carbon_m7-userdebug
 add_lunch_combo carbon_m7spr-userdebug
-add_lunch_combo carbon_m7tmo-userdebug
+add_lunch_combo carbon_m7vzw-userdebug
 add_lunch_combo carbon_maguro-userdebug
 add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_manta-userdebug
