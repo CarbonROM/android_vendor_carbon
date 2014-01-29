@@ -1,4 +1,6 @@
 add_lunch_combo carbon_acclaim-userdebug
+add_lunch_combo carbon_anzu-userdebug
+add_lunch_combo carbon_coconut-userdebug
 add_lunch_combo carbon_crespo-userdebug
 add_lunch_combo carbon_d2att-userdebug
 add_lunch_combo carbon_d2cri-userdebug
@@ -19,8 +21,11 @@ add_lunch_combo carbon_evita-userdebug
 add_lunch_combo carbon_find5-userdebug
 add_lunch_combo carbon_flo-userdebug
 add_lunch_combo carbon_grouper-userdebug
+add_lunch_combo carbon_haida-userdebug
+add_lunch_combo carbon_hallon-userdebug
 add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_hercules-userdebug
+add_lunch_combo carbon_iyokan-userdebug
 add_lunch_combo carbon_i605-userdebug
 add_lunch_combo carbon_i777-userdebug
 add_lunch_combo carbon_infuse4g-userdebug
@@ -41,13 +46,16 @@ add_lunch_combo carbon_m7spr-userdebug
 add_lunch_combo carbon_m7vzw-userdebug
 add_lunch_combo carbon_maguro-userdebug
 add_lunch_combo carbon_mako-userdebug
+add_lunch_combo carbon_mango-userdebug
 add_lunch_combo carbon_manta-userdebug
 add_lunch_combo carbon_maserati-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
 add_lunch_combo carbon_quincyatt-userdebug
 add_lunch_combo carbon_quincytmo-userdebug
+add_lunch_combo carbon_satsuma-userdebug
 add_lunch_combo carbon_skyrocket-userdebug
+add_lunch_combo carbon_smultron-userdebug
 add_lunch_combo carbon_solana-userdebug
 add_lunch_combo carbon_spyder-userdebug
 add_lunch_combo carbon_t0lte-userdebug
@@ -59,6 +67,7 @@ add_lunch_combo carbon_tilapia-userdebug
 add_lunch_combo carbon_toro-userdebug
 add_lunch_combo carbon_toroplus-userdebug
 add_lunch_combo carbon_umts_spyder-userdebug
+add_lunch_combo carbon_urushi-userdebug
 add_lunch_combo carbon_ville-userdebug
 add_lunch_combo carbon_vs980-userdebug
 add_lunch_combo carbon_xt897-userdebug
