@@ -2,14 +2,8 @@ add_lunch_combo carbon_acclaim-userdebug
 add_lunch_combo carbon_anzu-userdebug
 add_lunch_combo carbon_coconut-userdebug
 add_lunch_combo carbon_crespo-userdebug
-add_lunch_combo carbon_d2att-userdebug
-add_lunch_combo carbon_d2cri-userdebug
 add_lunch_combo carbon_d2dcm-userdebug
-add_lunch_combo carbon_d2mtr-userdebug
-add_lunch_combo carbon_d2spr-userdebug
-add_lunch_combo carbon_d2tmo-userdebug
-add_lunch_combo carbon_d2usc-userdebug
-add_lunch_combo carbon_d2vzw-userdebug
+add_lunch_combo carbon_d2lte-userdebug
 add_lunch_combo carbon_d710-userdebug
 add_lunch_combo carbon_d800-userdebug
 add_lunch_combo carbon_d801-userdebug
