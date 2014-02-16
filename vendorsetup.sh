@@ -44,6 +44,7 @@ add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_mango-userdebug
 add_lunch_combo carbon_manta-userdebug
 add_lunch_combo carbon_maserati-userdebug
+add_lunch_combo carbon_n1-userdebug
 add_lunch_combo carbon_n5110-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
