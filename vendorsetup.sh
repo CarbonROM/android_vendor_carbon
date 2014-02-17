@@ -25,7 +25,7 @@ add_lunch_combo carbon_haida-userdebug
 add_lunch_combo carbon_hallon-userdebug
 add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_hercules-userdebug
-add_lunch_combo carbon_hltexx-userdebug
+add_lunch_combo carbon_hlte-userdebug
 add_lunch_combo carbon_iyokan-userdebug
 add_lunch_combo carbon_i605-userdebug
 add_lunch_combo carbon_i777-userdebug
