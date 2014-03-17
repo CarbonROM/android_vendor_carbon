@@ -87,7 +87,6 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     CarbonAbout \
     CarbonDelta \
-    CarbonFibers \
     ROMStats \
     Wallpapers
 
