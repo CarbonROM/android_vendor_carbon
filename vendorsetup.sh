@@ -50,6 +50,7 @@ add_lunch_combo carbon_n1-userdebug
 add_lunch_combo carbon_n5110-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
+add_lunch_combo carbon_n801x-userdebug
 add_lunch_combo carbon_quincyatt-userdebug
 add_lunch_combo carbon_quincytmo-userdebug
 add_lunch_combo carbon_satsuma-userdebug
