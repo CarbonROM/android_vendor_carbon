@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     LockClock \
     NoiseField \
+    OmniSwitch \
     PhaseBeam \
     PhotoTable \
     Superuser \
