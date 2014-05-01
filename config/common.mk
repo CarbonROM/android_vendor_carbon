@@ -215,3 +215,16 @@ ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
 ro.romstats.url=http://stats.carbon-rom.com \
 ro.romstats.version=$(CARBON_VERSION)
+
+# Audio
+$(call inherit-product-if-exists, frameworks/base/data/sounds/OldAudio.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/NewAudio.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageStars.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageNewWave.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageElements.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage9.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
