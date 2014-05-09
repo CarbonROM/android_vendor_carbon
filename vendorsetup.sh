@@ -41,6 +41,7 @@ add_lunch_combo carbon_mb886-userdebug
 add_lunch_combo carbon_m7-userdebug
 add_lunch_combo carbon_m7spr-userdebug
 add_lunch_combo carbon_m7vzw-userdebug
+add_lunch_combo carbon_m8-userdebug
 add_lunch_combo carbon_maguro-userdebug
 add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_mango-userdebug
