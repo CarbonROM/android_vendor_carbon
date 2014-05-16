@@ -62,6 +62,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+
 # main packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
