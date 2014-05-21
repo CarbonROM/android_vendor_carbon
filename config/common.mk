@@ -69,6 +69,7 @@ PRODUCT_PACKAGES += \
     Development \
     CMFileManager \
     Galaxy4 \
+    HoloSpiralWallpaper \
     LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
