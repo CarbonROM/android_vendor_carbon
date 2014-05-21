@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     Torch \
+    VisualizationWallpapers \
     VoicePlus \
     libemoji
 
