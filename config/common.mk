@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     PhaseBeam \
     PhotoTable \
+    SoundRecorder \
     Superuser \
     su \
     Torch \
