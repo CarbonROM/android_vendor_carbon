@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
+    MagicSmokeWallpapers \
     NoiseField \
     OmniSwitch \
     PhaseBeam \
