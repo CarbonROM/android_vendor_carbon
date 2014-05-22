@@ -228,6 +228,9 @@ ro.romstats.name=CarbonRom- \
 ro.romstats.url=http://stats.carbon-rom.com \
 ro.romstats.version=$(CARBON_VERSION)
 
+# by default, do not update the recovery with system updates
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+
 # Audio
 $(call inherit-product-if-exists, frameworks/base/data/sounds/OldAudio.mk)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/NewAudio.mk)
