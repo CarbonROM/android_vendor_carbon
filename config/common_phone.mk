@@ -1,12 +1,5 @@
-# audio
-include frameworks/base/data/sounds/NewAudio.mk
-
 # common
 $(call inherit-product, vendor/carbon/config/common.mk)
-
-# media
-#PRODUCT_COPY_FILES += \
-#    vendor/carbon/prebuilt/common/media/xhdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # ringtones
 PRODUCT_PROPERTY_OVERRIDES += \
