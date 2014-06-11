@@ -36,6 +36,7 @@ add_lunch_combo carbon_t0lteatt-userdebug
 add_lunch_combo carbon_t0ltetmo-userdebug
 add_lunch_combo carbon_t769-userdebug
 add_lunch_combo carbon_taoshan-userdebug
+add_lunch_combo carbon_tf101-userdebug
 add_lunch_combo carbon_toro-userdebug
 add_lunch_combo carbon_toroplus-userdebug
 add_lunch_combo carbon_vs980-userdebug
