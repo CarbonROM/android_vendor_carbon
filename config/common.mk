@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
     NoiseField \
     OmniSwitch \
     PhaseBeam \
+    PhotoPhase \
     PhotoTable \
     SoundRecorder \
     Superuser \
