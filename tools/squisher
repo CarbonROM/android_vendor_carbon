@@ -20,7 +20,7 @@ else
 fi
 
 if [ -z "$OUT" -o ! -d "$OUT" ]; then
-	echo $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
+	echo -e $CL_RED"ERROR: $0 only works with a full build environment. $OUT should exist."$CL_RST
 	exit 1
 fi
 
@@ -32,18 +32,18 @@ DELETE_FONTS="MTLmr3m.ttf"
 DELETE_MEDIA="*.qmg"
 
 REPACK=$OUT/repack.d
-printf "Sanitizing Environment..."
+echo -e "Sanitizing Environment..."
 rm -rf $REPACK
 mkdir -p $REPACK
-echo
+echo -e
 
 # Unpack the otapackage and opticharge all apks
 mkdir $REPACK/ota
 (
 cd $REPACK/ota
-printf "Unpacking $OTAPACKAGE..."
+echo -e "Unpacking $OTAPACKAGE..."
 unzip $QUIET $OTAPACKAGE
-echo
+echo -e
 
 # Move all apks to the same directory so xargs can
 # use also with framework-res.apk. This allow process
@@ -79,23 +79,23 @@ $SED -i \
 # Determine what to name the new signed package
 MODVERSION=`sed -n -e'/ro\.carbon\.version/s/^.*=//p' $OUT/system/build.prop`
 # Check for '_' in product name
-if [ "`echo $TARGET_PRODUCT | cut -d '_' -f3`" != "" ]
+if [ "`echo -e $TARGET_PRODUCT | cut -d '_' -f3`" != "" ]
 then
-TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2,3`
+TARGET_PRODUCT_FINAL=`echo -e $TARGET_PRODUCT | cut -d '_' -f2,3`
 else
-TARGET_PRODUCT_FINAL=`echo $TARGET_PRODUCT | cut -d '_' -f2`
+TARGET_PRODUCT_FINAL=`echo -e $TARGET_PRODUCT | cut -d '_' -f2`
 fi
-echo $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
+echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST
 OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 
 # Delete unnecessary binaries
-( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
+( cd $REPACK/ota/system/bin; echo -e $DELETE_BINS | xargs rm -f; )
 
 # Delete unnecessary libraries
-( cd $REPACK/ota/system/lib; echo $DELETE_LIBS | xargs rm -f; )
+( cd $REPACK/ota/system/lib; echo -e $DELETE_LIBS | xargs rm -f; )
 
 # Delete Offline charging mode files
-( cd $REPACK/ota/system/media; echo $DELETE_MEDIA | xargs rm -f; )
+( cd $REPACK/ota/system/media; echo -e $DELETE_MEDIA | xargs rm -f; )
 
 if [ "$TARGET_PRODUCT_FINAL" != "infuse4g" ]
 then
@@ -107,7 +107,7 @@ fi
 rm -rf $REPACK/ota/system/media/video
 
 # Delete Unnecessary Fonts
-( cd $REPACK/ota/system/fonts; echo $DELETE_FONTS | xargs rm -f; )
+( cd $REPACK/ota/system/fonts; echo -e $DELETE_FONTS | xargs rm -f; )
 
 # No need for tts
 rm -rf $REPACK/ota/system/tts
@@ -128,45 +128,45 @@ then
 # Add changelog
 . $ANDROID_BUILD_TOP/vendor/carbon/tools/changelog
 else
-printf "No changelog..."
-echo
+echo -e "No changelog..."
+echo -e
 fi
 
 # Pack it up and sign
-printf "Zipping package..."
+echo -e "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
-echo
-printf "Signing package..."
+echo -e
+echo -e "Signing package..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
-echo
-printf "Cleaning up..."
+echo -e
+echo -e "Cleaning up..."
 rm -rf $REPACK
-echo
+echo -e
 
-echo $CL_RED" ▄████▄   ▄▄▄       ██▀███   ▄▄▄▄    ▒█████   ███▄    █     ██▀███   ▒█████   ███▄ ▄███▓"$CL_RST
-echo $CL_RED"▒██▀ ▀█  ▒████▄    ▓██ ▒ ██▒▓█████▄ ▒██▒  ██▒ ██ ▀█   █    ▓██ ▒ ██▒▒██▒  ██▒▓██▒▀█▀ ██▒"$CL_RST
-echo $CL_RED"▒▓█    ▄ ▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒ ▄██▒██░  ██▒▓██  ▀█ ██▒   ▓██ ░▄█ ▒▒██░  ██▒▓██    ▓██░"$CL_RST
-echo $CL_RED"▒▓▓▄ ▄██▒░██▄▄▄▄██ ▒██▀▀█▄  ▒██░█▀  ▒██   ██░▓██▒  ▐▌██▒   ▒██▀▀█▄  ▒██   ██░▒██    ▒██"$CL_RST
-echo $CL_RED"▒ ▓███▀ ░ ▓█   ▓██▒░██▓ ▒██▒░▓█  ▀█▓░ ████▓▒░▒██░   ▓██░   ░██▓ ▒██▒░ ████▓▒░▒██▒   ░██▒"$CL_RST
-echo $CL_RED"░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░▒▓███▀▒░ ▒░▒░▒░ ░ ▒░   ▒ ▒    ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░ ▒░   ░  ░"$CL_RST
-echo $CL_RED"  ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░▒░▒   ░   ░ ▒ ▒░ ░ ░░   ░ ▒░     ░▒ ░ ▒░  ░ ▒ ▒░ ░  ░      ░"$CL_RST
-echo $CL_RED"░          ░   ▒     ░░   ░  ░    ░ ░ ░ ░ ▒     ░   ░ ░      ░░   ░ ░ ░ ░ ▒  ░      ░"$CL_RST
-echo $CL_RED"░ ░            ░  ░   ░      ░          ░ ░           ░       ░         ░ ░         ░"$CL_RST
-echo $CL_RED"░                                 ░"$CL_RST
+echo -e $CL_RED" ▄████▄   ▄▄▄       ██▀███   ▄▄▄▄    ▒█████   ███▄    █     ██▀███   ▒█████   ███▄ ▄███▓"$CL_RST
+echo -e $CL_RED"▒██▀ ▀█  ▒████▄    ▓██ ▒ ██▒▓█████▄ ▒██▒  ██▒ ██ ▀█   █    ▓██ ▒ ██▒▒██▒  ██▒▓██▒▀█▀ ██▒"$CL_RST
+echo -e $CL_RED"▒▓█    ▄ ▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒ ▄██▒██░  ██▒▓██  ▀█ ██▒   ▓██ ░▄█ ▒▒██░  ██▒▓██    ▓██░"$CL_RST
+echo -e $CL_RED"▒▓▓▄ ▄██▒░██▄▄▄▄██ ▒██▀▀█▄  ▒██░█▀  ▒██   ██░▓██▒  ▐▌██▒   ▒██▀▀█▄  ▒██   ██░▒██    ▒██"$CL_RST
+echo -e $CL_RED"▒ ▓███▀ ░ ▓█   ▓██▒░██▓ ▒██▒░▓█  ▀█▓░ ████▓▒░▒██░   ▓██░   ░██▓ ▒██▒░ ████▓▒░▒██▒   ░██▒"$CL_RST
+echo -e $CL_RED"░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░▒▓███▀▒░ ▒░▒░▒░ ░ ▒░   ▒ ▒    ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ░ ▒░   ░  ░"$CL_RST
+echo -e $CL_RED"  ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░▒░▒   ░   ░ ▒ ▒░ ░ ░░   ░ ▒░     ░▒ ░ ▒░  ░ ▒ ▒░ ░  ░      ░"$CL_RST
+echo -e $CL_RED"░          ░   ▒     ░░   ░  ░    ░ ░ ░ ░ ▒     ░   ░ ░      ░░   ░ ░ ░ ░ ▒  ░      ░"$CL_RST
+echo -e $CL_RED"░ ░            ░  ░   ░      ░          ░ ░           ░       ░         ░ ░         ░"$CL_RST
+echo -e $CL_RED"░                                 ░"$CL_RST
 
 # Create a md5 checksum image of the repacked package
 (
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
-echo
-echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
-echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo
+echo -e
+echo -e $CL_GRN"Package complete: $OUTFILE"$CL_RST
+echo -e $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo -e
 )
 
 exit 0
