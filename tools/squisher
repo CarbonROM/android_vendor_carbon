@@ -147,16 +147,6 @@ printf "Cleaning up..."
 rm -rf $REPACK
 echo
 
-# Create a md5 checksum image of the repacked package
-(
-img=`basename $OUTFILE`
-cd `dirname $OUTFILE`
-$MD5 $img >$img.md5sum
-echo
-echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
-echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
-echo
-
 echo $CL_RED" ▄████▄   ▄▄▄       ██▀███   ▄▄▄▄    ▒█████   ███▄    █     ██▀███   ▒█████   ███▄ ▄███▓"$CL_RST
 echo $CL_RED"▒██▀ ▀█  ▒████▄    ▓██ ▒ ██▒▓█████▄ ▒██▒  ██▒ ██ ▀█   █    ▓██ ▒ ██▒▒██▒  ██▒▓██▒▀█▀ ██▒"$CL_RST
 echo $CL_RED"▒▓█    ▄ ▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒ ▄██▒██░  ██▒▓██  ▀█ ██▒   ▓██ ░▄█ ▒▒██░  ██▒▓██    ▓██░"$CL_RST
@@ -167,6 +157,16 @@ echo $CL_RED"  ░  ▒     ▒   ▒▒ ░  ░▒ ░ ▒░▒░▒   ░  
 echo $CL_RED"░          ░   ▒     ░░   ░  ░    ░ ░ ░ ░ ▒     ░   ░ ░      ░░   ░ ░ ░ ░ ▒  ░      ░"$CL_RST
 echo $CL_RED"░ ░            ░  ░   ░      ░          ░ ░           ░       ░         ░ ░         ░"$CL_RST
 echo $CL_RED"░                                 ░"$CL_RST
+
+# Create a md5 checksum image of the repacked package
+(
+img=`basename $OUTFILE`
+cd `dirname $OUTFILE`
+$MD5 $img >$img.md5sum
+echo
+echo $CL_GRN"Package complete: $OUTFILE"$CL_RST
+echo $CL_GRN"md5: $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
+echo
 )
 
 exit 0
