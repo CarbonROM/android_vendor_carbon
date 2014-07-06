@@ -231,7 +231,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.askfirst=1 \
 ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
-ro.romstats.url=http://stats.carbon-rom.com \
+ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.version=$(CARBON_VERSION)
 
 # by default, do not update the recovery with system updates
