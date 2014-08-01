@@ -33,6 +33,7 @@ add_lunch_combo carbon_n5110-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
 add_lunch_combo carbon_n801x-userdebug
+add_lunch_combo carbon_peregrine-userdebug
 add_lunch_combo carbon_sirius-userdebug
 add_lunch_combo carbon_skyrocket-userdebug
 add_lunch_combo carbon_t0lte-userdebug
