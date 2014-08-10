@@ -106,7 +106,7 @@ PRODUCT_PACKAGES += \
     ROMStats \
     Wallpapers
 
-ifeq ($(BOARD_USES_QCOM_MUSICFX),)
+ifneq ($(BOARD_USES_QCOM_MUSICFX),)
     # dsp manager
     PRODUCT_PACKAGES += \
         DSPManager \
