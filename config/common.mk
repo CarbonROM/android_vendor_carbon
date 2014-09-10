@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     PhotoPhase \
     PhotoTable \
-    QuickBoot \
     SoundRecorder \
     Superuser \
     su \
