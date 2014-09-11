@@ -1,3 +1,4 @@
+add_lunch_combo carbon_bacon-userdebug
 add_lunch_combo carbon_d2dcm-userdebug
 add_lunch_combo carbon_d2lte-userdebug
 add_lunch_combo carbon_d800-userdebug
