@@ -245,12 +245,4 @@ ro.romstats.version=$(CARBON_VERSION)
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Audio
-$(call inherit-product-if-exists, frameworks/base/data/sounds/OldAudio.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/NewAudio.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageNewWave.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage9.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/CopyAudioFiles.mk)
