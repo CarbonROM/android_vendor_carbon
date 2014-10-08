@@ -13,6 +13,7 @@ add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_hercules-userdebug
 add_lunch_combo carbon_hlte-userdebug
 add_lunch_combo carbon_hltespr-userdebug
+add_lunch_combo carbon_hlteusc-userdebug
 add_lunch_combo carbon_hltevzw-userdebug
 add_lunch_combo carbon_i605-userdebug
 add_lunch_combo carbon_i9100-userdebug
