@@ -202,7 +202,7 @@ PRODUCT_COPY_FILES += \
 
 # version
 RELEASE = false
-CARBON_VERSION_MAJOR = 2
+CARBON_VERSION_MAJOR = 5
 CARBON_VERSION_MINOR = 0
 
 # Set CARBON_BUILDTYPE
@@ -245,4 +245,4 @@ ro.romstats.version=$(CARBON_VERSION)
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Audio
-$(call inherit-product-if-exists, frameworks/base/data/sounds/CopyAudioFiles.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk.mk)
