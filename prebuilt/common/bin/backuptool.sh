@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=CARBON-KK
+export V=CARBON-LP
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {

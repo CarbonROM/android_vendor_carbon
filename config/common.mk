@@ -99,11 +99,12 @@ PRODUCT_PACKAGES += \
 
 # carbon packages
 PRODUCT_PACKAGES += \
-    BlueBalls \
-    CarbonAbout \
-    CarbonDelta \
-    ROMStats \
-    Wallpapers
+        ROMControl
+#     BlueBalls \
+#     CarbonAbout \
+#     CarbonDelta \
+#     ROMStats \
+#     Wallpapers
 
 # DSPManager
 PRODUCT_PACKAGES += \
@@ -225,9 +226,9 @@ endif
 
 # Set Carbon version
 ifdef CARBON_RELEASE
-    CARBON_VERSION := "CARBON-KK-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
+    CARBON_VERSION := "CARBON-LP-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
-    CARBON_VERSION := "CARBON-KK-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+    CARBON_VERSION := "CARBON-LP-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
