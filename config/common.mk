@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
+    Launcher3 \
     LockClock \
     MagicSmokeWallpapers \
     NoiseField \
