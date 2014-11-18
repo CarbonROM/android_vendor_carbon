@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
     VoicePlus \
     libemoji
 
-# carbon packages
+# CarbonROM packages
 PRODUCT_PACKAGES += \
         ROMControl
 #     BlueBalls \
@@ -106,6 +106,11 @@ PRODUCT_PACKAGES += \
 #     CarbonDelta \
 #     ROMStats \
 #     Wallpapers
+
+# CM packages
+PRODUCT_PACKAGES += \
+        CMHome \
+        CMWallpapers
 
 # DSPManager
 PRODUCT_PACKAGES += \
