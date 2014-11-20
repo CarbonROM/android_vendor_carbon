@@ -3,6 +3,7 @@ PRODUCT_BRAND ?= Carbon
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -67,9 +68,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 # Installer
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
-    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+#    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
 
 # main packages
 PRODUCT_PACKAGES += \
@@ -91,8 +92,6 @@ PRODUCT_PACKAGES += \
     PhotoPhase \
     PhotoTable \
     SoundRecorder \
-    Superuser \
-    su \
     Torch \
     VisualizationWallpapers \
     VoicePlus \
@@ -128,12 +127,18 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+# Extra tools in Carbon
 PRODUCT_PACKAGES += \
     libsepol \
+    openvpn \
     e2fsck \
     mke2fs \
     tune2fs \
+    bash \
     nano \
+    htop \
+    powertop \
+    lsof \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
@@ -141,7 +146,12 @@ PRODUCT_PACKAGES += \
     fsck.f2fs \
     fibmap.f2fs \
     ntfsfix \
-    ntfs-3g
+    ntfs-3g \
+    gdbserver \
+    micro_bench \
+    oprofiled \
+    sqlite3 \
+    strace
 
 # Openssh
 PRODUCT_PACKAGES += \
@@ -153,12 +163,34 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegadec \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
+
+# These packages are excluded from user builds
+ifneq ($(TARGET_BUILD_VARIANT),user)
+
+PRODUCT_PACKAGES += \
+    procmem \
+    procrank \
+    Superuser \
+    su
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=1
+else
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=0
+
+endif
 
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -177,7 +209,20 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# etc
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Carbon-specific init file
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
 
@@ -198,13 +243,20 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
-# sip/voip
+# Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# Enable wireless Xbox 360 controller support
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+
+# This is Carbon!
+PRODUCT_COPY_FILES += \
+    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
+
 # nfc
 PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml \
     vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
