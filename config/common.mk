@@ -72,6 +72,21 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 #    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
 #    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
 
+# Include CM audio files
+include vendor/carbon/config/cm_audio.mk
+
+PRODUCT_PACKAGES += \
+    VideoEditor \
+    libvideoeditor_jni \
+    libvideoeditor_core \
+    libvideoeditor_osal \
+    libvideoeditor_videofilters \
+    libvideoeditorplayer
+
+# Extra tools in CM
+PRODUCT_PACKAGES += \
+    vim
+
 # main packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
@@ -224,7 +239,9 @@ PRODUCT_COPY_FILES += \
 
 # Carbon-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
+    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
 
 # prebuilt
 PRODUCT_COPY_FILES += \
