@@ -89,9 +89,11 @@ PRODUCT_PACKAGES += \
 
 # main packages
 PRODUCT_PACKAGES += \
+    Apollo \
     BluetoothExt \
     Camera \
     Development \
+    DeskClock \
     CMFileManager \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -108,6 +110,7 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     SoundRecorder \
     Torch \
+    Trebuchet \
     VisualizationWallpapers \
     VoicePlus \
     libemoji
