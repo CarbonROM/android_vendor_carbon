@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
 
 # main packages
 PRODUCT_PACKAGES += \
+    AudioFX \
     BluetoothExt \
     Camera \
     CMFileManager \
@@ -128,12 +129,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         CMHome \
         CMWallpapers
-
-# DSPManager
-PRODUCT_PACKAGES += \
-    DSPManager \
-    audio_effects.conf \
-    libcyanogen-dsp
 
 # Screen recorder
 PRODUCT_PACKAGES += \
