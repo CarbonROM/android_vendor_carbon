@@ -89,15 +89,16 @@ PRODUCT_PACKAGES += \
 
 # main packages
 PRODUCT_PACKAGES += \
-    Apollo \
     BluetoothExt \
     Camera \
+    CMFileManager \
     Development \
     DeskClock \
-    CMFileManager \
+    Eleven \
     Galaxy4 \
     HoloSpiralWallpaper \
     LatinIME \
+    libemoji \
     LiveWallpapers \
     LiveWallpapersPicker \
     Launcher3 \
@@ -112,8 +113,7 @@ PRODUCT_PACKAGES += \
     Torch \
     Trebuchet \
     VisualizationWallpapers \
-    VoicePlus \
-    libemoji
+    VoicePlus
 
 # CarbonROM packages
 PRODUCT_PACKAGES += \
