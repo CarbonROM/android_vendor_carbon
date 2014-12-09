@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
     LatinIME \
+    libemoji \
     LiveWallpapers \
     LiveWallpapersPicker \
     Launcher3 \
@@ -112,8 +113,7 @@ PRODUCT_PACKAGES += \
     Torch \
     Trebuchet \
     VisualizationWallpapers \
-    VoicePlus \
-    libemoji
+    VoicePlus
 
 # CarbonROM packages
 PRODUCT_PACKAGES += \
