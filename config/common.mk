@@ -89,12 +89,12 @@ PRODUCT_PACKAGES += \
 
 # main packages
 PRODUCT_PACKAGES += \
-    Apollo \
     BluetoothExt \
     Camera \
+    CMFileManager \
     Development \
     DeskClock \
-    CMFileManager \
+    Eleven \
     Galaxy4 \
     HoloSpiralWallpaper \
     LatinIME \
@@ -129,11 +129,10 @@ PRODUCT_PACKAGES += \
         CMHome \
         CMWallpapers
 
-# DSPManager
+# AudioFX
 PRODUCT_PACKAGES += \
-    DSPManager \
-    audio_effects.conf \
-    libcyanogen-dsp
+    AudioFX \
+    audio_effects.conf
 
 # Screen recorder
 PRODUCT_PACKAGES += \
