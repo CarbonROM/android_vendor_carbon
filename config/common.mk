@@ -70,8 +70,8 @@ include vendor/carbon/config/cm_audio.mk
 # Backup tool
 CARBON_BUILD = true
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/carbon/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/carbon/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
