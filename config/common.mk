@@ -56,20 +56,65 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-# camera shutter sound property
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.camera-sound=1
-
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
-# Installer
-#PRODUCT_COPY_FILES += \
-#    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
-#    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
 
 # Include CM audio files
 include vendor/carbon/config/cm_audio.mk
+
+# Backup tool
+CARBON_BUILD = true
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
+    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
+    vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+
+# Signature compatibility validation
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+
+# Carbon-specific init file
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+#PRODUCT_COPY_FILES += \
+#    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
+
+# Bring in camera effects
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+
+# Enable SIP+VoIP on all targets
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+# Enable wireless Xbox 360 controller support
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+
+# This is Carbon!
+PRODUCT_COPY_FILES += \
+    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
+
+# T-Mobile theme engine
+include vendor/carbon/config/theme_chooser.mk
 
 PRODUCT_PACKAGES += \
     VideoEditor \
@@ -85,6 +130,9 @@ PRODUCT_PACKAGES += \
 
 # main packages
 PRODUCT_PACKAGES += \
+    AudioFX \
+    audio_effects.conf \
+    Basic \
     BluetoothExt \
     Camera \
     CMFileManager \
@@ -123,11 +171,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         CMHome \
         CMWallpapers
-
-# AudioFX
-PRODUCT_PACKAGES += \
-    AudioFX \
-    audio_effects.conf
 
 # Screen recorder
 PRODUCT_PACKAGES += \
@@ -193,7 +236,6 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
-
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -202,67 +244,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# themes
-include vendor/carbon/config/theme_chooser.mk
-
 # korean
 $(call inherit-product-if-exists, external/naver-fonts/fonts.mk)
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
-
-# bin
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
-
-# Signature compatibility validation
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
-
-# init.d support
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
-
-# userinit support
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
-
-# Carbon-specific init file
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
-#PRODUCT_COPY_FILES += \
-#    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
-
-# prebuilt
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/xbin/sysro:system/xbin/sysro \
-    vendor/carbon/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
-    vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
-# Backup tool
-CARBON_BUILD = true
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/carbon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
-    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
-    vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
-
-# Enable SIP+VoIP on all targets
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# Enable wireless Xbox 360 controller support
-PRODUCT_COPY_FILES += \
-    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
-
-# This is Carbon!
-PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
 
 # nfc
 PRODUCT_COPY_FILES += \
@@ -314,3 +301,9 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Audio
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
+
+-include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+-include vendor/cyngn/product.mk
+
+$(call prepend-product-if-exists, vendor/extra/product.mk)
