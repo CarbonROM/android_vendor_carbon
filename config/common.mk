@@ -118,12 +118,10 @@ PRODUCT_PACKAGES += \
 
 # CarbonROM packages
 PRODUCT_PACKAGES += \
-        ROMControl
-#     BlueBalls \
-#     CarbonAbout \
-#     CarbonDelta \
-#     ROMStats \
-#     Wallpapers
+        BlueBalls \
+        CarbonDelta \
+        ROMStats \
+        Wallpapers
 
 # CM packages
 PRODUCT_PACKAGES += \
