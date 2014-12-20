@@ -313,4 +313,4 @@ ro.romstats.version=$(CARBON_VERSION)
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Audio
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
