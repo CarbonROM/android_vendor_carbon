@@ -195,14 +195,10 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=1
-else
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
-
-endif
 
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
