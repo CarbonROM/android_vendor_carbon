@@ -9,6 +9,8 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_SEPOLICY_UNION += \
     file.te \
     file_contexts \
+    system_app.te \
+    system_server.te \
     genfs_contexts \
     property_contexts \
     seapp_contexts \
