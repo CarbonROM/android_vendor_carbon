@@ -120,11 +120,6 @@ PRODUCT_PACKAGES += \
         ROMStats \
         Wallpapers
 
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/carbon/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-
 # CM packages
 PRODUCT_PACKAGES += \
         CMHome \
