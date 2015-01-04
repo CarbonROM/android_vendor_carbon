@@ -107,6 +107,7 @@ PRODUCT_PACKAGES += \
     PhotoPhase \
     PhotoTable \
     SoundRecorder \
+    Terminal \
     Torch \
     Trebuchet \
     VisualizationWallpapers \
