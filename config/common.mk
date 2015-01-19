@@ -3,7 +3,6 @@ PRODUCT_BRAND ?= Carbon
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -114,7 +113,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
 
 # T-Mobile theme engine
-include vendor/carbon/config/theme_chooser.mk
+include vendor/carbon/config/themes_common.mk
 
 PRODUCT_PACKAGES += \
     VideoEditor \
