@@ -3,6 +3,7 @@ PRODUCT_BRAND ?= Carbon
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
@@ -33,6 +34,8 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 PRODUCT_BOOTANIMATION := vendor/carbon/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
 endif
 
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
@@ -48,8 +51,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false \
-    persist.sys.root_access=3
+    ro.com.android.dataroaming=false
 
 # selinux dialog
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -62,9 +64,6 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
-
-# Include CM audio files
-include vendor/carbon/config/cm_audio.mk
 
 # Backup tool
 CARBON_BUILD = true
@@ -123,64 +122,38 @@ PRODUCT_PACKAGES += \
     libvideoeditor_videofilters \
     libvideoeditorplayer
 
-# Extra tools in CM
+# Required CM packages
 PRODUCT_PACKAGES += \
-    vim
-
-# main packages
-PRODUCT_PACKAGES += \
-    AudioFX \
-    Basic \
-    BluetoothExt \
-    Camera \
-    CMFileManager \
     Development \
-    DeskClock \
-    Eleven \
-    Galaxy4 \
-    HoloSpiralWallpaper \
     LatinIME \
+    BluetoothExt
+
+# Optional CM packages
+PRODUCT_PACKAGES += \
+    VoicePlus \
+    Basic \
     libemoji \
-    LiveWallpapers \
-    LiveWallpapersPicker \
+    Terminal
+
+# Custom CM packages
+PRODUCT_PACKAGES += \
     Launcher3 \
-    LockClock \
-    MagicSmokeWallpapers \
-    NoiseField \
-    OmniSwitch \
-    PhaseBeam \
-    PhotoPhase \
-    PhotoTable \
-    SoundRecorder \
-    Terminal \
-    Torch \
     Trebuchet \
-    VisualizationWallpapers \
-    VoicePlus
-
-# CarbonROM packages
-PRODUCT_PACKAGES += \
-        BlueBalls \
-        CarbonDelta \
-        ROMStats \
-        Wallpapers
-
-# CM packages
-PRODUCT_PACKAGES += \
-        CMHome \
-        CMWallpapers
-
-# Screen recorder
-PRODUCT_PACKAGES += \
-    ScreenRecorder \
-    libscreenrecorder
+    AudioFX \
+    CMWallpapers \
+    CMFileManager \
+    Eleven \
+    LockClock \
+    CMUpdater \
+    CMAccount \
+    CMHome
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
-# Extra tools in Carbon
+# Extra tools in CM
 PRODUCT_PACKAGES += \
     libsepol \
     openvpn \
@@ -229,12 +202,42 @@ PRODUCT_PACKAGES += \
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
-
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
 endif
+
+# Bring in all video files
+$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
+
+# Optional CM packages
+PRODUCT_PACKAGES += \
+    Galaxy4 \
+    HoloSpiralWallpaper \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    MagicSmokeWallpapers \
+    NoiseField \
+    PhaseBeam \
+    VisualizationWallpapers \
+    PhotoTable \
+    SoundRecorder \
+    PhotoPhase
+
+PRODUCT_PACKAGES += \
+    VideoEditor \
+    libvideoeditor_jni \
+    libvideoeditor_core \
+    libvideoeditor_osal \
+    libvideoeditor_videofilters \
+    libvideoeditorplayer
+
+# Extra tools in CM
+PRODUCT_PACKAGES += \
+    vim \
+    zip \
+    unrar
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
@@ -296,6 +299,9 @@ ro.romstats.version=$(CARBON_VERSION)
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+
+# Include CM audio files
+include vendor/carbon/config/cm_audio.mk
 
 # Audio
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)

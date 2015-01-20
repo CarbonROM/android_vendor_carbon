@@ -19,5 +19,5 @@
     <!-- The preferred APN to use, in the format name,mcc,mnc
          Leave empty to choose automatically. -->
     <string name="config_preferred_apn">lte.ktfwing.com,450,08</string>
-
 </resources>
+
