@@ -139,11 +139,7 @@ PRODUCT_PACKAGES += \
     CMWallpapers \
     CMFileManager \
     Eleven \
-    LockClock \
-    CMUpdater \
-    CMAccount \
-    CMHome \
-    CyanogenSetupWizard
+    LockClock
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
