@@ -1,9 +1,6 @@
 # brand
 PRODUCT_BRAND ?= Carbon
 
-# SuperUser
-SUPERUSER_EMBEDDED := true
-
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
 TARGET_BOOTANIMATION_SIZE := $(shell \
@@ -32,8 +29,6 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 PRODUCT_BOOTANIMATION := vendor/carbon/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
 endif
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,9 +84,7 @@ PRODUCT_COPY_FILES += \
 
 # Carbon-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
-#PRODUCT_COPY_FILES += \
-#    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
+    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.carbon.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES += \
@@ -106,21 +99,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# This is Carbon!
-PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
-
-# T-Mobile theme engine
-include vendor/carbon/config/themes_common.mk
-
-PRODUCT_PACKAGES += \
-    VideoEditor \
-    libvideoeditor_jni \
-    libvideoeditor_core \
-    libvideoeditor_osal \
-    libvideoeditor_videofilters \
-    libvideoeditorplayer
-
 # Required CM packages
 PRODUCT_PACKAGES += \
     AudioFX \
@@ -128,35 +106,18 @@ PRODUCT_PACKAGES += \
     Basic \
     BluetoothExt \
     Camera \
-    CMFileManager \
     Development \
     LatinIME \
     BluetoothExt
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
-    VoicePlus \
     Basic \
-    libemoji \
-    Terminal
+    libemoji
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
-    AudioFX \
-    CMWallpapers \
-    CMFileManager \
-    Eleven \
-    LockClock \
-    CMUpdater \
-    CMAccount \
-    CMHome
-
-# CM Hardware Abstraction Framework
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
+    Launcher3
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
@@ -244,8 +205,7 @@ PRODUCT_PACKAGES += \
     zip \
     unrar
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.root_access=0
 
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -256,10 +216,6 @@ $(call inherit-product-if-exists, external/naver-fonts/fonts.mk)
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
-
-# nfc
-PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
 RELEASE = false
@@ -293,14 +249,6 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.carbon.version=$(CARBON_VERSION)
-
-# ROM Statistics and ROM Identification
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.romstats.askfirst=1 \
-ro.romstats.ga=UA-43747246-1 \
-ro.romstats.name=CarbonRom- \
-ro.romstats.url=http://carbon-stats.mattman.org \
-ro.romstats.version=$(CARBON_VERSION)
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
