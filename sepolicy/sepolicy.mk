@@ -4,7 +4,7 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/carbon/sepolicy
+    vendor/stelix/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file.te \

@@ -11,7 +11,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/carbon/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/stelix/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -27,7 +27,7 @@ $(eval TARGET_BOOTANIMATION_NAME := $(shell \
 endef
 $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
 
-PRODUCT_BOOTANIMATION := vendor/carbon/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
+PRODUCT_BOOTANIMATION := vendor/stelix/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
 endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -64,36 +64,36 @@ endif
 # Backup tool
 CARBON_BUILD = true
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/carbon/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
-    vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
-    vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/stelix/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/stelix/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/stelix/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
+    vendor/stelix/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
+    vendor/stelix/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/stelix/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/stelix/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/carbon/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/stelix/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/stelix/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/stelix/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Carbon-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/stelix/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 #PRODUCT_COPY_FILES += \
-#    vendor/carbon/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
+#    vendor/stelix/prebuilt/common/etc/init.carbon.rc:root/init.carbon.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/carbon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/stelix/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/stelix/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -105,10 +105,10 @@ PRODUCT_COPY_FILES += \
 
 # This is Carbon!
 PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
+    vendor/stelix/config/permissions/com.carbon.android.xml:system/etc/permissions/com.carbon.android.xml
 
 # T-Mobile theme engine
-include vendor/carbon/config/themes_common.mk
+include vendor/stelix/config/themes_common.mk
 
 PRODUCT_PACKAGES += \
     VideoEditor \
@@ -242,17 +242,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, external/naver-fonts/fonts.mk)
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/stelix/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/stelix/overlay/common
 
 # nfc
 PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
+    vendor/stelix/config/permissions/com.carbon.nfc.enhanced.xml:system/etc/permissions/com.carbon.nfc.enhanced.xml
 
 # version
 RELEASE = false
-CARBON_VERSION_MAJOR = 5
-CARBON_VERSION_MINOR = 0
+STELIX_VERSION_MAJOR = 5
+STELIX_VERSION_MINOR = 0
 
 # Set CARBON_BUILDTYPE
 ifdef CARBON_NIGHTLY
@@ -268,19 +268,19 @@ endif
 ifdef CARBON_BUILDTYPE
 else
     CARBON_BUILDTYPE := UNOFFICIAL
-    CARBON_VERSION_MAJOR :=
-    CARBON_VERSION_MINOR :=
+    STELIX_VERSION_MAJOR :=
+    STELIX_VERSION_MINOR :=
 endif
 
 # Set Carbon version
 ifdef CARBON_RELEASE
-    CARBON_VERSION := "CARBON-LP-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
+    STELIX_VERSION := "STELIX-LP-v"$(STELIX_VERSION_MAJOR).$(STELIX_VERSION_MINOR)
 else
-    CARBON_VERSION := "CARBON-LP-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+    STELIX_VERSION := "STELIX-LP-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.carbon.version=$(CARBON_VERSION)
+  ro.stelix.version=$(STELIX_VERSION)
 
 # ROM Statistics and ROM Identification
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -288,13 +288,13 @@ ro.romstats.askfirst=1 \
 ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
 ro.romstats.url=http://carbon-stats.mattman.org \
-ro.romstats.version=$(CARBON_VERSION)
+ro.romstats.version=$(STELIX_VERSION)
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Include CM audio files
-include vendor/carbon/config/cm_audio.mk
+include vendor/stelix/config/cm_audio.mk
 
 # Audio
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
