@@ -4,7 +4,7 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/omni/sepolicy
+    vendor/carbon/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \

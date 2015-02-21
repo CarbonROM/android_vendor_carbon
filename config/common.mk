@@ -4,10 +4,10 @@ PRODUCT_BRAND ?= Carbon
 # use specific resolution for bootanimation
 ifneq ($(TARGET_BOOTANIMATION_SIZE),)
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bootanimation/res/$(TARGET_BOOTANIMATION_SIZE).zip:system/media/bootanimation.zip
+    vendor/carbon/prebuilt/bootanimation/res/$(TARGET_BOOTANIMATION_SIZE).zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/carbon/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -48,12 +48,12 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/omni/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/carbon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/carbon/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/carbon/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Init script file borrowed from omni
 PRODUCT_COPY_FILES += \
@@ -73,23 +73,23 @@ endif
 #    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
 
 # Additional packages
--include vendor/omni/config/packages.mk
+-include vendor/carbon/config/packages.mk
 
 # Versioning
--include vendor/omni/config/version.mk
+-include vendor/carbon/config/version.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # version
 RELEASE = true
-CARBON_VERSION_MAJOR = 5
+CARBON_VERSION_MAJOR = 3
 CARBON_VERSION_MINOR = 0
 
 ifeq ($(RELEASE),true)
-    CARBON_VERSION := "Carbon-JB-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(shell date +%0d%^b%Y-%H%M%S)
+    CARBON_VERSION := "Carbon-LP-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(shell date +%0d%^b%Y-%H%M%S)
 else
-    CARBON_VERSION := "Carbon-JB-exp"-$(shell date +%0d%^b%Y-%H%M%S)
+    CARBON_VERSION := "Carbon-LP-exp"-$(shell date +%0d%^b%Y-%H%M%S)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \

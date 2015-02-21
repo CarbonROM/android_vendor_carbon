@@ -1,12 +1,11 @@
 # Common settings and files
--include vendor/omni/config/common.mk
+-include vendor/carbon/config/common.mk
 
-<<<<<<< HEAD
 # Add tablet overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/omni/overlay/common_tablet
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common_tablet
 
 PRODUCT_CHARACTERISTICS := tablet
-=======
+
 # common
 $(call inherit-product, vendor/carbon/config/common.mk)
 
@@ -27,5 +26,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Hydra.ogg \
     ro.config.notification_sound=Proxima.ogg \
     ro.config.alarm_alert=Cesium.ogg
->>>>>>> 0e78133... Carbon.
 
