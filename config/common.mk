@@ -70,7 +70,7 @@ endif
 
 # Dashclock
 #PRODUCT_COPY_FILES += \
-#    vendor/omni/prebuilt/app/DashClock.apk:system/app/DashClock.apk
+#    vendor/carbon/prebuilt/app/DashClock.apk:system/app/DashClock.apk
 
 # Additional packages
 -include vendor/carbon/config/packages.mk

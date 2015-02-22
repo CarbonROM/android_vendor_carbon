@@ -18,7 +18,7 @@ ifndef ROM_BUILDTYPE
 endif
 
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
-TARGET_PRODUCT_SHORT := $(subst omni_,,$(TARGET_PRODUCT_SHORT))
+TARGET_PRODUCT_SHORT := $(subst carbon_,,$(TARGET_PRODUCT_SHORT))
 
 # Build the final version string
 ifdef BUILDTYPE_RELEASE
@@ -33,5 +33,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=OmniROM-$(ROM_VERSION) \
-    ro.omni.version=$(ROM_VERSION)
+    ro.modversion=CarbonROM-$(ROM_VERSION) \
+    ro.carbon.version=$(ROM_VERSION)
