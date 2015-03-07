@@ -30,11 +30,11 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-//# tools
-//PRODUCT_PACKAGES += \
-//    e2fsck \
-//    mke2fs \
-//    tune2fs
+# tools
+#PRODUCT_PACKAGES += \
+#    e2fsck \
+#    mke2fs \
+#    tune2fs
 
 # overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
