@@ -212,10 +212,11 @@ PRODUCT_PACKAGES += \
     MagicSmokeWallpapers \
     NoiseField \
     PhaseBeam \
-    VisualizationWallpapers \
+    PhotoPhase \
     PhotoTable \
     SoundRecorder \
-    PhotoPhase
+    VisualizationWallpapers
+
 
 PRODUCT_PACKAGES += \
     VideoEditor \
