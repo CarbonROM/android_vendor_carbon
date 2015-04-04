@@ -139,8 +139,7 @@ PRODUCT_PACKAGES += \
     CMWallpapers \
     CMFileManager \
     Eleven \
-    LockClock \
-    OmniSwitch
+    LockClock
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
