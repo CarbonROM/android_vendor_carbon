@@ -2,10 +2,10 @@
 # CyanogenMod Audio Files
 #
 
-ALARM_PATH := vendor/stelix/prebuilt/common/media/audio/alarms
-NOTIFICATION_PATH := vendor/stelix/prebuilt/common/media/audio/notifications
-RINGTONE_PATH := vendor/stelix/prebuilt/common/media/audio/ringtones
-UI_PATH := vendor/stelix/prebuilt/common/media/audio/ui
+ALARM_PATH := vendor/carbon/prebuilt/common/media/audio/alarms
+NOTIFICATION_PATH := vendor/carbon/prebuilt/common/media/audio/notifications
+RINGTONE_PATH := vendor/carbon/prebuilt/common/media/audio/ringtones
+UI_PATH := vendor/carbon/prebuilt/common/media/audio/ui
 
 # Alarms
 PRODUCT_COPY_FILES += \
