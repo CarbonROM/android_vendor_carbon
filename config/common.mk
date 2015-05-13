@@ -144,13 +144,11 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock
 
-ifeq ($(filter NIGHTLY SNAPSHOT EXPERIMENTAL,$(CM_BUILDTYPE)),)
 # CM Platform Library
 PRODUCT_PACKAGES += \
     org.cyanogenmod.platform-res \
     org.cyanogenmod.platform \
     org.cyanogenmod.platform.xml
-endif
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
