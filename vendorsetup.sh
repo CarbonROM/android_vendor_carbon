@@ -10,5 +10,6 @@ add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_peregrine-userdebug
 add_lunch_combo carbon_shamu-userdebug
 add_lunch_combo carbon_sirius-userdebug
+add_lunch_combo carbon_w7-userdebug
 add_lunch_combo carbon_z3-userdebug
 add_lunch_combo carbon_z3c-userdebug
