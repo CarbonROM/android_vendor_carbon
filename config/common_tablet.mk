@@ -1,8 +1,8 @@
 # common
 $(call inherit-product, vendor/carbon/config/common.mk)
 
-# ringtones
+# Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Proxima.ogg \
-    ro.config.alarm_alert=Cesium.ogg
-
+    ro.config.ringtone=CyanTone.ogg \
+    ro.config.notification_sound=CyanDoink.ogg \
+    ro.config.alarm_alert=CyanAlarm.ogg
