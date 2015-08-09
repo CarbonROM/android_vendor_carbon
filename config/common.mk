@@ -275,6 +275,9 @@ CARBON_VERSION_MINOR = 0
 ifdef CARBON_NIGHTLY
     CARBON_BUILDTYPE := NIGHTLY
 endif
+ifdef CARBON_WEEKLY
+    CARBON_BUILDTYPE := WEEKLY
+endif
 ifdef CARBON_EXPERIMENTAL
     CARBON_BUILDTYPE := EXPERIMENTAL
 endif
@@ -285,15 +288,15 @@ endif
 ifdef CARBON_BUILDTYPE
 else
     CARBON_BUILDTYPE := UNOFFICIAL
-		CARBON_VERSION_MAJOR = LP-5.1.1
+		CARBON_VERSION_MAJOR = LP5.1.1
 		CARBON_VERSION_MINOR = 0
 endif
 
 # Set Carbon version
 ifdef CARBON_RELEASE
-    CARBON_VERSION := CARBON-$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(CARBON_BUILDTYPE)-$(shell date +%Y%m%d-%H%M)
+    CARBON_VERSION := CarbonTEAM-$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)-$(CARBON_BUILDTYPE)-$(shell date +%Y%m%d-%H%M)
 else
-    CARBON_VERSION := CARBON-$(CARBON_VERSION_MAJOR)-$(CARBON_BUILDTYPE)-$(shell date +%Y%m%d-%H%M)
+    CARBON_VERSION := CarbonTEAM-$(CARBON_VERSION_MAJOR)-$(CARBON_BUILDTYPE)-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -303,7 +306,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.askfirst=1 \
 ro.romstats.ga=UA-43747246-1 \
-ro.romstats.name=CarbonRom- \
+ro.romstats.name=CarbonTEAM- \
 ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.version=$(CARBON_VERSION)
 
