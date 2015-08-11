@@ -316,6 +316,17 @@ include vendor/carbon/config/cm_audio.mk
 # Audio
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 
+ifndef CM_PLATFORM_REV
+  # For internal SDK revisions that are hotfixed/patched
+  # Reset after each CM_PLATFORM_SDK_VERSION release
+  # If you are doing a release and this is NOT 0, you are almost certainly doing it wrong
+  CM_PLATFORM_REV := 0
+endif
+
+# CyanogenMod Platform Internal
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.cm.build.version.plat.rev=$(CM_PLATFORM_REV)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 -include vendor/cyngn/product.mk
