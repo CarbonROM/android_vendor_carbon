@@ -69,7 +69,8 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/50-carbon.sh:system/addon.d/50-carbon.sh \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf \
+    vendor/carbon/prebuilt/common/etc/security/cacerts/55e3ba42.0:system/etc/security/cacerts/55e3ba42.0
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -268,7 +269,7 @@ PRODUCT_COPY_FILES += \
 
 # version
 RELEASE = false
-CARBON_VERSION_MAJOR = LP-5.1.1
+CARBON_VERSION_MAJOR = 5.1.1
 CARBON_VERSION_MINOR = 0
 
 # Set CARBON_BUILDTYPE
@@ -285,7 +286,7 @@ endif
 ifdef CARBON_BUILDTYPE
 else
     CARBON_BUILDTYPE := UNOFFICIAL
-		CARBON_VERSION_MAJOR = LP-5.1.1
+		CARBON_VERSION_MAJOR = 5.1.1
 		CARBON_VERSION_MINOR = 0
 endif
 
@@ -304,7 +305,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.askfirst=1 \
 ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom- \
-ro.romstats.url=http://carbon-stats.mattman.org \
+ro.romstats.url=http://stats.carbonrom.org \
 ro.romstats.version=$(CARBON_VERSION)
 
 # by default, do not update the recovery with system updates
