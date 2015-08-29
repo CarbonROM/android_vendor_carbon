@@ -145,6 +145,10 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock
 
+# Custom Carbon packages
+PRODUCT_PACKAGES += \
+    Wallpapers
+
 # CM Platform Library
 PRODUCT_PACKAGES += \
     org.cyanogenmod.platform-res \
