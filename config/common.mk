@@ -244,7 +244,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vim \
     zip \
-    unrar
+    unrar \
+    curl
 
 # SuperSU
 PRODUCT_COPY_FILES += \
