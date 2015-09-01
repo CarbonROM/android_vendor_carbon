@@ -226,6 +226,7 @@ PRODUCT_PACKAGES += \
     NoiseField \
     PhaseBeam \
     PhotoPhase \
+    CMSettingsProvider \
     PhotoTable \
     SoundRecorder \
     VisualizationWallpapers
