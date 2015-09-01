@@ -228,7 +228,8 @@ PRODUCT_PACKAGES += \
     PhotoPhase \
     PhotoTable \
     SoundRecorder \
-    VisualizationWallpapers
+    VisualizationWallpapers \
+    CMSettingsProvider
 
 
 PRODUCT_PACKAGES += \
