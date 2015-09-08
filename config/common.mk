@@ -231,7 +231,8 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     SoundRecorder \
     VisualizationWallpapers \
-    CMSettingsProvider
+		CMSettingsProvider \
+    CMResolver
 
 
 PRODUCT_PACKAGES += \
