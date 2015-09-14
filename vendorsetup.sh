@@ -8,6 +8,7 @@ add_lunch_combo carbon_m7-userdebug
 add_lunch_combo carbon_m7spr-userdebug
 add_lunch_combo carbon_m8-userdebug
 add_lunch_combo carbon_mako-userdebug
+add_lunch_combo carbon_oneplus2-userdebug
 add_lunch_combo carbon_peregrine-userdebug
 add_lunch_combo carbon_shamu-userdebug
 add_lunch_combo carbon_sirius-userdebug
