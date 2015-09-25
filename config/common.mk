@@ -145,7 +145,8 @@ PRODUCT_PACKAGES += \
     CMWallpapers \
     CMFileManager \
     Eleven \
-    LockClock
+    LockClock \
+    CMSettingsProvider
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
