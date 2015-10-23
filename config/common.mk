@@ -352,3 +352,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+
+ifeq ($(USE_SM_OPTS), true)
+  # Inherite sabermod vendor
+  SM_VENDOR := vendor/sm
+  include $(SM_VENDOR)/Main.mk
+else
+  $(shell unset SM_VENDOR)
+	USE_LEGACY_GCC := true
+endif
