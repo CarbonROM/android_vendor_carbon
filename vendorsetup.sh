@@ -1,4 +1,5 @@
 add_lunch_combo carbon_aries_aosp-userdebug
+add_lunch_combo carbon_alel04-userdebug
 add_lunch_combo carbon_bacon-userdebug
 add_lunch_combo carbon_e975-userdebug
 add_lunch_combo carbon_flo-userdebug
