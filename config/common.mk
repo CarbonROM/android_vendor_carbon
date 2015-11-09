@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf \
-    vendor/carbon/prebuilt/common/etc/security/cacerts/55e3ba42.0:system/etc/security/cacerts/55e3ba42.0
+    vendor/carbon/prebuilt/common/etc/security/cacerts/7d2fc310.0:system/etc/security/cacerts/7d2fc310.0
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
