@@ -1,7 +1,8 @@
 # Additional packages
 
 # Additional apps
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    Chromium
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
