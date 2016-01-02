@@ -16,5 +16,5 @@ endif
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=CarbonROM-$(ROM_VERSION) \
-    ro.carbon.version=$(ROM_VERSION)
+    ro.modversion=CarbonROM-$(CARBON_VERSION) \
+    ro.carbon.version=$(CARBON_VERSION)
