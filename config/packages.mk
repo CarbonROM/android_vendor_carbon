@@ -1,5 +1,4 @@
 # Additional packages
 
 # Additional apps
-PRODUCT_PACKAGES += \
-    CarbonFibers
+# PRODUCT_PACKAGES += \
