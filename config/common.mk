@@ -79,8 +79,5 @@ PRODUCT_COPY_FILES += \
 # Versioning
 -include vendor/carbon/config/version.mk
 
-# SELinux Policy
--include vendor/carbon/sepolicy/sepolicy.mk
-
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
