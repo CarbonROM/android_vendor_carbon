@@ -62,13 +62,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/carbon/prebuilt/bin/sysinit:system/bin/sysinit
 
-# Add SuperSU flashable
-ifeq ($(TARGET_KEEP_UNROOTED),)
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/SuperSU/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/carbon/prebuilt/SuperSU/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-endif
-
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
