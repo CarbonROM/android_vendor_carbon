@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
 -include vendor/carbon/sepolicy/sepolicy.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
