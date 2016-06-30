@@ -74,4 +74,6 @@
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
+    <!-- Whether to persist the notification for when a usb drive device is plugged in -->
+    <bool name="config_persistUsbDriveNotification">true</bool>
 </resources>
