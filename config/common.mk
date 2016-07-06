@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/carbon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/carbon/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
