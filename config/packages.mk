@@ -2,7 +2,8 @@
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    Chromium
+    Chromium \
+    VanillaMusic
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
