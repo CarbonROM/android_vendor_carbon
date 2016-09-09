@@ -38,6 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# Fixes: terminate called after throwing an instance of 'std::out_of_range' what(): basic_string::erase
+# error with prop override
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # general properties
