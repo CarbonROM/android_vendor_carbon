@@ -90,3 +90,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
+
+# include definitions for SDCLANG
+include device/qcom/common/sdclang/sdclang.mk
