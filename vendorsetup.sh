@@ -1,6 +1,8 @@
 add_lunch_combo carbon_angler-userdebug
 add_lunch_combo carbon_aries-userdebug
 add_lunch_combo carbon_leo-userdebug
+add_lunch_combo carbon_marlin-userdebug
+add_lunch_combo carbon_sailfish-userdebug
 add_lunch_combo carbon_shamu-userdebug
 add_lunch_combo carbon_shieldtablet-userdebug
 add_lunch_combo carbon_sirius-userdebug
