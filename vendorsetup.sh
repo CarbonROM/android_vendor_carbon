@@ -18,3 +18,4 @@ add_lunch_combo carbon_sirius_aosp-userdebug
 add_lunch_combo carbon_w7-userdebug
 add_lunch_combo carbon_z3-userdebug
 add_lunch_combo carbon_z3c-userdebug
+add_lunch_combo carbon_d851-userdebug
