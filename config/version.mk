@@ -17,6 +17,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID="$(BUILD_ID)-$(shell whoami)@$(
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=CarbonROM-$(CARBON_VERSION) \
     ro.carbon.version=$(CARBON_VERSION) \
-    ro.romstats.url=https://stats.carbonrom.org \
+    ro.romstats.url=https://stats.speedstercommunity.com \
     ro.romstats.name=CarbonROM \
     ro.romstats.version=$(CARBON_VERSION)
