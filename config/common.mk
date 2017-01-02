@@ -86,3 +86,6 @@ PRODUCT_COPY_FILES += \
 
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+
+# Compile dex2oat for release
+USE_DEX2OAT_DEBUG := false
