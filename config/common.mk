@@ -93,3 +93,6 @@ USE_DEX2OAT_DEBUG := false
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
+
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
