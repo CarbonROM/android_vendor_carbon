@@ -61,6 +61,13 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/carbon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/carbon/prebuilt/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/carbon/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
