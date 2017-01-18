@@ -1,4 +1,5 @@
 PRODUCT_BRAND ?= CarbonROM
+CARBON_BUILD := true
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
