@@ -11,6 +11,4 @@ PRODUCT_PACKAGES += \
     CarbonStats \
     Chromium \
     masquerade \
-    VanillaMusic \
-    CMUpdater
-
+    VanillaMusic
