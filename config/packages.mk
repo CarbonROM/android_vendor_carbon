@@ -29,3 +29,19 @@ PRODUCT_PACKAGES += \
     font_log.png \
     libhealthd.cm
 endif
+
+# NTFS-3G support
+PRODUCT_PACKAGES += \
+    fsck.ntfs \
+    mkfs.ntfs \
+    mount.ntfs
+
+# ExFAT support
+WITH_EXFAT ?= true
+ifeq ($(WITH_EXFAT),true)
+TARGET_USES_EXFAT := true
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+endif
