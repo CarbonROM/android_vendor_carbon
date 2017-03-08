@@ -16,7 +16,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Chromium \
-    masquerade \
+    ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
     CMUpdater
