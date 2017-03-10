@@ -1,6 +1,3 @@
-# Support asec containers getting mounted
-allow file_type rootfs:filesystem associate;
-
 # Persistent property storage
 type persist_property_file, file_type;
 
