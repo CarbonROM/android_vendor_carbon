@@ -1,5 +1,6 @@
 add_lunch_combo carbon_angler-userdebug
 add_lunch_combo carbon_aries-userdebug
+add_lunch_combo carbon_bacon-userdebug
 add_lunch_combo carbon_bullhead-userdebug
 add_lunch_combo carbon_castor_windy-userdebug
 add_lunch_combo carbon_hammerhead-userdebug
@@ -15,6 +16,7 @@ add_lunch_combo carbon_sirius-userdebug
 add_lunch_combo carbon_sumire-userdebug
 add_lunch_combo carbon_angler-user
 add_lunch_combo carbon_aries-user
+add_lunch_combo carbon_bacon-user
 add_lunch_combo carbon_bullhead-user
 add_lunch_combo carbon_castor_windy-user
 add_lunch_combo carbon_hammerhead-user
