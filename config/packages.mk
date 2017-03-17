@@ -16,6 +16,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Chromium \
+    Substratum \
     ThemeInterfacer \
     OmniStyle \
     VanillaMusic \

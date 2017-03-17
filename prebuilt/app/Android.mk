@@ -22,7 +22,13 @@
 
 LOCAL_PATH := $(call my-dir)
 
-# if some modules are built directly from this directory (not subdirectories),
-# their rules should be written here.
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(CLEAR_VARS)
+LOCAL_MODULE := Substratum
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_BUILT_MODULE_STEM := package.apk
+# Make sure the build system doesn't try to resign the APK
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := false
+LOCAL_SRC_FILES := Substratum.apk
+include $(BUILD_PREBUILT)
