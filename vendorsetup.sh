@@ -8,6 +8,8 @@ add_lunch_combo carbon_bullhead-user
 add_lunch_combo carbon_bullhead-userdebug
 add_lunch_combo carbon_castor_windy-user
 add_lunch_combo carbon_castor_windy-userdebug
+add_lunch_combo carbon_griffin-user
+add_lunch_combo carbon_griffin-userdebug
 add_lunch_combo carbon_hammerhead-user
 add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_kiwi-user
