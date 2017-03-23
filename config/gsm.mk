@@ -1,3 +1,7 @@
+# Sensitive Phone Numbers list
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
+
 # GSM APN list
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
