@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
-    CMUpdater
+    CMUpdater \
+    Turbo
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
