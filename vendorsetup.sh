@@ -22,6 +22,8 @@ add_lunch_combo carbon_marlin-user
 add_lunch_combo carbon_marlin-userdebug
 add_lunch_combo carbon_oneplus2-user
 add_lunch_combo carbon_oneplus2-userdebug
+add_lunch_combo carbon_oneplus3-user
+add_lunch_combo carbon_oneplus3-userdebug
 add_lunch_combo carbon_sailfish-user
 add_lunch_combo carbon_sailfish-userdebug
 add_lunch_combo carbon_shamu-user
