@@ -61,8 +61,8 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/carbon/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/carbon/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/carbon/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/carbon/prebuilt/bin/blacklist:system/addon.d/blacklist
 
