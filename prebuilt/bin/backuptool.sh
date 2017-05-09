@@ -22,6 +22,7 @@ preserve_addon_d() {
 # Restore /system/addon.d from /tmp/addon.d
 restore_addon_d() {
   if [ -d /tmp/addon.d/ ]; then
+    mkdir -p /system/addon.d/
     cp -a /tmp/addon.d/* /system/addon.d/
     rm -rf /tmp/addon.d/
   fi
@@ -35,8 +36,9 @@ if [ ! -r /system/build.prop ]; then
 fi
 if ( ! grep -q "^ro.build.version.release=$V.*" /system/build.prop ); then
   echo "Not backing up files from incompatible version: $V"
-  exit 127
+  return 0
 fi
+return 1
 }
 
 check_blacklist() {
@@ -44,10 +46,28 @@ check_blacklist() {
       ## Discard any known bad backup scripts
       cd /$1/addon.d/
       for f in *sh; do
-          s=$(md5sum $f | awk {'print $1'})
+          s=$(md5sum $f | cut -c-32)
           grep -q $s /system/addon.d/blacklist && rm -f $f
       done
   fi
+}
+
+check_whitelist() {
+  found=0
+  if [ -f /system/addon.d/whitelist ];then
+      ## forcefully keep any version-independent stuff
+      cd /$1/addon.d/
+      for f in *sh; do
+          s=$(md5sum $f | cut -c-32)
+          grep -q $s /system/addon.d/whitelist
+          if [ $? -eq 0 ]; then
+              found=1
+          else
+              rm -f $f
+          fi
+      done
+  fi
+  return $found
 }
 
 # Execute /system/addon.d/*.sh scripts with $1 parameter
@@ -62,7 +82,11 @@ fi
 case "$1" in
   backup)
     mkdir -p $C
-    check_prereq
+    if check_prereq; then
+        if check_whitelist system; then
+            exit 127
+        fi
+    fi
     check_blacklist system
     preserve_addon_d
     run_stage pre-backup
@@ -70,7 +94,11 @@ case "$1" in
     run_stage post-backup
   ;;
   restore)
-    check_prereq
+    if check_prereq; then
+        if check_whitelist tmp; then
+            exit 127
+        fi
+    fi
     check_blacklist tmp
     run_stage pre-restore
     run_stage restore
