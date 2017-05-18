@@ -12,6 +12,16 @@ add_lunch_combo carbon_cancro-user
 add_lunch_combo carbon_cancro-userdebug
 add_lunch_combo carbon_castor_windy-user
 add_lunch_combo carbon_castor_windy-userdebug
+add_lunch_combo carbon_d2att-user
+add_lunch_combo carbon_d2att-userdebug
+add_lunch_combo carbon_d2refreshspr-user
+add_lunch_combo carbon_d2refreshspr-userdebug
+add_lunch_combo carbon_d2spr-user
+add_lunch_combo carbon_d2spr-userdebug
+add_lunch_combo carbon_d2tmo-user
+add_lunch_combo carbon_d2tmo-userdebug
+add_lunch_combo carbon_d2vzw-user
+add_lunch_combo carbon_d2vzw-userdebug
 add_lunch_combo carbon_griffin-user
 add_lunch_combo carbon_griffin-userdebug
 add_lunch_combo carbon_hammerhead-user
