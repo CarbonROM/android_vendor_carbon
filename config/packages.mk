@@ -15,7 +15,7 @@ PRODUCT_BOOT_JARS += \
 # Additional apps
 PRODUCT_PACKAGES += \
     Launcher3 \
-    Chromium \
+    Quarks \
     Substratum \
     ThemeInterfacer \
     OmniStyle \
