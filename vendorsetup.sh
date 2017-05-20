@@ -24,6 +24,8 @@ add_lunch_combo carbon_d2vzw-user
 add_lunch_combo carbon_d2vzw-userdebug
 add_lunch_combo carbon_griffin-user
 add_lunch_combo carbon_griffin-userdebug
+add_lunch_combo carbon_i9100-user
+add_lunch_combo carbon_i9100-userdebug
 add_lunch_combo carbon_hammerhead-user
 add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_kenzo-user
