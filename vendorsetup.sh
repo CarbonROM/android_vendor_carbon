@@ -22,6 +22,10 @@ add_lunch_combo carbon_d2tmo-user
 add_lunch_combo carbon_d2tmo-userdebug
 add_lunch_combo carbon_d2vzw-user
 add_lunch_combo carbon_d2vzw-userdebug
+add_lunch_combo carbon_dora-user
+add_lunch_combo carbon_dora-userdebug
+add_lunch_combo carbon_dora_dual-user
+add_lunch_combo carbon_dora_dual-userdebug
 add_lunch_combo carbon_griffin-user
 add_lunch_combo carbon_griffin-userdebug
 add_lunch_combo carbon_i9100-user
