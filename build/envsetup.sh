@@ -2,6 +2,7 @@ function __print_lineage_functions_help() {
 cat <<EOF
 Additional LineageOS functions:
 - cout:            Changes directory to out.
+- cdevice:         Changes directory to main device tree.
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
@@ -129,6 +130,17 @@ function cout()
         cd $OUT
     else
         echo "Couldn't locate out directory.  Try setting OUT."
+    fi
+}
+
+function cdevice()
+{
+    T=$(ls -d $(gettop)/device/*/$(get_build_var TARGET_DEVICE))
+
+    if [ "$T" ]; then
+        \cd $T
+    else
+        echo "Could not locate the device tree. Try setting TARGET_DEVICE."
     fi
 }
 
