@@ -50,6 +50,8 @@ add_lunch_combo carbon_mako-user
 add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_marlin-user
 add_lunch_combo carbon_marlin-userdebug
+add_lunch_combo carbon_mocha-user
+add_lunch_combo carbon_mocha-userdebug
 add_lunch_combo carbon_oneplus2-user
 add_lunch_combo carbon_oneplus2-userdebug
 add_lunch_combo carbon_oneplus3-user
