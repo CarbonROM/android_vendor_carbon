@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
-    CMUpdater \
     Turbo
 
 # Custom off-mode charger
