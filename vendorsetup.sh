@@ -48,6 +48,10 @@ add_lunch_combo carbon_leo-user
 add_lunch_combo carbon_leo-userdebug
 add_lunch_combo carbon_mako-user
 add_lunch_combo carbon_mako-userdebug
+add_lunch_combo carbon_maple-user
+add_lunch_combo carbon_maple-userdebug
+add_lunch_combo carbon_maple_dual-user
+add_lunch_combo carbon_maple_dual-userdebug
 add_lunch_combo carbon_marlin-user
 add_lunch_combo carbon_marlin-userdebug
 add_lunch_combo carbon_mocha-user
