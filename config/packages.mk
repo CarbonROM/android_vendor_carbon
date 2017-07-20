@@ -12,6 +12,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Exchange support
+PRODUCT_PACKAGES += \
+    Exchange2
+
 # Additional apps
 PRODUCT_PACKAGES += \
     Launcher3 \
