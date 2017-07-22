@@ -14,6 +14,8 @@ add_lunch_combo carbon_cancro-user
 add_lunch_combo carbon_cancro-userdebug
 add_lunch_combo carbon_castor_windy-user
 add_lunch_combo carbon_castor_windy-userdebug
+add_lunch_combo carbon_cheeseburger-user
+add_lunch_combo carbon_cheeseburger-userdebug
 add_lunch_combo carbon_d2att-user
 add_lunch_combo carbon_d2att-userdebug
 add_lunch_combo carbon_d2refreshspr-user
