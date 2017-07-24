@@ -32,6 +32,8 @@ add_lunch_combo carbon_dora_dual-user
 add_lunch_combo carbon_dora_dual-userdebug
 add_lunch_combo carbon_dragon-user
 add_lunch_combo carbon_dragon-userdebug
+add_lunch_combo carbon_ether-user
+add_lunch_combo carbon_ether-userdebug
 add_lunch_combo carbon_griffin-user
 add_lunch_combo carbon_griffin-userdebug
 add_lunch_combo carbon_i9100-user
