@@ -117,9 +117,9 @@ $(call bt-vendor-set-path-variant,bt-caf)
 
 else
 
-$(call project-set-path,qcom-audio,hardware/qcom/audio/default)
-$(call project-set-path,qcom-display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
-$(call project-set-path,qcom-media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
+$(call set-device-specific-path,AUDIO,audio,hardware/qcom/audio/default)
+$(call set-device-specific-path,DISPLAY,display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
+$(call set-device-specific-path,MEDIA,media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
 
 $(call set-device-specific-path,CAMERA,camera,hardware/qcom/camera)
 $(call set-device-specific-path,GPS,gps,hardware/qcom/gps)
