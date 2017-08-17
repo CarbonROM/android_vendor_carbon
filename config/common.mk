@@ -97,8 +97,3 @@ ifeq ($(HOST_OS),linux)
         include vendor/carbon/sdclang/sdclang.mk
     endif
 endif
-
-# Include QCOM Perf vendor if available and compatible
-ifneq ($(filter msm% apq%,$(TARGET_BOARD_PLATFORM)),)
--include vendor/qcom/perf/BoardConfigVendor.mk
-endif
