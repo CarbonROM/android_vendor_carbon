@@ -77,3 +77,5 @@ DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
+# Disable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := false
