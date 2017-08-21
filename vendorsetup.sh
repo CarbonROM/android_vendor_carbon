@@ -68,6 +68,8 @@ add_lunch_combo carbon_oneplus3-user
 add_lunch_combo carbon_oneplus3-userdebug
 add_lunch_combo carbon_potter-user
 add_lunch_combo carbon_potter-userdebug
+add_lunch_combo carbon_s2-user
+add_lunch_combo carbon_s2-userdebug
 add_lunch_combo carbon_sailfish-user
 add_lunch_combo carbon_sailfish-userdebug
 add_lunch_combo carbon_shamu-user
