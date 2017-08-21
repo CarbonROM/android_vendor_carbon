@@ -1,3 +1,5 @@
+add_lunch_combo carbon_a6000-user
+add_lunch_combo carbon_a6000-userdebug
 add_lunch_combo carbon_addison-user
 add_lunch_combo carbon_addison-userdebug
 add_lunch_combo carbon_angler-user
