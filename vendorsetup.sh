@@ -40,6 +40,8 @@ add_lunch_combo carbon_i9100-user
 add_lunch_combo carbon_i9100-userdebug
 add_lunch_combo carbon_hammerhead-user
 add_lunch_combo carbon_hammerhead-userdebug
+add_lunch_combo carbon_honami-user
+add_lunch_combo carbon_honami-userdebug
 add_lunch_combo carbon_kagura-user
 add_lunch_combo carbon_kagura-userdebug
 add_lunch_combo carbon_kagura_dual-user
