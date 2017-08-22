@@ -54,11 +54,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
-# enable ADB authentication if not on eng build
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
