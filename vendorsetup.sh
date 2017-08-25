@@ -62,6 +62,7 @@ add_lunch_combo carbon_maple_dual-user
 add_lunch_combo carbon_maple_dual-userdebug
 add_lunch_combo carbon_marlin-user
 add_lunch_combo carbon_marlin-userdebug
+add_lunch_combo carbon_mido-userdebug
 add_lunch_combo carbon_mocha-user
 add_lunch_combo carbon_mocha-userdebug
 add_lunch_combo carbon_oneplus2-user
