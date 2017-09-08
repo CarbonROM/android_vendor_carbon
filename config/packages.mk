@@ -18,6 +18,7 @@ PRODUCT_PACKAGES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
+    CarbonDelta \
     Launcher3 \
     Quarks \
     Substratum \
