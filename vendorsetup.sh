@@ -54,6 +54,8 @@ add_lunch_combo carbon_kiwi-user
 add_lunch_combo carbon_kiwi-userdebug
 add_lunch_combo carbon_leo-user
 add_lunch_combo carbon_leo-userdebug
+add_lunch_combo carbon_lettuce-user
+add_lunch_combo carbon_lettuce-userdebug
 add_lunch_combo carbon_mako-user
 add_lunch_combo carbon_mako-userdebug
 add_lunch_combo carbon_maple-user
