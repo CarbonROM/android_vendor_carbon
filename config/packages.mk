@@ -60,3 +60,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
+
+# Permissions
+PRODUCT_PACKAGES += \
+    privapp-permissions-google.xml
