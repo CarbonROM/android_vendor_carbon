@@ -63,4 +63,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Permissions
 PRODUCT_PACKAGES += \
-    privapp-permissions-google.xml
+    privapp-permissions-google.xml \
+    privapp-permissions-carbon.xml
+
