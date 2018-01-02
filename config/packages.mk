@@ -24,7 +24,8 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
-    Turbo
+    Turbo \
+    CarbonDelta
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
