@@ -21,7 +21,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Quarks \
     Substratum \
-    ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
     Turbo \
