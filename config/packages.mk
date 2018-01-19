@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Quarks \
-    Substratum \
     OmniStyle \
     VanillaMusic \
     Turbo \
