@@ -1,5 +1,7 @@
 #!/sbin/sh
 #
+# ADDOND_VERSION=2
+#
 # /system/addon.d/50-hosts.sh
 # During a firmware upgrade, this script backs up /system/etc/hosts,
 # /system is formatted and reinstalled, then the file is restored.
