@@ -96,6 +96,3 @@ ifeq ($(HOST_OS),linux)
         include vendor/carbon/sdclang/sdclang.mk
     endif
 endif
-
-# Include Carbon fonts
-include external/cr-fonts/fonts.mk
