@@ -29,6 +29,10 @@ PRODUCT_PACKAGES += \
     Turbo \
     CarbonDelta
 
+# Fonts
+PRODUCT_PACKAGES += \
+    CR-Fonts
+
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \
