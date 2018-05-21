@@ -86,6 +86,8 @@ add_lunch_combo carbon_taimen-user
 add_lunch_combo carbon_taimen-userdebug
 add_lunch_combo carbon_tissot-user
 add_lunch_combo carbon_tissot-userdebug
+add_lunch_combo carbon_x2-user
+add_lunch_combo carbon_x2-userdebug
 add_lunch_combo carbon_z3-user
 add_lunch_combo carbon_z3-userdebug
 add_lunch_combo carbon_z3c-user
