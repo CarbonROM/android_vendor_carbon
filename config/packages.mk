@@ -71,3 +71,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Permissions
 PRODUCT_PACKAGES += \
     privapp-permissions-carbon.xml
+
+-include vendor/qcom/perf/packages.mk
