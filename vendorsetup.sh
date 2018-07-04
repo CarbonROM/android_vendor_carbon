@@ -96,3 +96,5 @@ add_lunch_combo carbon_z3-user
 add_lunch_combo carbon_z3-userdebug
 add_lunch_combo carbon_z3c-user
 add_lunch_combo carbon_z3c-userdebug
+add_lunch_combo carbon_mido-userdebug
+add_lunch_combo carbon_mido-user
