@@ -822,33 +822,39 @@ function oat2dex() {
     for ARCH in $ARCHES; do
         BOOTOAT="$TMPDIR/system/framework/$ARCH/boot.oat"
 
-        local OAT="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").odex"
-        local VDEX="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}").vdex"
+        local BASEPATH="$(dirname "$OEM_TARGET")/oat/$ARCH/$(basename "$OEM_TARGET" ."${OEM_TARGET##*.}")"
+        local OAT="$BASEPATH.odex"
+        local VDEX="$BASEPATH.vdex"
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             if get_file "$VDEX" "$TMPDIR" "$SRC"; then
-                "$OATDUMP" --oat-file="$TMPDIR/$(basename "$VDEX")" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                if !("$OATDUMP" --oat-file="$TMPDIR/$(basename "$VDEX")" --export-dex-to="$TMPDIR" &> /dev/null); then
+                    echo "Warning: vdex extraction failed, falling back to odex"
+                    "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
+                fi
             else
                 "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
             fi
+            mv "$TMPDIR/$(basename "$BASEPATH").${OEM_TARGET##*.}_export.dex" "$TMPDIR/classes.dex"
         elif [[ "$CM_TARGET" =~ .jar$ ]]; then
-            JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
-            JARVDEX="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).vdex"
+            BASEPATH="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*})"
+            JAROAT="$BASEPATH.oat"
+            JARVDEX="$BASEPATH.vdex"
             if [ ! -f "$JAROAT" ]; then
                 JAROAT=$BOOTOAT;
             fi
 
             # try to extract classes.dex from boot.vdex for frameworks jars
-            # fallback to boot.oat if vdex is not available
+            # fallback to boot.oat if vdex is not available or fails
             if [ -f "$JARVDEX" ]; then
-                "$OATDUMP" --oat-file="$JARVDEX" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                if !("$OATDUMP" --oat-file="$JARVDEX" --export-dex-to="$TMPDIR" &> /dev/null); then
+                    echo "Warning: vdex extraction failed, falling back to odex"
+                    "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
+                fi
             else
                 "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
             fi
+            mv "$TMPDIR/$(basename "$BASEPATH").jar_export.dex" "$TMPDIR/classes.dex"
         else
             continue
         fi
