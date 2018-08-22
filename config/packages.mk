@@ -26,8 +26,12 @@ PRODUCT_PACKAGES += \
     Quarks \
     OmniStyle \
     VanillaMusic \
-    Turbo \
     CarbonDelta
+
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
 
 # Fonts
 PRODUCT_PACKAGES += \
