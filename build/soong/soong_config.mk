@@ -17,6 +17,8 @@ $(call add_json_bool,	Target_uses_qsml,							$(filter true,$(if $(strip $(TARGE
 $(call add_json_bool,	Target_uses_eigen,							$(filter true,$(if $(strip $(TARGET_USES_QSML)),false,true)))
 $(call add_json_bool,	Target_use_sdclang,							$(filter true,$(if $(strip $(TARGET_USE_SDCLANG)),true,false)))
 
+$(call add_json_str_omitempty,	Additional_gralloc_10_usage_bits, 	$(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
+
 $(call add_json_str,	Specific_camera_parameter_library,			$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY))
 $(call add_json_str,	Libart_img_base,							$(LIBART_IMG_BASE))
 $(call add_json_str,	QTIAudioPath,								$(call project-path-for,qcom-audio))
