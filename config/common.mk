@@ -102,9 +102,3 @@ DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
-# Include SDCLANG definitions if it is requested and available
-ifeq ($(HOST_OS),linux)
-    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
-        include vendor/carbon/sdclang/sdclang.mk
-    endif
-endif
