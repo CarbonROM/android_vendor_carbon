@@ -18,6 +18,10 @@ type Product_variables struct {
 		Cflags []string
 	}
 
+	Supports_legacy_hw_fde struct {
+		Cflags []string
+	}
+
 	Target_uses_eigen struct {
 		Shared_libs []string
 		Required []string
@@ -48,6 +52,7 @@ type ProductVariables struct {
 	Qcom_bsp_legacy								*bool `json:",omitempty"`
 	Supports_hw_fde								*bool `json:",omitempty"`
 	Supports_hw_fde_perf						*bool `json:",omitempty"`
+	Supports_legacy_hw_fde						*bool `json:",omitempty"`
 	Target_uses_eigen							*bool `json:",omitempty"`
 	Target_uses_qsml							*bool `json:",omitempty"`
 	Uses_generic_camera_parameter_library		*bool `json:",omitempty"`
