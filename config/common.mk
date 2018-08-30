@@ -70,6 +70,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# Hidden API whitelist
+PRODUCT_COPY_FILES += \
+    vendor/carbon/config/permissions/carbon-hiddenapi-package-whitelist.xml:system/etc/sysconfig/carbon-hiddenapi-package-whitelist.xml
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
