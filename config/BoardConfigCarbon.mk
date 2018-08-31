@@ -10,3 +10,5 @@ endif
 ifeq ($(BOARD_USES_QTI_HARDWARE),true)
 include vendor/carbon/config/BoardConfigQcom.mk
 endif
+
+-include vendor/carbon/perf/BoardConfigVendor.mk
