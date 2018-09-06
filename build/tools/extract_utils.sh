@@ -828,8 +828,9 @@ function oat2dex() {
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             if get_file "$VDEX" "$TMPDIR" "$SRC"; then
-                if !("$OATDUMP" --oat-file="$TMPDIR/$(basename "$VDEX")" --export-dex-to="$TMPDIR" &> /dev/null); then
-                    echo "Warning: vdex extraction failed, falling back to odex"
+                if !("$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --header-only --export-dex-to="$TMPDIR" > /dev/null); then
+                    echo "ERROR: vdex extraction failed, odex may be possible, but not recommended."
+                    exit 1; # Comment this line to fallback to odex. NOT RECOMMENDED
                     "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
                 fi
             else
@@ -847,8 +848,9 @@ function oat2dex() {
             # try to extract classes.dex from boot.vdex for frameworks jars
             # fallback to boot.oat if vdex is not available or fails
             if [ -f "$JARVDEX" ]; then
-                if !("$OATDUMP" --oat-file="$JARVDEX" --export-dex-to="$TMPDIR" &> /dev/null); then
-                    echo "Warning: vdex extraction failed, falling back to odex"
+                if !("$OATDUMP" --oat-file="$JAROAT" --header-only --export-dex-to="$TMPDIR" > /dev/null); then
+                    echo "ERROR: vdex extraction failed, odex may be possible, but not recommended."
+                    exit 1; # Comment this line to fallback to odex. NOT RECOMMENDED
                     "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
                 fi
             else
