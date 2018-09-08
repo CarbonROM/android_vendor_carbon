@@ -5,6 +5,7 @@ supported_devices=(
   'castor_windy'
   'cheeseburger'
   'dumpling'
+  'enchilada'
   'honami'
   'kenzo'
   'land'
