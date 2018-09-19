@@ -14,3 +14,5 @@ include vendor/carbon/config/BoardConfigQcom.mk
 endif
 
 -include vendor/carbon/perf/BoardConfigVendor.mk
+
+include vendor/carbon/config/BoardConfigSoong.mk
