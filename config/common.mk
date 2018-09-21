@@ -84,3 +84,7 @@ SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+
+# Allow vendor/extra to override any property by setting it first
+$(call inherit-product-if-exists, vendor/extra/product.mk)
