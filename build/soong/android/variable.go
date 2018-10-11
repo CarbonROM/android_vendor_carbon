@@ -51,6 +51,10 @@ type Product_variables struct {
 		Cppflags []string
 	}
 
+	Bootloader_message_offset struct {
+		Cflags []string
+	}
+
 	Target_shim_libs struct {
 		Cppflags []string
 	}
@@ -92,6 +96,7 @@ type ProductVariables struct {
 	Uses_generic_camera_parameter_library			*bool `json:",omitempty"`
 	Uses_qti_camera_device					*bool `json:",omitempty"`
 	Additional_gralloc_10_usage_bits			*string `json:",omitempty"`
+	Bootloader_message_offset					*int `json:",omitempty"`
 	Java_Source_Overlays					*string `json:",omitempty"`
 	QTIAudioPath						*string `json:",omitempty"`
 	QTIDisplayPath						*string `json:",omitempty"`
