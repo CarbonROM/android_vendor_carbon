@@ -1,12 +1,6 @@
 # Themes
 PRODUCT_PACKAGES += \
+    GBoardDark \
     SettingsDark \
     SettingsIntelligenceDark \
-    SystemDark \
-    UserOne \
-    UserTwo \
-    UserThree \
-    UserFour \
-    UserFive \
-    UserSix \
-    UserSeven
+    SystemDark
