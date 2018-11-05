@@ -18,6 +18,7 @@ supported_devices=(
   'oneplus3'
   'poplar'
   'potter'
+  's5neoltexx'
   'sailfish'
   'shamu'
   'star2lte'
