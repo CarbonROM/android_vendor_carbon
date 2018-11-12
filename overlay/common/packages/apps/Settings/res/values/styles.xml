@@ -31,4 +31,8 @@
         <item name="android:tint">@*android:color/accent_device_default_light</item>
     </style>
 
+    <style name="SuggestionCardButton">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
 </resources>
