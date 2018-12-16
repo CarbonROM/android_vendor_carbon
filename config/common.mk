@@ -1,34 +1,6 @@
 PRODUCT_BRAND ?= CarbonROM
 CARBON_BUILD := true
 
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
-# determine the smaller dimension
-ifeq ($(shell expr $(TARGET_SCREEN_WIDTH) \< $(TARGET_SCREEN_HEIGHT)), 1)
-      $(eval TARGET_BOOTANIMATION_SIZE := $(TARGET_SCREEN_WIDTH))
-else
-      $(eval TARGET_BOOTANIMATION_SIZE := $(TARGET_SCREEN_HEIGHT))
-endif
-
-# get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/carbon/prebuilt/bootanimation))
-bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
-
-# find the appropriate size and set
-
-define check_and_set_bootanimation
-  ifeq ($(TARGET_BOOTANIMATION_NAME),)
-    ifeq ($(shell expr $(1) \<= $(TARGET_BOOTANIMATION_SIZE)), 1)
-      TARGET_BOOTANIMATION_NAME := $(1)
-    endif
-  endif
-endef
-
-$(foreach size,$(bootanimation_sizes), $(eval $(call check_and_set_bootanimation, $(size))))
-
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
-endif
-
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
