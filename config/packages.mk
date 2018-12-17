@@ -1,5 +1,9 @@
 # Additional packages
 
+# Bootanimation
+PRODUCT_PACKAGES += \
+    bootanimation.zip
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
