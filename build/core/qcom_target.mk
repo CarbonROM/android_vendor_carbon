@@ -28,7 +28,7 @@ $(call set-device-specific-path,DATASERVICES,dataservices,vendor/qcom/opensource
 $(call set-device-specific-path,POWER,power,hardware/qcom/power)
 $(call set-device-specific-path,THERMAL,thermal,hardware/qcom/thermal)
 $(call set-device-specific-path,VR,vr,hardware/qcom/vr)
-$(call set-device-specific-path,IPACFG_MGR,ipacfg-mgr,hardware/qcom/data/ipacfg-mgr)
+$(call set-device-specific-path,IPACFG_MGR,ipacfg-mgr,vendor/qcom/opensource/data-ipa-cfg-mgr)
 
 $(call wlan-set-path-variant,wlan-caf)
 $(call bt-vendor-set-path-variant,bt-caf)
