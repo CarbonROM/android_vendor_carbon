@@ -72,4 +72,8 @@ endif
 PRODUCT_PACKAGES += \
     privapp-permissions-carbon.xml
 
+# Exempt DeskClock from Powersave
+PRODUCT_PACKAGES += \
+    deskclock.xml
+
 -include vendor/qcom/perf/packages.mk
