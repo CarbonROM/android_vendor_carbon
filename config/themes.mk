@@ -6,4 +6,5 @@ PRODUCT_PACKAGES += \
     GoogleIntelligenceSenseLight \
     SettingsDark \
     SettingsIntelligenceDark \
-    SystemDark
+    SystemDark \
+    WellbeingDark
