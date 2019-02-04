@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    Launcher3 \
+    SearchLauncherQuickStep \
     Quarks \
     OmniStyle \
     VanillaMusic \
