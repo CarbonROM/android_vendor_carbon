@@ -6,6 +6,7 @@ supported_devices=(
   'cheeseburger'
   'dumpling'
   'enchilada'
+  'fajita'
   'honami'
   'kenzo'
   'land'
