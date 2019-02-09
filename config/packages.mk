@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     Quarks \
     OmniStyle \
     VanillaMusic \
-    CarbonDelta
+    CarbonDelta \
+    CameraRoll
 
 # Turbo
 PRODUCT_PACKAGES += \
