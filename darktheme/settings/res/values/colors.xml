@@ -17,6 +17,9 @@
 
 <resources>
 
+    <!-- Suggestion cards -->
+    <color name="suggestion_card_background">#ff313235</color>
+
     <!-- Color for the background of the shortcut icons.-->
     <color name="shortcut_background">@*android:color/primary_device_default_dark</color>
 
