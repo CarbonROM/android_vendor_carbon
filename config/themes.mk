@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceBlack \
     SystemDark \
     SystemBlack \
-    WellbeingDark
+    WellbeingDark \
+    WellbeingBlack
     
     
     
