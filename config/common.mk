@@ -46,10 +46,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/carbon/config/permissions/carbon-hiddenapi-package-whitelist.xml:system/etc/sysconfig/carbon-hiddenapi-package-whitelist.xml
 
-# init.d support
+# carbon init
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/carbon/prebuilt/bin/sysinit:system/bin/sysinit \
     vendor/carbon/prebuilt/etc/init.carbon.rc:root/init.carbon.rc
 
 # Enable SIP and VoIP on all targets
