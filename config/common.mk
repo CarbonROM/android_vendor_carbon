@@ -24,6 +24,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.alarm_alert=Carbon.ogg
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
