@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
-    Quarks \
+    Jelly \
     OmniStyle \
     VanillaMusic \
     CarbonDelta \

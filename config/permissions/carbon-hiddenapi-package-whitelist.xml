@@ -20,5 +20,5 @@ which apps should be allowed to access the entire private API. Only apps NOT sig
 platform cert need to be included, as apps signed with the platform cert are exempted by default.
 -->
  <config>
-  <hidden-api-whitelisted-app package="org.carbonrom.quarks" />
+  <hidden-api-whitelisted-app package="org.lineageos.jelly" />
 </config>
