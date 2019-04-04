@@ -41,14 +41,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
-# Backup Services whitelist
-PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
-
-# Hidden API whitelist
-PRODUCT_COPY_FILES += \
-    vendor/carbon/config/permissions/carbon-hiddenapi-package-whitelist.xml:system/etc/sysconfig/carbon-hiddenapi-package-whitelist.xml
-
 # carbon init
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/init.carbon.rc:root/init.carbon.rc

@@ -76,4 +76,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     deskclock.xml
 
+# Backup Services whitelist
+PRODUCT_PACKAGES += \
+    backup.xml
+
+# Hidden API whitelist
+PRODUCT_PACKAGES += \
+    carbon-hiddenapi-package-whitelist.xml
+
 -include vendor/qcom/perf/packages.mk
