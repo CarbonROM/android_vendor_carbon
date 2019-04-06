@@ -8,6 +8,7 @@ supported_devices=(
   'enchilada'
   'fajita'
   'honami'
+  'i9100'
   'kenzo'
   'land'
   'mako'
