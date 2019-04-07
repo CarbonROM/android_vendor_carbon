@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     VanillaMusic \
     CarbonDelta \
-    CameraRoll
+    SimpleGallery
 
 # Turbo
 PRODUCT_PACKAGES += \
