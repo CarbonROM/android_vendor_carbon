@@ -31,7 +31,8 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     VanillaMusic \
     CarbonDelta \
-    SimpleGallery
+    SimpleGallery \
+    WeatherClient
 
 # Turbo
 PRODUCT_PACKAGES += \
