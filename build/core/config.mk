@@ -23,5 +23,6 @@ include $(TOPDIR)vendor/carbon/build/core/mtk_target.mk
 
 # Rules for QCOM targets
 include $(TOPDIR)vendor/carbon/build/core/qcom_target.mk
+include $(TOPDIR)vendor/carbon/build/core/qcom_utils.mk
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/carbon/build/core/system_rro.mk
