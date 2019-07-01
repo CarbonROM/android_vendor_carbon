@@ -16,7 +16,8 @@
 #
 
 define build-bootanimation
-    sh vendor/carbon/bootanimation/generate-bootanimation.sh \
+    $(shell) vendor/carbon/bootanimation/generate-bootanimation.sh \
+    $(PRODUCT_OUT) \
     $(TARGET_SCREEN_WIDTH) \
     $(TARGET_SCREEN_HEIGHT) \
     $(TARGET_BOOTANIMATION_HALF_RES)
