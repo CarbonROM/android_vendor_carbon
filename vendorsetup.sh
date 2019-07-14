@@ -20,6 +20,7 @@ supported_devices=(
   'oneplus3'
   'poplar'
   'potter'
+  'rosy'
   'sailfish'
   'shamu'
   'star2lte'
