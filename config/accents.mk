@@ -28,4 +28,5 @@ PRODUCT_PACKAGES += \
     UserSeven \
     UserEight \
     Yellow \
-    White
+    White \
+    Netflix
