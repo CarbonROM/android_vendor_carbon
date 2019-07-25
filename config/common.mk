@@ -58,6 +58,10 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/sounds/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
     vendor/carbon/sounds/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
 
+# Enforce privapp-permissions whitelist
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
+
 # Additional packages
 -include vendor/carbon/config/packages.mk
 
