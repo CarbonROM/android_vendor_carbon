@@ -29,6 +29,7 @@ supported_devices=(
   'sirius'
   'taimen'
   'tissot'
+  'whyred'
   'x2'
   'z2_plus'
   'z3'
