@@ -776,6 +776,7 @@ function oat2dex() {
     local SRC="$3"
     local TARGET=
     local OAT=
+    local HOST="$(uname)"
 
     if [ -z "$ANDROID_HOST_OUT" ]; then
         echo "ERROR: ANDROID_HOST_OUT not found!"
@@ -783,7 +784,7 @@ function oat2dex() {
         exit 1
     fi
 
-    if [ -z "$OATDUMP" ]; then
+    if [ -z "$OATDUMP" ] || [ -z "$VDEXEXTRACTOR" ]; then
         if [ ! -f "$ANDROID_HOST_OUT/bin/oatdump" ]; then
             echo "ERROR: oatdump utility not found!"
             echo "ERROR: Please run 'make oatdump'"
@@ -792,6 +793,7 @@ function oat2dex() {
         else
            export OATDUMP="$ANDROID_HOST_OUT/bin/oatdump"
         fi
+        export VDEXEXTRACTOR="$CM_ROOT"/vendor/carbon/build/tools/"$HOST"/vdexExtractor
    fi
 
     # Extract existing boot.oats to the temp folder
@@ -827,8 +829,8 @@ function oat2dex() {
 
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             if get_file "$VDEX" "$TMPDIR" "$SRC"; then
-                "$OATDUMP" --oat-file="$TMPDIR/$(basename "$VDEX")" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$VDEX")" > /dev/null
+                mv "$TMPDIR/$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
             else
                 "$OATDUMP" --oat-file="$TMPDIR/$(basename "$OAT")" --export-dex-to="$TMPDIR" > /dev/null
                 mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
@@ -843,8 +845,8 @@ function oat2dex() {
             # try to extract classes.dex from boot.vdex for frameworks jars
             # fallback to boot.oat if vdex is not available
             if [ -f "$JARVDEX" ]; then
-                "$OATDUMP" --oat-file="$JARVDEX" --export-dex-to="$TMPDIR" > /dev/null
-                mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
+                "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$JARVDEX" > /dev/null
+                mv "$TMPDIR/boot-$(basename "${OEM_TARGET%.*}").apk_classes.dex" "$TMPDIR/classes.dex"
             else
                 "$OATDUMP" --oat-file="$JAROAT" --export-dex-to="$TMPDIR" > /dev/null
                 mv "$(find "$TMPDIR" -maxdepth 1 -type f -name "*_export.dex" | wc -l | tr -d ' ')" "$TMPDIR/classes.dex"
