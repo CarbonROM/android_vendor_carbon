@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=$2
-export V=CR-7
+export V=CR-8
 
 export ADDOND_VERSION=1
 
