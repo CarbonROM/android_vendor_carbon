@@ -31,6 +31,4 @@ echo "$IMAGESCALEWIDTH $IMAGESCALEWIDTH" 30 > "$OUT/bootanimation/desc.txt"
 cat "vendor/carbon/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
 # Create bootanimation.zip
-cd "$OUT/bootanimation"
-
-zip -qr0 "$OUT/bootanimation.zip" .
+zip -qr0 "$OUT/bootanimation.zip" "$OUT/bootanimation"
