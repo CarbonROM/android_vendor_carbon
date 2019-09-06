@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     CR-Fonts
 
 # Custom off-mode charger
-ifneq ($(WITH_LINEAGE_CHARGER),false)
+#ifneq ($(WITH_LINEAGE_CHARGER),false)
+ifeq (true,false)
 PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images \
