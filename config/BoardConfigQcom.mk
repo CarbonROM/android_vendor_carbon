@@ -104,6 +104,4 @@ else ifneq ($(filter $(UM_4_14_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
 endif
 
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom/audio-caf/$(QCOM_HARDWARE_VARIANT) \
-    hardware/qcom/display-caf/$(QCOM_HARDWARE_VARIANT) \
-    hardware/qcom/media-caf/$(QCOM_HARDWARE_VARIANT)
+    hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
