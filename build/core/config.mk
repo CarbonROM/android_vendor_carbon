@@ -18,6 +18,9 @@
 # be device and hardware independent.
 $(call project-set-path-variant,ril,TARGET_RIL_VARIANT,hardware/ril)
 
+PRODUCT_SOONG_NAMESPACES += \
+	$(call project-path-for,ril)
+
 # Include board/platform macros
 include vendor/carbon/build/core/utils.mk
 
