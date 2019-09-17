@@ -44,6 +44,8 @@ type Product_variables struct {
 
 	Uses_nvidia_enhancements struct {
 		Cppflags []string
+		Shared_libs []string
+		Srcs []string
 	}
 
 	Uses_qti_camera_device struct {
