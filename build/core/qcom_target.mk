@@ -27,20 +27,5 @@ $(call set-device-specific-path,WLAN,wlan,hardware/qcom-caf/wlan)
 
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
-else
-
-$(call set-device-specific-path,AUDIO,audio,hardware/qcom/audio)
-$(call set-device-specific-path,DISPLAY,display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
-$(call set-device-specific-path,MEDIA,media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
-
-$(call set-device-specific-path,BT_VENDOR,bt-vendor,hardware/qcom/bt)
-$(call set-device-specific-path,CAMERA,camera,hardware/qcom/camera)
-$(call set-device-specific-path,GPS,gps,hardware/qcom/gps)
-$(call set-device-specific-path,SENSORS,sensors,hardware/qcom/sensors)
-$(call set-device-specific-path,LOC_API,loc-api,vendor/qcom/opensource/location)
-$(call set-device-specific-path,DATASERVICES,dataservices,$(TARGET_DEVICE_DIR)/dataservices)
-$(call set-device-specific-path,IPACFG_MGR,ipacfg-mgr,hardware/qcom/data/ipacfg-mgr)
-
-$(call set-device-specific-path,WLAN,wlan,hardware/qcom/wlan)
 
 endif
