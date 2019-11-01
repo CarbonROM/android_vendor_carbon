@@ -92,4 +92,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     carbon-hiddenapi-package-whitelist.xml
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+   ThemePicker
+
 -include vendor/qcom/perf/packages.mk
