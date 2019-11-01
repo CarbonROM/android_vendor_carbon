@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="theme_wallpaper_default">@drawable/generic_bg</item>
+    <item type="drawable" name="theme_wallpaper_thumbnail_default">@drawable/generic_bg_prev</item>
+    <item type="drawable" name="theme_wallpaper_carbon">@drawable/carbon_bg</item>
+    <item type="drawable" name="theme_wallpaper_thumbnail_carbon">@drawable/carbon_bg_prev</item>
+</resources>

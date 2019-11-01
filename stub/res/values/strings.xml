@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carbon Themes</string>
+    <!-- DEFAULT VALUES HAHA YES, maybe switch to an actual overlay later? -->
+    <string name="theme_name_default">Default</string>
+    <string name="theme_title_default">@string/theme_name_default</string>
+    <string name="theme_wallpaper_title_default">Default Carbon Wallpaper</string>
+
+    <string name="theme_name_carbon">Carbon</string>
+    <string name="theme_title_carbon">@string/theme_name_carbon</string>
+    <string name="theme_overlay_color_carbon">com.android.theme.color.black</string>
+    <string name="theme_overlay_icon_android_carbon">com.android.theme.icon_pack.filled.android</string>
+    <string name="theme_overlay_icon_launcher_carbon">com.android.theme.icon_pack.filled.launcher</string>
+    <string name="theme_overlay_icon_settings_carbon">com.android.theme.icon_pack.filled.settings</string>
+    <string name="theme_overlay_icon_sysui_carbon">com.android.theme.icon_pack.filled.systemui</string>
+    <string name="theme_overlay_shape_carbon">com.android.theme.icon.roundedrect</string>
+    <string name="theme_wallpaper_title_carbon">Alternative Carbon Wallpaper</string>
+</resources>
