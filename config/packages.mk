@@ -94,6 +94,7 @@ PRODUCT_PACKAGES += \
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-   ThemePicker
+    CarbonThemesStub \
+    ThemePicker
 
 -include vendor/qcom/perf/packages.mk
