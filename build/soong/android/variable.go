@@ -93,6 +93,9 @@ type Product_variables struct {
 		Cflags []string
 		Whole_static_libs []string
 	}
+    Target_enforce_ab_ota_partition_list struct {
+        Cflags []string
+    }
 }
 
 type ProductVariables struct {
@@ -125,4 +128,5 @@ type ProductVariables struct {
 	Qcom_um_soong_namespace					*string `json:",omitempty"`
 	Target_surfaceflinger_fod_lib			*string `json:",omitempty"`
 	Recovery_skip_ev_rel_input				*bool `json:",omitempty"`
+    Target_enforce_ab_ota_partition_list    *bool `json:",omitempty"`
 }
