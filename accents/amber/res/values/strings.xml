@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Accent color name application label. [CHAR LIMIT=50] -->
+    <string name="accent_color_amber_overlay" translatable="false">Amber</string>
+</resources>
