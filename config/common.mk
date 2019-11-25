@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
 -include vendor/carbon/sepolicy/sepolicy.mk
 
 # Themes
-# include vendor/carbon/config/accents.mk
+include vendor/carbon/config/accents.mk
 # include vendor/carbon/config/themes.mk
 
 # Add our overlays
