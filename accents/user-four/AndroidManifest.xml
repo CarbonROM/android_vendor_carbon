@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.accents.userfour"
+    package="com.android.theme.color.userfour"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:targetPackage="android" android:priority="1"/>
+    <overlay android:targetPackage="android" android:category="android.theme.customization.accent_color" android:priority="1"/>
 
-    <application android:label="UserFour" android:hasCode="false"/>
+    <application android:label="@string/accent_color_userfour_overlay" android:hasCode="false"/>
 </manifest>

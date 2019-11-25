@@ -19,7 +19,6 @@ PRODUCT_PACKAGES += \
     Purple \
     Red \
     Teal \
-    QPurple \
     UserOne \
     UserTwo \
     UserThree \
@@ -30,4 +29,5 @@ PRODUCT_PACKAGES += \
     UserEight \
     Yellow \
     White \
-    Netflix
+    Netflix \
+    PixelBlue
