@@ -19,7 +19,6 @@ PRODUCT_PACKAGES += \
     Purple \
     Red \
     Teal \
-    QPurple \
     UserOne \
     UserTwo \
     UserThree \
