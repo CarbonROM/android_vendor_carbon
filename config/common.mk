@@ -101,3 +101,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/framework/telephony-ext.jar \
     system/framework/oat/%/telephony-ext.odex \
     system/framework/oat/%/telephony-ext.vdex
+
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
