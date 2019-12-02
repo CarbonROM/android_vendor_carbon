@@ -101,3 +101,7 @@ SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
