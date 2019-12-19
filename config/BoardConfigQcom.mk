@@ -88,19 +88,21 @@ else
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
 endif
 
-# Required for frameworks/native
-ifneq ($(filter $(UM_3_18_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
-    TARGET_USES_QCOM_UM_FAMILY := true
-    TARGET_USES_QCOM_UM_3_18_FAMILY := true
-else ifneq ($(filter $(UM_4_4_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
-    TARGET_USES_QCOM_UM_FAMILY := true
-    TARGET_USES_QCOM_UM_4_4_FAMILY := true
-else ifneq ($(filter $(UM_4_9_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
-    TARGET_USES_QCOM_UM_FAMILY := true
-    TARGET_USES_QCOM_UM_4_9_FAMILY := true
-else ifneq ($(filter $(UM_4_14_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
-    TARGET_USES_QCOM_UM_FAMILY := true
-    TARGET_USES_QCOM_UM_4_14_FAMILY := true
+ifeq ($(TARGET_USE_CAF_SURFACEFLINGER), true)
+    # Required for frameworks/native
+    ifeq ($(QCOM_HARDWARE_VARIANT),msm8996)
+        TARGET_USES_QCOM_UM_FAMILY := true
+        TARGET_USES_QCOM_UM_3_18_FAMILY := true
+    else ifeq ($(QCOM_HARDWARE_VARIANT),msm8998)
+        TARGET_USES_QCOM_UM_FAMILY := true
+        TARGET_USES_QCOM_UM_4_4_FAMILY := true
+    else ifeq ($(QCOM_HARDWARE_VARIANT),sdm845)
+        TARGET_USES_QCOM_UM_FAMILY := true
+        TARGET_USES_QCOM_UM_4_9_FAMILY := true
+    else ifeq ($(QCOM_HARDWARE_VARIANT),sm8150)
+        TARGET_USES_QCOM_UM_FAMILY := true
+        TARGET_USES_QCOM_UM_4_14_FAMILY := true
+    endif
 endif
 
 PRODUCT_SOONG_NAMESPACES += \
