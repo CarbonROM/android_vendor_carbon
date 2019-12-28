@@ -60,6 +60,10 @@ type Product_variables struct {
 	Target_shim_libs struct {
 		Cppflags []string
 	}
+	Target_tegra_version struct {
+		Cppflags []string
+		Srcs []string
+	}
 	Uses_qcom_um_family struct {
 		Cflags []string
 		Srcs []string
@@ -105,6 +109,7 @@ type ProductVariables struct {
 	QTIMediaPath						*string `json:",omitempty"`
 	Specific_camera_parameter_library			*string `json:",omitempty"`
 	Target_shim_libs					*string `json:",omitempty"`
+	Target_tegra_version					*string `json:",omitempty"`
 	Uses_qcom_um_family					*bool `json:",omitempty"`
 	Uses_qcom_um_3_18_family				*bool `json:",omitempty"`
 	Uses_qcom_um_4_4_family					*bool `json:",omitempty"`

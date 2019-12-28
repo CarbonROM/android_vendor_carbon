@@ -27,5 +27,6 @@ $(call add_json_str,	QTIDisplayPath,						$(call project-path-for,qcom-display))
 $(call add_json_str,	QTIMediaPath,						$(call project-path-for,qcom-media))
 $(call add_json_str,	Specific_camera_parameter_library,			$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY))
 $(call add_json_str,	Target_shim_libs,					$(subst $(space),:,$(TARGET_LD_SHIM_LIBS)))
+$(call add_json_str,	Target_tegra_version,					$(TARGET_TEGRA_VERSION))
 
 $(eval _contents := $(subst $$(comma)$$(newline)__SV_END,$(newline),$$(_contents)__SV_END},$$(newline)))
