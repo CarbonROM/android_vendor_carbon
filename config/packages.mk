@@ -56,13 +56,11 @@ PRODUCT_PACKAGES += \
 
 # Custom off-mode charger
 #ifneq ($(WITH_LINEAGE_CHARGER),false)
-ifeq (true,false)
 PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images \
     font_log.png \
     libhealthd.lineage
-endif
 
 # NTFS-3G support
 PRODUCT_PACKAGES += \
