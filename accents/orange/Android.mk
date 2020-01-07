@@ -1,6 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_RRO_THEME := OrangeAccent
+LOCAL_RRO_THEME := Orange
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_MODULE_TAGS := optional
