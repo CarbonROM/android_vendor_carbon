@@ -78,7 +78,8 @@ endif
 
 # Permissions
 PRODUCT_PACKAGES += \
-    privapp-permissions-carbon.xml
+    privapp-permissions-carbon.xml \
+    privapp-permissions-carbon-product.xml
 
 # Exempt DeskClock from Powersave
 PRODUCT_PACKAGES += \
