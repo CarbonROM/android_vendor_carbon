@@ -1,3 +1,7 @@
+# Primary
+PRODUCT_PACKAGES += \
+    PrimaryColorCarbonBlackOverlay
+
 # Accents
 PRODUCT_PACKAGES += \
     Amber \
