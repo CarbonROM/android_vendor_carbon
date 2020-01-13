@@ -67,8 +67,8 @@ PRODUCT_COPY_FILES += \
 # SELinux Policy
 -include vendor/carbon/sepolicy/sepolicy.mk
 
-# Accents
-include vendor/carbon/config/accents.mk
+# Themes and Theme overlays
+include vendor/themes/themes.mk
 
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
