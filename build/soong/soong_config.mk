@@ -29,6 +29,7 @@ $(call add_json_str,	QTIAudioPath,								$(call project-path-for,qcom-audio))
 $(call add_json_str,	QTIDisplayPath,								$(call project-path-for,qcom-display))
 $(call add_json_str,	QTIMediaPath,								$(call project-path-for,qcom-media))
 $(call add_json_str,	Specific_camera_parameter_library,			$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY))
+$(call add_json_str_omitempty, Target_process_sdk_version_override, $(TARGET_PROCESS_SDK_VERSION_OVERRIDE))
 $(call add_json_str,	Target_shim_libs,							$(subst $(space),:,$(TARGET_LD_SHIM_LIBS)))
 $(call add_json_bool, Supports_extended_compress_format, $(filter true,$(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)))
 
