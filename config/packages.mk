@@ -40,6 +40,10 @@ PRODUCT_PACKAGES += \
     SimpleGallery \
     WeatherClient
 
+# SetupWizard
+PRODUCT_PACKAGES += \
+    CarbonSetupWizard
+
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
