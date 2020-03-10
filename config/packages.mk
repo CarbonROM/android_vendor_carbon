@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     VanillaMusic \
     CarbonDelta \
+    Seedvault \
     SimpleGallery \
     ExactCalculator
 
