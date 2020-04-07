@@ -102,4 +102,8 @@ PRODUCT_PACKAGES += \
     CarbonThemesStub \
     ThemePicker
 
+# IMSWidget
+PRODUCT_PACKAGES += \
+    IMSWidget
+
 -include vendor/qcom/perf/packages.mk
