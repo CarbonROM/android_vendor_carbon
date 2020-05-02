@@ -77,7 +77,7 @@ include vendor/themes/themes.mk
 DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # Exclude from RRO
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/carbon/tools/squisher
