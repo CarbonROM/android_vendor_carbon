@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
+    Etar \
     Jelly \
     VanillaMusic \
     CarbonDelta \
