@@ -82,6 +82,10 @@ type Product_variables struct {
 		Overrides []string
 		Shared_libs []string
 	}
+	Qcom_um_soong_namespace struct {
+		Cflags []string
+		Header_libs []string
+	}
 }
 
 type ProductVariables struct {
@@ -111,4 +115,5 @@ type ProductVariables struct {
 	Uses_qcom_um_4_14_family				*bool `json:",omitempty"`
 	Has_legacy_camera_hal1					*bool `json:",omitempty"`
 	Supports_extended_compress_format		*bool `json:",omitempty"`
+	Qcom_um_soong_namespace					*string `json:",omitempty"`
 }
