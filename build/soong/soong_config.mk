@@ -23,6 +23,7 @@ $(call add_json_bool,	Supports_extended_compress_format,			$(filter true,$(AUDIO
 
 $(call add_json_str_omitempty,	Additional_gralloc_10_usage_bits,	$(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 $(call add_json_str_omitempty,	Target_process_sdk_version_override,$(TARGET_PROCESS_SDK_VERSION_OVERRIDE))
+$(call add_json_str_omitempty,	Target_surfaceflinger_fod_lib,		$(TARGET_SURFACEFLINGER_FOD_LIB))
 $(call add_json_str_omitempty,	Qcom_um_soong_namespace,			$(if $(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),$(QCOM_SOONG_NAMESPACE),))
 
 $(call add_json_val_default,	Bootloader_message_offset,			$(BOOTLOADER_MESSAGE_OFFSET), 0)
