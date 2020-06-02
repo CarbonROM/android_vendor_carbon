@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
     turbo.xml \
     privapp-permissions-turbo.xml
 
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
+
 # Fonts
 PRODUCT_PACKAGES += \
     CR-Fonts
