@@ -15,6 +15,9 @@ PRODUCT_PACKAGES += \
     Stk \
     CellBroadcastReceiver
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Ring_Synth_04.ogg,Ring_Synth_04.ogg
+
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

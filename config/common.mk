@@ -23,8 +23,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Ring_Synth_04.ogg,Ring_Synth_04.ogg \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=pixiedust.ogg \
     ro.config.alarm_alert=Carbon.ogg
 
