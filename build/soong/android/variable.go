@@ -80,6 +80,11 @@ type Product_variables struct {
 		Header_libs []string
 		Shared_libs []string
 	}
+	Uses_qcom_um_4_19_family struct {
+		Include_dirs []string
+		Header_libs []string
+		Shared_libs []string
+	}
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
 		Overrides []string
@@ -120,6 +125,7 @@ type ProductVariables struct {
 	Uses_qcom_um_4_4_family					*bool `json:",omitempty"`
 	Uses_qcom_um_4_9_family					*bool `json:",omitempty"`
 	Uses_qcom_um_4_14_family				*bool `json:",omitempty"`
+	Uses_qcom_um_4_19_family				*bool `json:",omitempty"`
 	Has_legacy_camera_hal1					*bool `json:",omitempty"`
 	Supports_extended_compress_format		*bool `json:",omitempty"`
 	Qcom_um_soong_namespace					*string `json:",omitempty"`
