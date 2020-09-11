@@ -17,6 +17,8 @@
 
 CARBON_TARGET_PACKAGE := $(PRODUCT_OUT)/CARBON-$(CARBON_VERSION).zip
 
+MD5 := prebuilts/build-tools/path/$(HOST_OS)-x86/md5sum
+
 # This is for PhaseBurn
 .PHONY: sandwich measandwich
 sandwich:
@@ -55,7 +57,7 @@ measandwich: sandwich
 .PHONY: carbon
 carbon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CARBON_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(CARBON_TARGET_PACKAGE) > $(CARBON_TARGET_PACKAGE).md5sum
+	$(hide) $(MD5) $(CARBON_TARGET_PACKAGE) > $(CARBON_TARGET_PACKAGE).md5sum
 	@echo ""
 	@echo -e ${CL_YLW}"════════════════════════════════════════════════════════════════════════════════"${CL_RST}
 	@echo -e ${CL_BLU}" ██████╗ █████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗ ██████╗  ██████╗ ███╗   ███╗"${CL_RST}
