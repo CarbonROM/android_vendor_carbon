@@ -24,7 +24,7 @@ PRODUCT_BOOT_JARS += \
 
 # CellBroadcastReceiver
 PRODUCT_PACKAGES += \
-CellBroadcastReceiver
+    CellBroadcastReceiver
 
 # Exchange support
 PRODUCT_PACKAGES += \
