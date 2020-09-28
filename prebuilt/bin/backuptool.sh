@@ -4,7 +4,7 @@
 #
 
 export C=/tmp/backupdir
-export V=CR-8
+export V=CR-9
 export SYSDEV="$(readlink -nf "$2")"
 export SYSFS="$3"
 
