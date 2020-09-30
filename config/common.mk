@@ -73,6 +73,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Themes and Theme overlays
 include vendor/themes/themes.mk
 
+# Wallpapers
+include vendor/carbon/config/wallpaper.mk
+
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
