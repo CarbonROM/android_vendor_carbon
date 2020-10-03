@@ -40,6 +40,7 @@ except ImportError:
 from xml.etree import ElementTree
 
 product = sys.argv[1]
+default_rem = "carbon"
 
 if len(sys.argv) > 2:
     depsonly = sys.argv[2]
@@ -209,6 +210,9 @@ def add_to_manifest(repositories, fallback_branch = None):
         lm = ElementTree.Element("manifest")
 
     for repository in repositories:
+        repo_remote = default_rem
+        if 'remote' in repository:
+            repo_remote = repository['remote']
         repo_name = repository['repository']
         repo_target = repository['target_path']
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
@@ -218,7 +222,7 @@ def add_to_manifest(repositories, fallback_branch = None):
 
         print('Adding dependency: CarbonROM/%s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "carbon", "name": "CarbonROM/%s" % repo_name })
+            "remote": repo_remote, "name": "CarbonROM/%s" % repo_name })
 
         if 'revision' in repository:
             project.set('revision',repository['revision'])
