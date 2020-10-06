@@ -40,10 +40,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# carbon init
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/etc/init.carbon.rc:root/init.carbon.rc
-
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
