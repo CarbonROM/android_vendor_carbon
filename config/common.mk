@@ -27,6 +27,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Pollux.ogg \
     ro.config.alarm_alert=Carbon.ogg
 
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
