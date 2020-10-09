@@ -29,8 +29,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/carbon/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/carbon/prebuilt/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/carbon/prebuilt/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/carbon/prebuilt/bin/50-hosts.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-hosts.sh
 
 ifeq ($(AB_OTA_UPDATER),true)
