@@ -99,4 +99,7 @@ PRODUCT_PACKAGES += \
     CarbonThemesStub \
     ThemePicker
 
+PRODUCT_PACKAGES += \
+    NavigationBarMode2ButtonOverlay
+
 -include vendor/qcom/perf/packages.mk
