@@ -6,9 +6,6 @@ type Product_variables struct {
 	Uses_qcom_bsp_legacy struct {
 		Cppflags []string
 	}
-	Recovery_skip_ev_rel_input struct {
-		Cflags []string
-	}
 	Should_wait_for_qsee struct {
 		Cflags []string
 	}
@@ -127,6 +124,5 @@ type ProductVariables struct {
 	Supports_extended_compress_format		*bool `json:",omitempty"`
 	Qcom_um_soong_namespace					*string `json:",omitempty"`
 	Target_surfaceflinger_fod_lib			*string `json:",omitempty"`
-	Recovery_skip_ev_rel_input				*bool `json:",omitempty"`
     Target_enforce_ab_ota_partition_list    *bool `json:",omitempty"`
 }
