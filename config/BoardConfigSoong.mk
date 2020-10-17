@@ -33,6 +33,7 @@ SOONG_CONFIG_carbonGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     has_legacy_camera_hal1 \
+    has_memfd_backport \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
     target_enforce_ab_ota_partition_list \
@@ -68,6 +69,7 @@ endif
 
 # Soong bool variables
 SOONG_CONFIG_carbonGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
+SOONG_CONFIG_carbonGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_carbonGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_carbonGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_carbonGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
