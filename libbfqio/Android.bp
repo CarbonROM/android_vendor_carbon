@@ -44,12 +44,12 @@ cc_defaults {
 
 cc_library {
     name: "libbfqio",
-    vendor_available: true,
     defaults: ["libbfqio_defaults"],
+    vendor_available: true,
 }
 
 cc_library {
     name: "libbfqio_vendor",
-    vendor: true,
     defaults: ["libbfqio_defaults"],
+    vendor: true,
 }
