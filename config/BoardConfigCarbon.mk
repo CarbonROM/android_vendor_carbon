@@ -13,12 +13,6 @@ SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 # Wallpapers
 include vendor/carbon/config/wallpaper.mk
 
-# Charger
-#ifneq ($(WITH_LINEAGE_CHARGER),false)
-ifeq (true,false)
-    BOARD_HAL_STATIC_LIBRARIES := libhealthd.lineage
-endif
-
 include vendor/carbon/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
