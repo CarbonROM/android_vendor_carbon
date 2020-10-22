@@ -53,13 +53,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CR-Fonts
 
-# Custom off-mode charger
-#ifneq ($(WITH_LINEAGE_CHARGER),false)
 PRODUCT_PACKAGES += \
     charger_res_images \
-    cm_charger_res_images \
-    font_log.png \
-    libhealthd.lineage
 
 # Extra Tools
 PRODUCT_PACKAGES += \

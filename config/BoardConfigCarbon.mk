@@ -1,8 +1,17 @@
-# Charger
-#ifneq ($(WITH_LINEAGE_CHARGER),false)
-ifeq (true,false)
-    BOARD_HAL_STATIC_LIBRARIES := libhealthd.lineage
-endif
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
+# Add our overlays
+DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+
+# Squisher Location
+SQUISHER_SCRIPT := vendor/carbon/tools/squisher
+
+# Versioning
+-include vendor/carbon/config/version.mk
+
+# Wallpapers
+include vendor/carbon/config/wallpaper.mk
 
 include vendor/carbon/config/BoardConfigKernel.mk
 
