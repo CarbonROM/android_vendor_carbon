@@ -26,6 +26,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
 CellBroadcastReceiver
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
