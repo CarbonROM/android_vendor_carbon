@@ -25,4 +25,3 @@ else
 endif
 
 include $(BUILD_SYSTEM)/package.mk
-
