@@ -24,12 +24,3 @@ include vendor/carbon/build/core/vendor/*.mk
 include $(TOPDIR)vendor/carbon/build/core/qcom_target.mk
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/carbon/build/core/system_rro.mk
-
-# Filter out duplicates
-define uniq__dx
-  $(eval seen :=)
-  $(foreach _,$1,$(if $(filter $_,${seen}),,$(eval seen += $_)))
-  ${seen}
-endef
-
-PRODUCT_BOOT_JARS := $(call uniq__dx,$(subst $(space), ,$(strip $(PRODUCT_BOOT_JARS))))
