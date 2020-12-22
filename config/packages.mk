@@ -61,21 +61,14 @@ PRODUCT_PACKAGES += \
     font_log.png \
     libhealthd.lineage
 
-# NTFS-3G support
+# FS tools
 PRODUCT_PACKAGES += \
-    fsck.ntfs \
-    mkfs.ntfs \
-    mount.ntfs
-
-# ExFAT support
-WITH_EXFAT ?= true
-ifeq ($(WITH_EXFAT),true)
-TARGET_USES_EXFAT := true
-PRODUCT_PACKAGES += \
-    mount.exfat \
     fsck.exfat \
-    mkfs.exfat
-endif
+    fsck.ntfs \
+    mount.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs
 
 # Permissions
 PRODUCT_PACKAGES += \
