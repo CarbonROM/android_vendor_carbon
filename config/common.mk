@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/carbon/prebuilt/bin/50-hosts.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-hosts.sh
 
-ifeq ($(AB_OTA_UPDATER),true)
+ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/carbon/prebuilt/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
