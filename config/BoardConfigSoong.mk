@@ -48,6 +48,7 @@ SOONG_CONFIG_carbonNvidiaVars += \
 
 SOONG_CONFIG_NAMESPACES += carbonQcomVars
 SOONG_CONFIG_carbonQcomVars += \
+    legacy_hw_disk_encryption \
     should_wait_for_qsee \
     supports_extended_compress_format \
     supports_hw_fde \
@@ -69,6 +70,7 @@ SOONG_CONFIG_carbonGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGN
 SOONG_CONFIG_carbonGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_carbonGlobalVars_target_enforce_ab_ota_partition_list := $(TARGET_ENFORCE_AB_OTA_PARTITION_LIST)
 SOONG_CONFIG_carbonNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
+SOONG_CONFIG_carbonQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_carbonQcomVars_should_wait_for_qsee := $(TARGET_KEYMASTER_WAIT_FOR_QSEE)
 SOONG_CONFIG_carbonQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_carbonQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
