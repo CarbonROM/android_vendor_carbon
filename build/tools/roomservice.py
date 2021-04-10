@@ -292,8 +292,8 @@ else:
     for repository in repositories:
         repo_name = repository['name']
         if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
-            repo_name = repository['full_name']
-            print("Found repository: %s" % repo_name)
+            repo_full_name = repository['full_name']
+            print("Found repository: %s" % repo_full_name)
             
             manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
             
@@ -311,7 +311,7 @@ else:
                 result.extend (json.loads(urllib.request.urlopen(githubreq).read().decode()))
             
             repo_path = "device/%s/%s" % (manufacturer, device)
-            adding = {'repository':repo_name,'target_path':repo_path}
+            adding = {'repository':repo_full_name,'target_path':repo_path}
             
             fallback_branch = None
             if not has_branch(result, default_revision):
