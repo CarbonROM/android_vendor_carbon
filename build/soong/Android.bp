@@ -278,6 +278,86 @@ camera_parameter_library {
     },
 }
 
+soong_config_module_type {
+    name: "rs_qml_library",
+    module_type: "cc_defaults",
+    config_namespace: "carbonGlobalVars",
+    bool_variables: ["target_uses_qml"],
+    properties: [
+        "cflags",
+        "shared_libs",
+        "header_libs",
+    ],
+}
+
+rs_qml_library {
+    name: "uses_qml_defaults",
+    soong_config_variables: {
+        target_uses_qml: {
+            cflags: ["-DUSE_QML", "-fopenmp"],
+            shared_libs: ["libQML-1.4.0"],
+            header_libs: ["libQML_headers"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "rs_eigen_library",
+    module_type: "cc_defaults",
+    config_namespace: "carbonGlobalVars",
+    bool_variables: ["target_uses_eigen"],
+    properties: [
+        "shared_libs",
+    ],
+}
+
+rs_eigen_library {
+    name: "uses_eigen_defaults",
+    soong_config_variables: {
+        target_uses_eigen: {
+            shared_libs: ["libblas"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "rs_qml_library_support",
+    module_type: "cc_defaults",
+    config_namespace: "carbonGlobalVars",
+    bool_variables: ["target_uses_qml"],
+    properties: [
+        "required",
+    ],
+}
+
+rs_qml_library_support {
+    name: "uses_qml_support_defaults",
+    soong_config_variables: {
+        target_uses_qml: {
+            required: ["libQML-1.4.0"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "rs_eigen_library_support",
+    module_type: "cc_defaults",
+    config_namespace: "carbonGlobalVars",
+    bool_variables: ["target_uses_eigen"],
+    properties: [
+        "required",
+    ],
+}
+
+rs_eigen_library_support {
+    name: "uses_eigen_support_defaults",
+    soong_config_variables: {
+        target_uses_eigen: {
+            required: ["libblasV8"],
+        },
+    },
+}
+
 // NVIDIA specific config modules
 soong_config_module_type {
     name: "nvidia_enhancements",
