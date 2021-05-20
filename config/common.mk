@@ -24,7 +24,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.notification_sound=pixiedust.ogg \
+    ro.config.notification_sound=Pollux.ogg \
     ro.config.alarm_alert=Carbon.ogg
 
 # Backup Tool
