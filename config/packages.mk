@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
     font_log.png \
     libhealthd.lineage
 
+# Extra Tools
+PRODUCT_PACKAGES += \
+    curl
+
 # FS tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
