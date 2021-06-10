@@ -72,11 +72,9 @@ PRODUCT_PACKAGES += \
 
 # FS tools
 PRODUCT_PACKAGES += \
-    fsck.exfat \
     fsck.ntfs \
     mount.ntfs \
     mke2fs \
-    mkfs.exfat \
     mkfs.ntfs
 
 # Permissions
