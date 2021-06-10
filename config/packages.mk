@@ -68,7 +68,17 @@ PRODUCT_PACKAGES += \
 
 # Extra Tools
 PRODUCT_PACKAGES += \
-    curl
+    7z \
+    curl \
+    getcap \
+    htop \
+    lib7z \
+    libsepol \
+    nano \
+    pigz \
+    setcap \
+    unrar \
+    zip
 
 # FS tools
 PRODUCT_PACKAGES += \
