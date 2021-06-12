@@ -48,12 +48,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarbonSetupWizard
 
-# Turbo
-PRODUCT_PACKAGES += \
-    Turbo \
-    turbo.xml \
-    privapp-permissions-turbo.xml
-
 # Fonts
 PRODUCT_PACKAGES += \
     CR-Fonts
