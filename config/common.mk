@@ -101,3 +101,5 @@ SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/carbon/config/device_framework_matrix.xml
