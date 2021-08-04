@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     charger_res_images \
+    lineage_charger_animation \
 
 # Extra Tools
 PRODUCT_PACKAGES += \
