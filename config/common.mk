@@ -88,7 +88,10 @@ include vendor/carbon/config/packages.mk
 include vendor/themes/themes.mk
 
 # Include common overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay/no-rro
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/carbon/overlay/common \
+    vendor/carbon/overlay/no-rro
 
 # Include CM LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
