@@ -31,6 +31,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.error.receiver.system.apps=org.carbonrom.errorreport
 
+# Enable support of one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
