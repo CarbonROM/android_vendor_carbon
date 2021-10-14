@@ -1,5 +1,5 @@
 # Apply it to build.prop
-ADDITIONAL_BUILD_PROPERTIES += \
+ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.modversion=CarbonROM-$(CARBON_VERSION) \
     ro.carbon.version=$(CARBON_VERSION) \
     ro.carbon.build.version=$(CARBON_REVISION) \
@@ -9,6 +9,6 @@ ADDITIONAL_BUILD_PROPERTIES += \
 
 # Build fingerprint
 ifneq ($(BUILD_FINGERPRINT),)
-ADDITIONAL_BUILD_PROPERTIES += \
+ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
