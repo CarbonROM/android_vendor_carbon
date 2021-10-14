@@ -1,6 +1,6 @@
-function __print_lineage_functions_help() {
+function __print_carbon_functions_help() {
 cat <<EOF
-Additional LineageOS functions:
+Additional CarbonROM functions:
 - cout:            Changes directory to out.
 - cdevice:         Changes directory to main device tree.
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
@@ -12,7 +12,7 @@ Additional LineageOS functions:
 - lineageremote:   Add git remote for LineageOS Gerrit Review.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for LineageOS Github.
+- githubremote:    Add git remote for CarbonROM Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -79,12 +79,12 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the Lineage model name
+            # This is probably just the Carbon model name
             if [ -z "$variant" ]; then
                 variant="userdebug"
             fi
 
-            lunch lineage_$target-$variant
+            lunch carbon_$target-$variant
         fi
     fi
     return $?
