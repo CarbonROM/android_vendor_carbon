@@ -51,9 +51,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
-# Copy all Lineage-specific init rc files
+# Copy all Carbon-specific init rc files
 $(foreach f,$(wildcard vendor/carbon/prebuilt/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+
+ifneq ($(CARBON_INIT_DEBUG),)
+PRODUCT_COPY_FILES += vendor/carbon/prebuilt/init.debug.rc:$(TARGET_COPY_OUT_RAMDISK)/etc/init/init.debug.rc
+endif
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
