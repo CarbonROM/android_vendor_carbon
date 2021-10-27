@@ -17,11 +17,9 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/carbon_emulator_x86.mk \
     $(LOCAL_DIR)/carbon_emulator_x86_64.mk \
-    $(LOCAL_DIR)/carbon_emulator_arm.mk \
     $(LOCAL_DIR)/carbon_emulator_arm64.mk \
 
 COMMON_LUNCH_CHOICES := \
     carbon_emulator_x86-userdebug \
     carbon_emulator_x86_64-userdebug \
-    carbon_emulator_arm-userdebug \
     carbon_emulator_arm64-userdebug \
