@@ -478,8 +478,8 @@ function carbongerrit() {
         return 1
     fi
     local user=`git config --get review.review.carbonrom.org.username`
-    local review=`git config --get remote.github.review`
-    local project=`git config --get remote.github.projectname`
+    local review=`git config --get remote.carbon.review`
+    local project=`git config --get remote.carbon.projectname`
     local command=$1
     shift
     case $command in
