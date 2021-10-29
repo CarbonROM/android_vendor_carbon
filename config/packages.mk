@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
     VanillaMusic \
     CarbonDelta \
     SimpleGallery \
-    ExactCalculator
+    ExactCalculator \
+    Seedvault \
 
 # SetupWizard
 PRODUCT_PACKAGES += \
