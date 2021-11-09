@@ -104,4 +104,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     QuickAccessWallet
 
+# System error handler
+PRODUCT_PACKAGES += \
+    CarbonErrorReport
+
 -include vendor/qcom/perf/packages.mk
