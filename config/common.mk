@@ -27,6 +27,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Pollux.ogg \
     ro.config.alarm_alert=Carbon.ogg
 
+# Set system error handler
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.error.receiver.system.apps=org.carbonrom.errorreport
+
 # Flatten APEXs for performance
 OVERRIDE_TARGET_FLATTEN_APEX := true
 # This needs to be specified explicitly to override ro.apex.updatable=true from
