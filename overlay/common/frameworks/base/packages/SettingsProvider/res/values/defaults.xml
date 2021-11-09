@@ -19,4 +19,8 @@
 <resources>
     <!-- Use the Google propriatery backup transport service-->
     <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
+
+    <!-- Enable app crash reporting -->
+    <bool name="def_enable_send_action_app_error">true</bool>
+
 </resources>

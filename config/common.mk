@@ -26,6 +26,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Pollux.ogg \
     ro.config.alarm_alert=Carbon.ogg
 
+# Set system error handler
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.error.receiver.system.apps=org.carbonrom.errorreport
+
 # This needs to be specified explicitly to override ro.apex.updatable=true from
 # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
 PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
