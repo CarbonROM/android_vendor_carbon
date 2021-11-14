@@ -29,6 +29,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
 # Make sure the build system doesn't try to resign the APK
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_DEX_PREOPT := false
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 LOCAL_OVERRIDES_PACKAGES := Gallery Gallery3D GalleryNew3D Gallery2
@@ -41,6 +42,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
 # Make sure the build system doesn't try to resign the APK
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_DEX_PREOPT := false
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 include $(BUILD_PREBUILT)
