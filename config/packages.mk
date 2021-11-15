@@ -24,7 +24,7 @@ PRODUCT_BOOT_JARS += \
 
 # CellBroadcastReceiver
 PRODUCT_PACKAGES += \
-CellBroadcastReceiver
+    CellBroadcastReceiver
 
 # Config
 PRODUCT_PACKAGES += \
@@ -86,17 +86,12 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_PACKAGES += \
-    privapp-permissions-carbon.xml \
     privapp-permissions-carbon-product.xml \
     privapp-permissions-carbon-system_ext.xml
 
 # Exempt DeskClock from Powersave
 PRODUCT_PACKAGES += \
     deskclock.xml
-
-# Backup Services whitelist
-PRODUCT_PACKAGES += \
-    backup.xml
 
 # Hidden API whitelist
 PRODUCT_PACKAGES += \
