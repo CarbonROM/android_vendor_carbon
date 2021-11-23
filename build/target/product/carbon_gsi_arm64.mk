@@ -12,11 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/google/cuttlefish/vsoc_x86_64/phone/aosp_cf.mk)
-$(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target.mk)
-
-TARGET_PREBUILT_KERNEL := kernel/prebuilts/5.10/x86_64/kernel-5.10
+$(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Overrides
-PRODUCT_NAME := carbon_emulator_x86_64
-PRODUCT_MODEL := CarbonROM for x86_64
+PRODUCT_NAME := carbon_gsi_arm64
+PRODUCT_MODEL := CarbonROM GSI for ARM64
+PRODUCT_DEVICE := carbon_gsi_arm64
