@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/sdk_phone_arm64.mk)
+$(call inherit-product, device/google/cuttlefish/vsoc_arm64/phone/aosp_cf.mk)
 
 include vendor/carbon/build/target/product/carbon_generic_target.mk
 

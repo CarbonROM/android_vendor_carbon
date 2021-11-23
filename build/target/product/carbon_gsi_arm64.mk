@@ -11,18 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-$(call inherit-product, device/google/cuttlefish/vsoc_x86/phone/aosp_cf.mk)
+$(call inherit-product, build/target/product/aosp_arm64.mk)
 
 include vendor/carbon/build/target/product/carbon_generic_target.mk
 
-# These are based on GSIs, we just have Carbon-specific items
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/apex/com.android.apex.cts.shim.apex \
-    system/framework/telephony-ext.jar
-
 # Overrides
-PRODUCT_NAME := carbon_emulator_x86
-PRODUCT_MODEL := CarbonROM for x86
+PRODUCT_NAME := carbon_gsi_arm64
+PRODUCT_MODEL := CarbonROM GSI for ARM64
