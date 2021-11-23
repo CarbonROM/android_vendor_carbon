@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/sdk_phone_x86.mk)
+$(call inherit-product, device/google/cuttlefish/vsoc_x86/phone/aosp_cf.mk)
+$(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target.mk)
 
-include vendor/carbon/build/target/product/carbon_generic_target.mk
+TARGET_PREBUILT_KERNEL := device/google/cuttlefish_prebuilts/kernel/5.10-i686/kernel-5.10
 
 # Overrides
 PRODUCT_NAME := carbon_emulator_x86
