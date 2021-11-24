@@ -17,6 +17,23 @@
       "message": "these ought to be moved to system",
       "revId": "c4e0db9d57c50f09633196749eb202d3e67d4ae7",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dea5726b_0242ba7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-24T09:54:17Z",
+      "side": 1,
+      "message": "more accurately, we ought to look at backuptool and see if it\u0027s even relevant to modern Android, given modifications to system partition files aren\u0027t as easy and that flashing zips is becoming dated",
+      "revId": "c4e0db9d57c50f09633196749eb202d3e67d4ae7",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
   ]
 }
