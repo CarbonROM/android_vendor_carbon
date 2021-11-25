@@ -1,5 +1,4 @@
 PRODUCT_BRAND ?= CarbonROM
-CARBON_BUILD := true
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -31,8 +30,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.error.receiver.system.apps=org.carbonrom.errorreport
 
-# Flatten APEXs for performance
-OVERRIDE_TARGET_FLATTEN_APEX := true
 # This needs to be specified explicitly to override ro.apex.updatable=true from
 # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
 PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
@@ -82,31 +79,19 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Additional packages
 -include vendor/carbon/config/packages.mk
 
-# Versioning
--include vendor/carbon/config/version.mk
-
 # SELinux Policy
 -include vendor/carbon/sepolicy/sepolicy.mk
-
-# Wallpapers
-include vendor/carbon/config/wallpaper.mk
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
     system/bin/getcap \
     system/bin/setcap
 
-# Add our overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
-
 # Exclude from RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
 
 # Include CM LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
-
-# Squisher Location
-SQUISHER_SCRIPT := vendor/carbon/tools/squisher
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
