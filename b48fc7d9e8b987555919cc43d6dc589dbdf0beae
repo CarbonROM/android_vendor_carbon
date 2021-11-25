@@ -1,4 +1,56 @@
 {
   "pushCert": "certificate version 0.1\npusher 822AA3E6EE28340C 1637802799 -0600\npushee ssh://review.carbonrom.org:29418/CarbonROM/android_vendor_carbon\nnonce 1637802799-03D8491D94E47B863BEBA062F5205B23703F406D\n\n0000000000000000000000000000000000000000 2fde98ba3e46bf3342d92e7d22985f555087671f refs/for/cr-10.0%topic\u003dgsi-compat\n-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEQcrRBcTNcaXlnQHac81pp1OtA54FAmGe4y8ACgkQc81pp1Ot\nA57UPw/9HJhrBN+UdPM52r6KRM+L3hizHfT5kC1wVuXyQl+GHvNF8Fvec/natZxe\n8QRO6dJ7zpVn6nrbLM3iA1oSDQHROUFnY1GJOIEtrLLCxeyOXvpz5KeXbe4IH1zt\nf7KfCF9TiqJjaItL1ak8KQUTOlaa8vHyOPnJQQN5d6JGc15YgKGdnDptp45fHpg3\nO6Y7qVPSV8LUixwuQEkRSQEICtVWZ44N+3P8Y+BgFLffDESzeHsbBBnAYylVfZ3S\nL/ivKDQ697ZQWF2lRuFwCD47sLz/HG079xwYRrb0/HXRq0hvpLxJOv2r5LKOEpNz\ny5+pldiWzKugGhSHegx6OuysD5gPVD7wQmjVWBIxK3mAOim0sJ6QGbDM/HjTK7Ir\nNjuKjXcR/T6817XjdgCwJbLkLq3u7RR79DMCVH62aAvRI6vKaYwqfcGwcvAJ3CX9\n8AZB23/xzmiRmNkUZSwE3t4ozm+bfxiB2bNXpX6QkOWs/40P65+bpnXkdc5lxN4v\n6ea528SkaUzj9fcGPlbNcYSGtffIg84vGE63hXn5d1mJuYRY3xF6GS8ZFH4ghwmU\nwLl0r6/knXWUnPHWsyM2U9CjCRJYxecVRNpBJQqu27hY9Ku+YZIMZeTTTFKM33kv\nxV0cnKbsd0QtRPJyOCoxk297bNcCi9enTwCtiureNA2Bahb+Kb8\u003d\n\u003dNZ02\n-----END PGP SIGNATURE-----\n",
-  "comments": []
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20388eda_0379a36f",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-11-25T06:05:15Z",
+      "side": 1,
+      "message": "This had been removed in the past.also, addition rather than move",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42aeb8a1_86d0eceb",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-11-25T06:05:15Z",
+      "side": 1,
+      "message": "are we sure thats on system, not sys_ext?",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46227709_f6e01246",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-11-25T06:05:15Z",
+      "side": 1,
+      "message": "all those files must be on the same partition as the apps they grant access for. have all those apps been moved to sys_ext as well?",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    }
+  ]
 }

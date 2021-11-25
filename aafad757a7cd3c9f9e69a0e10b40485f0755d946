@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80555cc7_b3554ea1",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-11-25T06:05:15Z",
+      "side": 0,
+      "message": "why are those removed?",
+      "revId": "aafad757a7cd3c9f9e69a0e10b40485f0755d946",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    }
+  ]
+}
