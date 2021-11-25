@@ -49,28 +49,33 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/carbon/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/backuptool_ab.sh \
+    system/bin/backuptool_ab.functions \
+    system/bin/backuptool_postinstall.sh \
+
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 endif
 endif
 
-# Copy all Lineage-specific init rc files
+# Copy all vendor-specific init rc files
 $(foreach f,$(wildcard vendor/carbon/prebuilt/etc/init/*.rc),\
-    $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+    $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_PRODUCT)/etc/init/$(notdir $f)))
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/carbon/prebuilt/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.sip.voip.xml
 
 # Charging sounds
 PRODUCT_COPY_FILES += \
-    vendor/carbon/sounds/BatteryPlugged.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged.ogg \
-    vendor/carbon/sounds/BatteryPlugged_48k.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged_48k.ogg
+    vendor/carbon/sounds/BatteryPlugged.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/BatteryPlugged.ogg \
+    vendor/carbon/sounds/BatteryPlugged_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/BatteryPlugged_48k.ogg
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -82,11 +87,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # SELinux Policy
 -include vendor/carbon/sepolicy/sepolicy.mk
 
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/bin/curl \
-    system/bin/getcap \
-    system/bin/setcap
-
 # Exclude from RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
 
@@ -95,3 +95,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/framework/telephony-ext.jar \
