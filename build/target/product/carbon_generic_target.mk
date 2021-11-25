@@ -1,3 +1,5 @@
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
+
 #
 # All components inherited here go to system_ext image
 #
