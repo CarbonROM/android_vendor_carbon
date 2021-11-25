@@ -19,6 +19,6 @@ This XML file declares which system apps should be exempted from the hidden API 
 which apps should be allowed to access the entire private API. Only apps NOT signed with the
 platform cert need to be included, as apps signed with the platform cert are exempted by default.
 -->
- <config>
+<config>
   <hidden-api-whitelisted-app package="org.lineageos.jelly" />
 </config>
