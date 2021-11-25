@@ -16,6 +16,24 @@
       "message": "why are those removed?",
       "revId": "aafad757a7cd3c9f9e69a0e10b40485f0755d946",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66aec5a1_7a45b4a7",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:15:02Z",
+      "side": 0,
+      "message": "moved to system_ext, so this hack no longer needed\n\nhttps://review.carbonrom.org/c/CarbonROM/android_external_curl/+/16640\nhttps://review.carbonrom.org/c/CarbonROM/android_external_libcap/+/16641",
+      "parentUuid": "80555cc7_b3554ea1",
+      "revId": "aafad757a7cd3c9f9e69a0e10b40485f0755d946",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
   ]
 }

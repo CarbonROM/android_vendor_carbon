@@ -39,6 +39,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3030981d_02f9b48e",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:15:02Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7f668a8e_ab4b01cb",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "42aeb8a1_86d0eceb",
         "filename": "config/common.mk",
         "patchSetId": 1
@@ -50,6 +68,24 @@
       "writtenOn": "2021-11-25T06:05:15Z",
       "side": 1,
       "message": "are we sure thats on system, not sys_ext?",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee6bc243_b17c9780",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:15:02Z",
+      "side": 1,
+      "message": "Boot jars still have to be in /system. I definitely tried it in system_ext",
+      "parentUuid": "42aeb8a1_86d0eceb",
       "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
@@ -67,6 +103,24 @@
       "writtenOn": "2021-11-25T06:05:15Z",
       "side": 1,
       "message": "all those files must be on the same partition as the apps they grant access for. have all those apps been moved to sys_ext as well?",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f732a4d_e39a3d46",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:15:02Z",
+      "side": 1,
+      "message": "SeedVault and Jelly for sure have. DeskClock I\u0027m making sure.",
+      "parentUuid": "46227709_f6e01246",
       "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
