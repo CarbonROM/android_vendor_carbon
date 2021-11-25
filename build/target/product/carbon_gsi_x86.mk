@@ -17,4 +17,4 @@ $(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
 # Overrides
 PRODUCT_NAME := carbon_gsi_x86
 PRODUCT_MODEL := CarbonROM GSI for x86
-PRODUCT_DEVICE := carbon_gsi_x86
+PRODUCT_DEVICE := mainline_x86

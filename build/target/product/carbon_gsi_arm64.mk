@@ -15,7 +15,9 @@
 $(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
+#OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Overrides
 PRODUCT_NAME := carbon_gsi_arm64
 PRODUCT_MODEL := CarbonROM GSI for ARM64
-PRODUCT_DEVICE := carbon_gsi_arm64
+PRODUCT_DEVICE := gsi_arm64
