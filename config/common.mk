@@ -73,7 +73,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Additional packages
--include vendor/carbon/config/packages.mk
+include vendor/carbon/config/packages.mk
 
 # Versioning
 -include vendor/carbon/config/version.mk
