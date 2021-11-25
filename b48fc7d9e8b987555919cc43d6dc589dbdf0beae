@@ -141,6 +141,24 @@
       "parentUuid": "5f732a4d_e39a3d46",
       "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15835fc1_569a8378",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:39:10Z",
+      "side": 1,
+      "message": "wrong anchor linked in last link:\n\n\nhttps://source.android.com/devices/bootloader/partitions/product-partitions#product-components",
+      "parentUuid": "1188ed7c_3661244a",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
   ]
 }
