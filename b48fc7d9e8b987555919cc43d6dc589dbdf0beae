@@ -123,6 +123,24 @@
       "parentUuid": "46227709_f6e01246",
       "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1188ed7c_3661244a",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-11-25T07:38:04Z",
+      "side": 1,
+      "message": "I think you might have two things mixed up. \n\nThis is /etc/sysconfig (Android Framework system configs which can be overwritten from non-system partitions like odm, product, and system_ext) not privapp permissions which talks about the partition boundary limitations: https://source.android.com/devices/tech/config/perms-allowlist\n\nIf anything, these ought to go to /product https://source.android.com/devices/bootloader/partitions/product-partitions",
+      "parentUuid": "5f732a4d_e39a3d46",
+      "revId": "b48fc7d9e8b987555919cc43d6dc589dbdf0beae",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
   ]
 }
