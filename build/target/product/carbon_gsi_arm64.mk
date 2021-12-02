@@ -21,3 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 PRODUCT_NAME := carbon_gsi_arm64
 PRODUCT_MODEL := CarbonROM GSI for ARM64
 PRODUCT_DEVICE := gsi_arm64
+BOARD_VNDK_VERSION := current
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
+include $(SRC_TARGET_DIR)/product/gsi_release.mk
