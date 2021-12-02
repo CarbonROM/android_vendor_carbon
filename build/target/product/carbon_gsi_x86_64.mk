@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include $(SRC_TARGET_DIR)/product/gsi_release.mk
 $(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Overrides
 PRODUCT_NAME := carbon_gsi_x86_64
 PRODUCT_MODEL := CarbonROM GSI for x86_64
-PRODUCT_DEVICE := mainline_x86_64
+PRODUCT_DEVICE := generic_x86_64
