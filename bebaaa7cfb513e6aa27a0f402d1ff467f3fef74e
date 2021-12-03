@@ -18,6 +18,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "52ddbd8f_d1297a40",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T06:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9fb123a1_c1a8943b",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "59c4873f_f0b2a530",
@@ -65,6 +83,24 @@
       "writtenOn": "2021-12-03T04:30:57Z",
       "side": 1,
       "message": "These need to be PRODUCT\n\nhttps://github.com/CarbonROM/android_frameworks_base/blob/cr-10.0/media/java/android/media/MediaActionSound.java#L50",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e922e7c0_b0f89832",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T06:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c0125c75_740c20d1",
       "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
@@ -120,6 +156,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad390f0e_2f1b9996",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T06:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b7dbdc68_30d37e5f",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b542ade_86d7e0d6",
@@ -137,6 +191,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d175d85d_90cbc10b",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T06:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b542ade_86d7e0d6",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "45f36b4a_ecd6c263",
@@ -150,6 +222,24 @@
       "writtenOn": "2021-12-03T04:30:57Z",
       "side": 1,
       "message": "/product and /system_ext have permission for allow-in-power-save, should be moved into /product with DeskClock and Messages",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e179e376_26467fb2",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T06:01:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45f36b4a_ecd6c263",
       "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     }
