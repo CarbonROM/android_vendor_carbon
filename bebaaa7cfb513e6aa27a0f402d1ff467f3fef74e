@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fb123a1_c1a8943b",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "I don\u0027t see why these have to be system_ext. Product init is loaded naturally",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59c4873f_f0b2a530",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "Is this the right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1cd76bb7_cc432c98",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "Is this the right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0125c75_740c20d1",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "These need to be PRODUCT\n\nhttps://github.com/CarbonROM/android_frameworks_base/blob/cr-10.0/media/java/android/media/MediaActionSound.java#L50",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da2f107b_3f8831e9",
+        "filename": "config/gsm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "Right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e52bd020_dd5f3c65",
+        "filename": "config/gsm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "Right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7dbdc68_30d37e5f",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "This is removed upstream as Gapps manage this functionaility\n\nhttps://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/318965",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b542ade_86d7e0d6",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "So I checked the code behind this: https://github.com/CarbonROM/android_frameworks_base/blob/cr-10.0/core/java/com/android/server/SystemConfig.java\n\nwhitelists don\u0027t HAVE to be on the same partition as long as the partition has permission to make these changes (see https://github.com/CarbonROM/android_frameworks_base/blob/cr-10.0/core/java/com/android/server/SystemConfig.java#L552 for an example of what\u0027s allowed with /product), however it makes sense for them to be. So this should be moved to product since Jelly is there too\n\nsystem_ext allows all sysconfig items so it\u0027s not \"broken\" per-se",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45f36b4a_ecd6c263",
+        "filename": "prebuilt/etc/sysconfig/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T04:30:57Z",
+      "side": 1,
+      "message": "/product and /system_ext have permission for allow-in-power-save, should be moved into /product with DeskClock and Messages",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    }
+  ]
+}
