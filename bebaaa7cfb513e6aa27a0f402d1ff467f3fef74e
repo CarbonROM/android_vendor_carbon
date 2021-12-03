@@ -211,6 +211,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "26c1b0b4_d5bbe933",
+        "filename": "config/gsm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T07:38:44Z",
+      "side": 1,
+      "message": "Not touched in years: https://github.com/CarbonROM/android_vendor_carbon/commits/cr-10.0/prebuilt/etc/selective-spn-conf.xml",
+      "parentUuid": "03eecf9f_f4fcb7a2",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b7dbdc68_30d37e5f",
