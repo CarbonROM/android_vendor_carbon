@@ -60,6 +60,8 @@
 #                                                      aarch64-linux-gnu- for arm64
 #                                                      x86_64-linux-gnu- for x86
 #
+#   KERNEL_LTO                         = Optional, force LTO to none / thin / full
+#
 #   NEED_KERNEL_MODULE_ROOT            = Optional, if true, install kernel
 #                                          modules in root instead of vendor
 #   NEED_KERNEL_MODULE_SYSTEM          = Optional, if true, install kernel
