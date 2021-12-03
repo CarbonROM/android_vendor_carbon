@@ -53,6 +53,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28c516d8_a9fd38c6",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T07:30:40Z",
+      "side": 1,
+      "message": "see frameworks/base/core/java/com/android/server/SystemConfig.java\n\n`\u003cfeature\u003e`s are allowed in most partitions, move to /product",
+      "parentUuid": "59c4873f_f0b2a530",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1cd76bb7_cc432c98",
@@ -66,6 +84,24 @@
       "writtenOn": "2021-12-03T04:30:57Z",
       "side": 1,
       "message": "Is this the right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cda8a5c1_527bc3fd",
+        "filename": "config/common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T07:30:40Z",
+      "side": 1,
+      "message": "see frameworks/base/core/java/com/android/server/SystemConfig.java\n\n`\u003cfeature\u003e`s are allowed in most partitions, move to /product",
+      "parentUuid": "1cd76bb7_cc432c98",
       "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
@@ -122,6 +158,24 @@
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3c30685_32a61c5f",
+        "filename": "config/gsm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T07:30:40Z",
+      "side": 1,
+      "message": "product as per https://github.com/LineageOS/android_lineage-sdk/blob/e1363720b061facf6368a017398d6af43bc9fbba/lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumbers.java#L56",
+      "parentUuid": "da2f107b_3f8831e9",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e52bd020_dd5f3c65",
@@ -135,6 +189,24 @@
       "writtenOn": "2021-12-03T04:30:57Z",
       "side": 1,
       "message": "Right partition?",
+      "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03eecf9f_f4fcb7a2",
+        "filename": "config/gsm.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 341
+      },
+      "writtenOn": "2021-12-03T07:30:40Z",
+      "side": 1,
+      "message": "I think remove. I don\u0027t see it used except in old RILs on niche devices https://github.com/search?q\u003dorg%3ALineageOS+selective-spn-conf\u0026type\u003dcode",
+      "parentUuid": "e52bd020_dd5f3c65",
       "revId": "bebaaa7cfb513e6aa27a0f402d1ff467f3fef74e",
       "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
     },
