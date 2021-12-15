@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d3fa3ac_36bdf487",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-12-15T16:39:35Z",
+      "side": 1,
+      "message": "Agreed that this should be done, but will require changes to the download website as well as a few other services that need to be taken care of before this can be done. Also, if it gets merged we shouuld probably do the same for CR8 and 9.",
+      "revId": "fd8d584014863f7ca556f63b541663c4cb3fd85a",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    }
+  ]
+}
