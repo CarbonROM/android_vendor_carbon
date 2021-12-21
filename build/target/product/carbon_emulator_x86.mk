@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
+
 $(call inherit-product, device/google/cuttlefish/vsoc_x86/phone/aosp_cf.mk)
 $(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target.mk)
 
@@ -20,3 +22,5 @@ TARGET_PREBUILT_KERNEL := device/google/cuttlefish_prebuilts/kernel/5.10-i686/ke
 # Overrides
 PRODUCT_NAME := carbon_emulator_x86
 PRODUCT_MODEL := CarbonROM for x86
+
+OVERRIDE_TARGET_FLATTEN_APEX := true
