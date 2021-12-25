@@ -19,6 +19,8 @@ $(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target
 
 TARGET_PREBUILT_KERNEL := device/google/cuttlefish_prebuilts/kernel/5.10-i686/kernel-5.10
 
+PRODUCT_HOST_PACKAGES += acloud
+
 # Overrides
 PRODUCT_NAME := carbon_emulator_x86
 PRODUCT_MODEL := CarbonROM for x86

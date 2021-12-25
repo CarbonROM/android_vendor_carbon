@@ -19,6 +19,8 @@ $(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target
 
 TARGET_PREBUILT_KERNEL := kernel/prebuilts/5.10/arm64/kernel-5.10
 
+PRODUCT_HOST_PACKAGES += acloud
+
 # Overrides
 PRODUCT_NAME := carbon_emulator_arm64
 PRODUCT_MODEL := CarbonROM for ARM64
