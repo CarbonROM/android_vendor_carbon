@@ -6,6 +6,7 @@ Additional CarbonROM functions:
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
+- emu:             A wrapper for acloud that will work to run the emulator targets with a simple command.
 - carbongerrit:    A Git wrapper that fetches/pushes patch from/to CarbonROM Gerrit Review.
 - carbonrebase:    Rebase a Gerrit change and push it again.
 - crremote:        Add gerrit remote for matching Carbon repository.
@@ -970,4 +971,9 @@ function fixup_common_out_dir() {
         [ -L ${common_out_dir} ] && rm ${common_out_dir}
         mkdir -p ${common_out_dir}
     fi
+}
+
+function emu() {
+    T=$(gettop)
+    $T/vendor/carbon/build/tools/emu.sh $@
 }
