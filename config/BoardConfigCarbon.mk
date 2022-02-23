@@ -1,3 +1,6 @@
+# Recovery
+BOARD_USES_FULL_RECOVERY_IMAGE ?= true
+
 # Flatten APEXs for performance
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
