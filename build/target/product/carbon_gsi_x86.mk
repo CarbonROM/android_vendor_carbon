@@ -14,9 +14,13 @@
 
 $(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
 
+# Include gapps if synced
+-include vendor/gapps/x86/x86-vendor.mk
+
 # Overrides
 PRODUCT_NAME := carbon_gsi_x86
 PRODUCT_MODEL := CarbonROM GSI for x86
 PRODUCT_DEVICE := generic_x86
 
 include $(SRC_TARGET_DIR)/product/gsi_release.mk
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

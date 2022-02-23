@@ -21,6 +21,10 @@ TARGET_PREBUILT_KERNEL := device/google/cuttlefish_prebuilts/kernel/5.10-i686/ke
 
 PRODUCT_HOST_PACKAGES += acloud
 
+# Include gapps if synced
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+-include vendor/gapps/x86/x86-vendor.mk
+
 # Overrides
 PRODUCT_NAME := carbon_emulator_x86
 PRODUCT_MODEL := CarbonROM for x86

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function show_help() {
-    echo "emu [global options] (init|start|stop) [command options]"
+    echo "emu [global options] (init|start|sync|stop) [command options]"
     echo
     echo "Wrapper script to make Cuttlefish easy to run. Must run \"emu init\" once per host before \"emu start\" will work."
     echo "The simplest usage is just \"emu start\". It uses sane defaults. Once the emulator boots, a VNC viewer should appear. Closing this VNC viewer will not stop the emulator."
@@ -48,6 +48,7 @@ fi
 verbose=0
 init=0
 start=0
+sync=0
 stop=0
 formfactor=
 resolution=
@@ -61,6 +62,7 @@ while [[ $1 != "" ]]; do
       -v|--verbose) verbose=1; shift;;
       init) init=1; shift;;
       start) start=1; shift;;
+      sync) sync=1; shift;;
       stop) stop=1; shift;;
       -f|--ff|--formfactor) shift; formfactor=$1; shift;;
       -r|--res|--resolution) shift; resolution=$1; shift;;
@@ -81,17 +83,21 @@ if [[ $start == 1 ]]; then
     n_pos=$((n_pos+1))
 fi
 
+if [[ $sync == 1 ]]; then
+    n_pos=$((n_pos+1))
+fi
+
 if [[ $stop == 1 ]]; then
     n_pos=$((n_pos+1))
 fi
 
 if [[ $n_pos > 1 ]]; then
-    echo "Too many positional arguments. Choose one of \"init\", \"start\" or \"stop\"." 1>&2
+    echo "Too many positional arguments. Choose one of \"init\", \"start\", \"sync\", or \"stop\"." 1>&2
     exit 1
 fi
 
 if [[ $n_pos == 0 ]]; then
-    echo "No command specified. Choose one of \"init\", \"start\" or \"stop\"." 1>&2
+    echo "No command specified. Choose one of \"init\", \"start\", \"sync\", or \"stop\"." 1>&2
     show_help
     exit 1
 fi
@@ -102,6 +108,19 @@ if [[ $init == 1 ]]; then
         echo "Arch Linux detected. Please install cuttlefish-common-git from the AUR and run systemctl enable --now cuttlefish-common.service and retry \"emu init\" again" 1>&2
         exit 1
     fi
+fi
+
+if [[ $sync == 1 ]]; then
+    adb root
+    sleep 1
+    adb shell mount -o rw,remount /
+    adb shell mount -o rw,remount /product
+    adb shell mount -o rw,remount /odm
+    adb shell mount -o rw,remount /system_ext
+    adb sync
+    adb shell stop
+    adb shell start
+    exit 0
 fi
 
 if [[ $stop == 1 ]]; then

@@ -21,6 +21,10 @@ TARGET_PREBUILT_KERNEL := kernel/prebuilts/5.10/arm64/kernel-5.10
 
 PRODUCT_HOST_PACKAGES += acloud
 
+# Include gapps if synced
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+-include vendor/gapps/arm64/arm64-vendor.mk
+
 # Overrides
 PRODUCT_NAME := carbon_emulator_arm64
 PRODUCT_MODEL := CarbonROM for ARM64

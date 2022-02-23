@@ -15,7 +15,8 @@
 $(call inherit-product, vendor/carbon/build/target/product/carbon_gsi_target.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-#OVERRIDE_TARGET_FLATTEN_APEX := true
+# Include gapps if synced
+-include vendor/gapps/arm64/arm64-vendor.mk
 
 # Overrides
 PRODUCT_NAME := carbon_gsi_arm64
@@ -23,3 +24,5 @@ PRODUCT_MODEL := CarbonROM GSI for ARM64
 PRODUCT_DEVICE := gsi_arm64
 
 include $(SRC_TARGET_DIR)/product/gsi_release.mk
+
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
