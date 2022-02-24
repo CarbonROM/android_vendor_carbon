@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function show_help() {
     echo "emu [global options] (init|start|stop) [command options]"
@@ -21,9 +21,14 @@ function show_help() {
     echo -e "\t--memory,--mem,-m\tSet the emulator's allocated memory. Defaults to \"4g\"."
 }
 
-acloud=$(which acloud-dev)
-if [[ $acloud == "acloud-dev not found" ]]; then
-    echo "acloud-dev command not found. Have you built the emulator target?" 1>&2
+apt=$(command -v apt)
+acloud=$(command -v acloud-dev)
+if [[ $apt != "" ]]; then
+    acloud=$(command -v acloud)
+fi
+
+if [[ $acloud == "" ]]; then
+    echo "acloud command not found. Have you built the emulator target?" 1>&2
     exit 1
 fi
 
@@ -33,8 +38,8 @@ if [[ $? != 0 ]]; then
     exit 1
 fi
 
-pacman=$(which pacman)
-if [[ $pacman != "pacman not found" ]] && ! [ -f /usr/lib/systemd/system/cuttlefish-common.service ]; then
+pacman=$(command -v pacman)
+if [[ $pacman != "" ]] && ! [ -f /usr/lib/systemd/system/cuttlefish-common.service ]; then
     echo "Arch Linux detected. Please install cuttlefish-common-git from the AUR and run systemctl enable --now cuttlefish-common.service." 1>&2
     exit 1
 fi
