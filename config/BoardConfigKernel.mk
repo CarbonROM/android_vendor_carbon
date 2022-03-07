@@ -26,7 +26,7 @@
 #                                                      aarch64-linux-android- for arm64
 #                                                      x86_64-linux-android- for x86
 #
-#   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to false
+#   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to true
 #   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
 #                                        makefile. Can be overriden in device trees
 #                                        in the event of prebuilt kernel.
@@ -105,7 +105,7 @@ ifneq ($(USE_CCACHE),)
     endif
 endif
 
-ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
 else
     KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(CCACHE_BIN) $(KERNEL_TOOLCHAIN_PATH)"
