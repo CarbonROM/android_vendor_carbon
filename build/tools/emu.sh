@@ -21,14 +21,9 @@ function show_help() {
     echo -e "\t--memory,--mem,-m\tSet the emulator's allocated memory. Defaults to \"4g\"."
 }
 
-apt=$(command -v apt)
-acloud=$(command -v acloud-dev)
-if [[ $apt != "" ]]; then
-    acloud=$(command -v acloud)
-fi
-
+acloud=$(command -v acloud-carbon)
 if [[ $acloud == "" ]]; then
-    echo "acloud command not found. Have you built the emulator target?" 1>&2
+    echo "acloud-carbon: command not found. Is prebuilts/tools-carbon present?" 1>&2
     exit 1
 fi
 
