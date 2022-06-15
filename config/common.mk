@@ -104,4 +104,6 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
     SystemUI
