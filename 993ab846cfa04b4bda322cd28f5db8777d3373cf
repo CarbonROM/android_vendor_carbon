@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "735a11de_7be0a6fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 273
+      },
+      "writtenOn": "2022-06-19T20:11:17Z",
+      "side": 1,
+      "message": "test: build and run ROM",
+      "revId": "993ab846cfa04b4bda322cd28f5db8777d3373cf",
+      "serverId": "4c0b52a2-b090-4331-a190-b288d812d081"
+    }
+  ]
+}
