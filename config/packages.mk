@@ -106,4 +106,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarbonErrorReport
 
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    NetworkStackOverlay
+
 -include vendor/qcom/perf/packages.mk
