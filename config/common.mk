@@ -102,6 +102,13 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/framework/oat/%/telephony-ext.odex \
     system/framework/oat/%/telephony-ext.vdex
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/fsck.ntfs \
+    system/bin/mkfs.ntfs \
+    system/bin/mount.ntfs \
+    system/%/libfuse-lite.so \
+    system/%/libntfs-3g.so
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep \
