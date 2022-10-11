@@ -17,7 +17,7 @@ PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 $(call inherit-product, device/google/cuttlefish/vsoc_x86_64/phone/aosp_cf.mk)
 $(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target.mk)
 
-TARGET_PREBUILT_KERNEL := kernel/prebuilts/5.10/x86_64/kernel-5.10
+TARGET_PREBUILT_KERNEL := kernel/prebuilts/5.15/x86_64/kernel-5.15
 
 PRODUCT_HOST_PACKAGES += acloud
 
