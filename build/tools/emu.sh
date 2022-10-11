@@ -34,14 +34,14 @@ if [[ $? != 0 ]]; then
 fi
 
 pacman=$(command -v pacman)
-if [[ $pacman != "" ]] && ! [ -f /usr/lib/systemd/system/cuttlefish-common.service ]; then
-    echo "Arch Linux detected. Please install cuttlefish-common-git from the AUR and run systemctl enable --now cuttlefish-common.service." 1>&2
+if [[ $pacman != "" ]] && ! [ -f /usr/lib/systemd/system/cuttlefish-host-resources.service ]; then
+    echo "Arch Linux detected. Please install cuttlefish-common-git from the AUR and run systemctl enable --now cuttlefish-host-resources.service." 1>&2
     exit 1
 fi
 
-systemctl is-active cuttlefish-common.service >/dev/null
+systemctl is-active cuttlefish-host-resources.service >/dev/null
 if [[ $? != 0 ]]; then
-    echo "Make sure to run systemctl enable --now cuttlefish-common.service." 1>&2
+    echo "Make sure to run systemctl enable --now cuttlefish-host-resources.service." 1>&2
     exit 1
 fi
 
