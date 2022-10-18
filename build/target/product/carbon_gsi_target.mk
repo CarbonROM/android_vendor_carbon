@@ -41,7 +41,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 # GSI should always support up-to-date platform features.
 # Keep this value at the latest API level to ensure latest build system
 # default configs are applied.
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 32
 
 # GSI specific tasks on boot
 PRODUCT_PACKAGES += \
@@ -49,5 +49,5 @@ PRODUCT_PACKAGES += \
     init.vndk-nodef.rc \
     gsi_skip_mount.cfg \
 
-# Support additional P, Q and R VNDK packages
-PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
+# Support additional P, Q, R, and S VNDK packages
+PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30 31
