@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 $(call inherit-product, vendor/carbon/build/target/product/carbon_generic_target.mk)
 
 # Enable artifact path requirements checking
