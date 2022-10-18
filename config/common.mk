@@ -99,3 +99,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/framework/telephony-ext.jar \
+    system/framework/oat/arm/telephony-ext.odex \
+    system/framework/oat/arm/telephony-ext.vdex \
+    system/framework/oat/arm64/telephony-ext.odex \
+    system/framework/oat/arm64/telephony-ext.vdex
