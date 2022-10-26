@@ -11,6 +11,7 @@ Additional CarbonROM functions:
 - carbonrebase:    Rebase a Gerrit change and push it again.
 - crremote:        Add gerrit remote for matching Carbon repository.
 - lineageremote:   Add git remote for LineageOS Gerrit Review.
+- lineageremote:   Add git remote for LineageOS GitHub.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - githubremote:    Add git remote for CarbonROM Github.
@@ -391,6 +392,40 @@ function githubremote()
     git remote add gh https://github.com/CarbonROM/$PROJECT
     echo "Remote 'gh' created"
 }
+
+function lineageghremote()
+{
+    if ! git rev-parse --git-dir &> /dev/null
+    then
+        echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
+        return 1
+    fi
+    git remote rm lineagegh 2> /dev/null
+    local REMOTE=$(git config --get remote.carbon.projectname)
+    local CARBON="true"
+    if [ -z "$REMOTE" ]
+    then
+        REMOTE=$(git config --get remote.aosp.projectname)
+        CARBON="false"
+    fi
+    if [ -z "$REMOTE" ]
+    then
+        REMOTE=$(git config --get remote.caf.projectname)
+        CARBON="false"
+    fi
+
+    if [ $CARBON = "false" ]
+    then
+        local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
+    else
+        local PROJECT=$(echo $REMOTE | sed -e "s#CarbonROM/##g")
+    fi
+
+    local PFX="LineageOS/"
+    git remote add lineagegh https://github.com/$PFX$PROJECT
+    echo "Remote 'lineagegh' created"
+}
+
 
 function installboot()
 {
