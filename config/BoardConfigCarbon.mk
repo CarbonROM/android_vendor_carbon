@@ -1,6 +1,3 @@
-# Flatten APEXs for performance
-OVERRIDE_TARGET_FLATTEN_APEX := true
-
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
