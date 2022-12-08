@@ -93,7 +93,6 @@ PRODUCT_PACKAGES += \
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-    CarbonThemesStub \
     ThemePicker
 
 PRODUCT_PACKAGES += \
