@@ -84,6 +84,9 @@ include vendor/carbon/config/packages.mk
 # SELinux Policy
 -include vendor/carbon/sepolicy/sepolicy.mk
 
+# Themes and Theme overlays
+include vendor/themes/themes.mk
+
 # Exclude from RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
 
