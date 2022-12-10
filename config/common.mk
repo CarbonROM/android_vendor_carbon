@@ -81,8 +81,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Additional packages
 include vendor/carbon/config/packages.mk
 
-# SELinux Policy
--include vendor/carbon/sepolicy/sepolicy.mk
+# Versioning
+include vendor/carbon/config/version.mk
+
+# Wallpapers
+include vendor/carbon/config/wallpaper.mk
 
 # Themes and Theme overlays
 include vendor/themes/themes.mk
