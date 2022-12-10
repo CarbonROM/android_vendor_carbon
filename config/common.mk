@@ -90,8 +90,8 @@ include vendor/carbon/config/wallpaper.mk
 # Themes and Theme overlays
 include vendor/themes/themes.mk
 
-# Exclude from RRO
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
+# Include common overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # Include CM LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
