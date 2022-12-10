@@ -1,6 +1,3 @@
-# Add our overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
-
 # Versioning
 -include vendor/carbon/config/version.mk
 
