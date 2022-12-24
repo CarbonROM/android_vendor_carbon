@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
 
 # Additional apps
 PRODUCT_PACKAGES += \
+    Aperture \
     SearchLauncherQuickStep \
     Etar \
     Jelly \
