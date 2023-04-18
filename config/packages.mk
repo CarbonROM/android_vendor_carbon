@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
+    DocumentsUIOverlay \
     NetworkStackOverlay
 
 -include vendor/qcom/perf/packages.mk
