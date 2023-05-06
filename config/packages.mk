@@ -96,9 +96,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ThemePicker
 
-PRODUCT_PACKAGES += \
-    NavigationBarMode2ButtonOverlay
-
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
