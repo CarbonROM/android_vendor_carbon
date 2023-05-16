@@ -32,6 +32,7 @@ SOONG_CONFIG_NAMESPACES += carbonGlobalVars
 SOONG_CONFIG_carbonGlobalVars += \
     aapt_version_code \
     additional_gralloc_10_usage_bits \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     bootloader_message_offset \
     disable_postrender_cleanup \
@@ -70,6 +71,7 @@ SOONG_CONFIG_carbonQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_carbonGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_carbonGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_carbonGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_carbonGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
@@ -92,6 +94,7 @@ SOONG_CONFIG_carbonQcomVars_needs_camera_boottime_timestamp := $(TARGET_CAMERA_B
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
