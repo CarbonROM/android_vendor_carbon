@@ -30,6 +30,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += carbonGlobalVars
 SOONG_CONFIG_carbonGlobalVars += \
+    aapt_version_code \
     additional_gralloc_10_usage_bits \
     gralloc_handle_has_reserved_size \
     bootloader_message_offset \
@@ -97,6 +98,7 @@ TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
+SOONG_CONFIG_carbonGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_carbonGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_carbonGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_carbonGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
