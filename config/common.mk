@@ -33,7 +33,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode=true
+    ro.support_one_handed_mode?=true
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
