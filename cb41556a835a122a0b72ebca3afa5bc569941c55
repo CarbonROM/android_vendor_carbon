@@ -1,4 +1,5 @@
 {
   "pushCert": "certificate version 0.1\npusher xenreon \u003cmain.xenreon@gmail.com\u003e 1530815009 +0530\npushee ssh://review.carbonrom.org:29418/CarbonROM/android_vendor_carbon\nnonce 1530815009-DF896EEF69962FE57DA113C68421EB13FBCEC375\n\n0000000000000000000000000000000000000000 cb41556a835a122a0b72ebca3afa5bc569941c55 refs/for/cr-6.1%topic\u003dlight_navbar\n-----BEGIN PGP SIGNATURE-----\nVersion: GnuPG v1\n\niQIcBAABAgAGBQJbPmIhAAoJEI3eqicOcXxmI8wP/RL1F9OntdMf6I+B7Nk/s57w\nwCfdQZlhFMXmad0whIUciSlAjlD9Ki6lfwgds8NJv8GAT3IKHYOOS4MHrskbEAzp\n/HXyFdoiy7XsxVubQitusvhFO5vrItRWdlJBBoktzO5Mv8TrPzHJFVeTqqoJ3XNa\nT8PF+2yrPBvMZRKLsBEgIkTQPy5+VeOf9qcfKzmN7FIUm4WvgsysgLLoddTLhzmS\nbvpcZQj8bjQ0DgVfdaocllZ8e15zPzOpumEJNY+82L9oXNkHJKiBlX9Ek0HAxdLv\nI1LSo8FbYoKBl0jYxIp0bJpMqcGYuJ1e1uE6oMxUDinBnWTK6ibJNAITxi7h41YE\nVApE0qw7n23iHFI/MYd6/wRYhYib79tX2KHu3ehlUStk4a4WU8n/sKiEeXcpVqVP\nJyF8SIyXiZcvQNpgecKe/NR/s9A29EYvWOFrqERnaIrJguA+fGabG2csVul9d8MA\nwcKACIFV6Y4nPTzP1Qpgsrp2vB5nrVQ+P1opEV64KwhCuZAX1WsgqXleIIlTa7+u\nxiVxN1Dc+4x/aCHvrTj2Ac7AND2tl9DsMcggU2T5AluT42EfoC5pMlLULN2JAdJr\nxPRK7feusmbBbyABc+FqcepODqtEGhFjtQ60/35v46tqG82s9nVOBk3L2kqngYtH\n5OZmNBSvFM6wEa9Ly+BY\n\u003d++2U\n-----END PGP SIGNATURE-----\n",
-  "comments": []
+  "comments": [],
+  "submitRequirementResults": []
 }
