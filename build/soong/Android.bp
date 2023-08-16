@@ -71,7 +71,7 @@ disable_postrender_cleanup {
 soong_config_module_type {
     name: "aapt_version_code",
     module_type: "java_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "carbonGlobalVars",
     value_variables: ["aapt_version_code"],
     properties: ["aaptflags"],
 }
